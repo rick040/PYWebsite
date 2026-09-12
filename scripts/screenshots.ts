@@ -18,9 +18,13 @@ const OUT_DIR = resolve(import.meta.dirname, '../screenshots')
 
 const PAGES: ReadonlyArray<{ path: string; name: string }> = [
   { path: '/', name: 'home' },
+  { path: '/locaties', name: 'locaties-hub' },
+  { path: '/parkeren/eindhoven', name: 'stad-eindhoven' },
   { path: '/parkeren/eindhoven/philips-stadion', name: 'locatie-philips-stadion' },
   { path: '/parkeren/rotterdam/hofplein', name: 'locatie-hofplein' },
-  { path: '/parkeren/amsterdam/cruquius', name: 'locatie-cruquius' },
+  { path: '/parkeren/zoetermeer/p1-belgielaan', name: 'locatie-zonder-tarieven' },
+  { path: '/parkeren-bij/amsterdam/the-harbour-club', name: 'poi-harbour-club' },
+  { path: '/abonnementen', name: 'abonnementen' },
 ]
 
 const VIEWPORTS: ReadonlyArray<{ label: string; width: number; height: number }> = [
