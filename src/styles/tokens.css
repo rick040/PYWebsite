@@ -1,0 +1,228 @@
+/**
+ * ParkingYou design tokens.
+ *
+ * This file is deliberately framework-agnostic: plain CSS custom properties,
+ * no Tailwind syntax, no build step. The marketing website and the future PWA
+ * both import this file, so the two products share one visual language without
+ * sharing a component library.
+ *
+ * The colour scales are derived in OKLCH from the real brand asset
+ * (ParkingYouBase.png): blue-700 and cyan-400 are the exact logo colours, and
+ * every other step is a perceptually even interpolation at the same hue.
+ * Every semantic pairing below was checked against WCAG 2.1; see
+ * docs/DESIGN-TOKENS.md for the measured ratios.
+ *
+ * Naming: everything is namespaced --py-* so that importing this file into the
+ * PWA cannot collide with whatever that project already defines.
+ * --py-blue-700 and friends are raw values; --py-color-*, --py-font-*,
+ * --py-space-* and friends are semantic roles that map onto them. Only ever use
+ * the semantic roles in components; the raw scale exists so the roles have
+ * something to point at.
+ */
+
+:root {
+  /* ---------------------------------------------------------------------- */
+  /* Raw palette                                                             */
+  /* ---------------------------------------------------------------------- */
+
+  /* Brand blue. 700 is #203D8B, the logo blue. */
+  --py-blue-50: #f2f6fe;
+  --py-blue-100: #e1ebfe;
+  --py-blue-200: #c9dafd;
+  --py-blue-300: #a8c1f8;
+  --py-blue-400: #82a2e9;
+  --py-blue-500: #5e80d0;
+  --py-blue-600: #3c5daf;
+  --py-blue-700: #203d8b;
+  --py-blue-800: #162e70;
+  --py-blue-900: #0f2153;
+  --py-blue-950: #081435;
+
+  /* Accent cyan. 400 is #79C9DC, the logo accent.
+     Decorative and background use only: it is 1.87:1 on white, so it never
+     carries white text and never carries meaning on its own. */
+  --py-cyan-50: #f2fbfd;
+  --py-cyan-100: #e0f4f9;
+  --py-cyan-200: #c6eaf3;
+  --py-cyan-300: #a4dcea;
+  --py-cyan-400: #79c9dc;
+  --py-cyan-500: #56b2c7;
+  --py-cyan-600: #4098ab;
+  --py-cyan-700: #2d7a8b;
+  --py-cyan-800: #235f6c;
+  --py-cyan-900: #1c4751;
+  --py-cyan-950: #0e2a31;
+
+  /* Neutrals, tinted toward the brand hue so greys sit next to blue without
+     looking muddy. */
+  --py-neutral-0: #ffffff;
+  --py-neutral-50: #f9fafc;
+  --py-neutral-100: #f2f4f7;
+  --py-neutral-200: #e4e6ec;
+  --py-neutral-300: #d2d5dc;
+  --py-neutral-400: #a7abb3;
+  --py-neutral-500: #82868e;
+  --py-neutral-600: #63676e;
+  --py-neutral-700: #4c4f56;
+  --py-neutral-800: #36393e;
+  --py-neutral-900: #24262a;
+  --py-neutral-950: #141518;
+
+  /* Status. Used for availability, warnings and sync state, never decoration. */
+  --py-success-50: #eefbf3;
+  --py-success-600: #11794a;
+  --py-success-700: #0c5f3a;
+  --py-warning-50: #fdf6e7;
+  --py-warning-600: #8a5a06;
+  --py-warning-700: #6e4705;
+  --py-danger-50: #fdf2f2;
+  --py-danger-600: #b4231f;
+  --py-danger-700: #8f1a17;
+
+  /* ---------------------------------------------------------------------- */
+  /* Semantic colour roles                                                   */
+  /* ---------------------------------------------------------------------- */
+
+  --py-color-background: var(--py-neutral-0);
+  --py-color-surface: var(--py-neutral-0);
+  --py-color-surface-subtle: var(--py-neutral-50);
+  --py-color-surface-sunken: var(--py-neutral-100);
+  --py-color-surface-brand: var(--py-blue-700);
+  --py-color-surface-brand-subtle: var(--py-blue-50);
+  --py-color-surface-accent-subtle: var(--py-cyan-100);
+
+  --py-color-foreground: var(--py-neutral-900); /* 15.15:1 on white */
+  --py-color-foreground-muted: var(--py-neutral-600); /*  5.68:1 on white */
+  --py-color-foreground-on-brand: var(--py-neutral-0); /*  9.99:1 on blue-700 */
+  --py-color-foreground-brand: var(--py-blue-700); /*  9.99:1 on white */
+
+  /* Decorative rules and card edges. */
+  --py-color-border: var(--py-neutral-200);
+  --py-color-border-strong: var(--py-neutral-300);
+  /* Functional edges: inputs, checkboxes, anything the user must perceive as a
+     control. 3.65:1 on white, clearing WCAG 1.4.11. Never use --py-color-border
+     for these. */
+  --py-color-border-interactive: var(--py-neutral-500);
+
+  --py-color-primary: var(--py-blue-700);
+  --py-color-primary-hover: var(--py-blue-800);
+  --py-color-primary-active: var(--py-blue-900);
+  --py-color-primary-foreground: var(--py-neutral-0);
+
+  --py-color-focus-ring: var(--py-blue-600); /* 6.22:1 on white */
+
+  --py-color-success: var(--py-success-600);
+  --py-color-success-surface: var(--py-success-50);
+  --py-color-warning: var(--py-warning-600);
+  --py-color-warning-surface: var(--py-warning-50);
+  --py-color-danger: var(--py-danger-600);
+  --py-color-danger-surface: var(--py-danger-50);
+
+  /* ---------------------------------------------------------------------- */
+  /* Typography                                                              */
+  /* ---------------------------------------------------------------------- */
+
+  /* No webfont. The target is Core Web Vitals in the green on a midrange
+     Android over 4G, and a webfont costs a round trip plus a layout shift for
+     no benefit this brand currently needs. Swapping in a brand typeface later
+     is a one-line change here. */
+  --py-font-sans:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  --py-font-mono:
+    ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono',
+    monospace;
+
+  /* Fluid type. Each step interpolates between a 390px phone and a 1280px
+     desktop, so there are no breakpoint jumps in the reading experience. */
+  --py-text-xs: clamp(0.75rem, 0.73rem + 0.09vw, 0.8125rem);
+  --py-text-sm: clamp(0.875rem, 0.855rem + 0.09vw, 0.9375rem);
+  --py-text-base: clamp(1rem, 0.97rem + 0.13vw, 1.0625rem);
+  --py-text-lg: clamp(1.125rem, 1.08rem + 0.2vw, 1.25rem);
+  --py-text-xl: clamp(1.25rem, 1.17rem + 0.35vw, 1.5rem);
+  --py-text-2xl: clamp(1.5rem, 1.36rem + 0.6vw, 1.875rem);
+  --py-text-3xl: clamp(1.75rem, 1.5rem + 1.1vw, 2.5rem);
+  --py-text-4xl: clamp(2.125rem, 1.75rem + 1.6vw, 3.25rem);
+
+  --py-leading-tight: 1.15;
+  --py-leading-snug: 1.3;
+  --py-leading-normal: 1.55;
+  --py-leading-relaxed: 1.7;
+
+  --py-tracking-tight: -0.02em;
+  --py-tracking-normal: 0;
+
+  --py-weight-normal: 400;
+  --py-weight-medium: 500;
+  --py-weight-semibold: 600;
+  --py-weight-bold: 700;
+
+  /* Body copy never gets wider than this. Dutch runs long; 68 characters keeps
+     it readable. */
+  --py-measure: 68ch;
+
+  /* ---------------------------------------------------------------------- */
+  /* Spacing, 4px base                                                       */
+  /* ---------------------------------------------------------------------- */
+
+  --py-space-0: 0;
+  --py-space-1: 0.25rem;
+  --py-space-2: 0.5rem;
+  --py-space-3: 0.75rem;
+  --py-space-4: 1rem;
+  --py-space-5: 1.25rem;
+  --py-space-6: 1.5rem;
+  --py-space-8: 2rem;
+  --py-space-10: 2.5rem;
+  --py-space-12: 3rem;
+  --py-space-16: 4rem;
+  --py-space-20: 5rem;
+  --py-space-24: 6rem;
+
+  /* Vertical rhythm between page sections, tighter on a phone. */
+  --py-space-section: clamp(2.5rem, 1.8rem + 3vw, 4.5rem);
+  /* The side gutter. Never smaller than 16px, which is the minimum that keeps
+     text off the edge of a 390px screen. */
+  --py-space-gutter: clamp(1rem, 0.6rem + 1.8vw, 2rem);
+
+  --py-container-max: 75rem; /* 1200px */
+  --py-container-prose: 45rem; /* 720px */
+
+  /* ---------------------------------------------------------------------- */
+  /* Radius, elevation, motion                                               */
+  /* ---------------------------------------------------------------------- */
+
+  --py-radius-sm: 0.25rem;
+  --py-radius-md: 0.5rem;
+  --py-radius-lg: 0.75rem;
+  --py-radius-xl: 1rem;
+  --py-radius-full: 9999px;
+
+  --py-shadow-sm: 0 1px 2px 0 rgb(15 33 83 / 0.06);
+  --py-shadow-md: 0 2px 4px -1px rgb(15 33 83 / 0.08), 0 4px 12px -2px rgb(15 33 83 / 0.08);
+  --py-shadow-lg: 0 4px 8px -2px rgb(15 33 83 / 0.1), 0 12px 28px -4px rgb(15 33 83 / 0.12);
+
+  --py-duration-fast: 120ms;
+  --py-duration-base: 200ms;
+  --py-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Minimum hit area for anything tappable. 44px is the smallest target that
+     works reliably with a thumb. */
+  --py-tap-target-min: 2.75rem;
+
+  /* ---------------------------------------------------------------------- */
+  /* Breakpoints, documented for the PWA. CSS cannot use a custom property in  */
+  /* a media query, so these are the numbers, kept in one place on purpose.    */
+  /* ---------------------------------------------------------------------- */
+  --py-bp-sm: 480px;
+  --py-bp-md: 768px;
+  --py-bp-lg: 1024px;
+  --py-bp-xl: 1280px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --py-duration-fast: 0ms;
+    --py-duration-base: 0ms;
+  }
+}
