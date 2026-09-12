@@ -58,12 +58,16 @@ export async function generateMetadata({
       url: canonical,
       title: location.seo.title,
       description: location.seo.description,
-      images: location.photos.map((photo) => ({
-        url: photo.src,
-        width: photo.width,
-        height: photo.height,
-        alt: photo.alt,
-      })),
+      // Only real photography becomes an OpenGraph image. A placeholder would
+      // be shared into a chat or a search result as if it were the car park.
+      images: location.photos
+        .filter((photo) => !photo.placeholder)
+        .map((photo) => ({
+          url: photo.src,
+          width: photo.width,
+          height: photo.height,
+          alt: photo.alt,
+        })),
     },
   }
 }

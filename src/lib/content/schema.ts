@@ -37,6 +37,13 @@ const Photo = z.object({
   alt: z.string().min(1),
   width: z.number().int().positive(),
   height: z.number().int().positive(),
+  /**
+   * True while real photography is missing. The gallery then renders a labelled
+   * placeholder block instead of an <img>, so nobody can mistake a stand-in for
+   * a photo of the actual car park, and the repository carries no fake images.
+   * Drop the flag and point `src` at the real file when photography arrives.
+   */
+  placeholder: z.boolean().default(false),
 })
 
 /** A heading plus its paragraphs. Mirrors the H2 structure of the source copy. */

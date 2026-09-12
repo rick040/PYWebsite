@@ -132,8 +132,10 @@ for r in rows:
             'city': stad,
         },
         'photos': [
-            {'src': f'/images/locations/{slug}-1.jpg', 'alt': alt1, 'width': 1600, 'height': 1000},
-            {'src': f'/images/locations/{slug}-2.jpg', 'alt': alt2, 'width': 1600, 'height': 1000},
+            {'src': f'/images/locations/{slug}-1.jpg', 'alt': alt1,
+             'width': 1600, 'height': 1000, 'placeholder': True},
+            {'src': f'/images/locations/{slug}-2.jpg', 'alt': alt2,
+             'width': 1600, 'height': 1000, 'placeholder': True},
         ],
         'tariffs': [],
         'bookingUrl': 'https://reserveren.parkingyou.nl/',
