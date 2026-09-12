@@ -1,0 +1,41 @@
+[
+  {
+    "id": "city-eindhoven",
+    "name": "Eindhoven",
+    "slug": "eindhoven",
+    "intro": "In Eindhoven staan de garages van ParkingYou rond het centrum, op Strijp en bij het stadiongebied. Je reserveert online op kenteken, zodat je bij aankomst zo doorrijdt.",
+    "centerPoint": { "lat": 51.4416, "lng": 5.4697 },
+    "seo": {
+      "title": "Parkeren in Eindhoven | ParkingYou",
+      "description": "Goedkoop en centraal parkeren in Eindhoven. Overdekte garages rond het centrum, op Strijp en bij het stadion. Reserveer online en rijd door op kenteken."
+    },
+    "faqIds": ["faq-reserveren-kenteken", "faq-annuleren"],
+    "published": true
+  },
+  {
+    "id": "city-rotterdam",
+    "name": "Rotterdam",
+    "slug": "rotterdam",
+    "intro": "De garages van ParkingYou in Rotterdam liggen op loopafstand van de binnenstad. In het weekend en 's nachts gelden op verschillende locaties lagere maximumtarieven.",
+    "centerPoint": { "lat": 51.9225, "lng": 4.47917 },
+    "seo": {
+      "title": "Parkeren in Rotterdam | ParkingYou",
+      "description": "Centraal parkeren in Rotterdam op loopafstand van de Lijnbaan en de Koopgoot. Overdekte garages met cameratoezicht en scherpe weekendtarieven."
+    },
+    "faqIds": ["faq-reserveren-kenteken", "faq-annuleren"],
+    "published": true
+  },
+  {
+    "id": "city-amsterdam",
+    "name": "Amsterdam",
+    "slug": "amsterdam",
+    "intro": "In Amsterdam staat ParkingYou onder meer op het Cruquius-eiland en de Zeeburgerkade in Oost. Je zet de auto hier neer en gaat met het openbaar vervoer verder de stad in.",
+    "centerPoint": { "lat": 52.3676, "lng": 4.9041 },
+    "seo": {
+      "title": "Parkeren in Amsterdam | ParkingYou",
+      "description": "Overdekt parkeren in Amsterdam-Oost, met ruime doorrijhoogte en binnen 25 minuten met het ov op Amsterdam Centraal. Reserveer online op kenteken."
+    },
+    "faqIds": ["faq-reserveren-kenteken", "faq-annuleren"],
+    "published": true
+  }
+]
