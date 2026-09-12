@@ -7,6 +7,7 @@ const NAV: ReadonlyArray<{ label: string; href: string }> = [
   { label: 'Abonnementen', href: routes.subscriptions() },
   { label: 'ParkingPass', href: routes.parkingPass() },
   { label: 'Zakelijk', href: routes.business() },
+  { label: 'Veelgestelde vragen', href: routes.faq() },
   { label: 'Contact', href: routes.contact() },
 ]
 

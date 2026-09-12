@@ -38,9 +38,31 @@ reports the record counts and lists every open `{{TODO-NL: ...}}` marker.
 
 ## Files
 
-- `cities.json` — three cities, enough to support the location template's breadcrumb and footer.
-- `locations.json` — the three reference locations: Philips Stadion (Eindhoven), Hofplein
-  (Rotterdam), Cruquius (Amsterdam). All three carry `—` in the source export's "needs checking"
-  column, which is why they were chosen: their source data is internally consistent.
-- `faqs.json` — a flat collection, so the same answer can appear on a location page, a city page
+- `cities.json` — 14 cities, every city ParkingYou operates in.
+- `locations.json` — all 46 published locations, migrated from the August 2026 export.
+- `faqs.json` — 189 records, flat, so the same answer can appear on a location page, a city page
   and the general FAQ without being written three times.
+- `poi.json` — 4 POI landing pages: The Harbour Club, Philips Stadion, Artis, Diergaarde Blijdorp.
+- `news.json` — 2 articles.
+- `pages.json` — the flat pages: abonnementen, aanvragen, ParkingPass, zakelijk, over ons, contact.
+
+## Two tiers of location
+
+**Three reference locations** (Philips Stadion, Hofplein, Cruquius) are fully populated: address,
+tariffs, opening hours, clearance heights, accessibility, coordinates. They were picked because
+all three carry `—` in the source export's "needs checking" column, so their source data is
+internally consistent.
+
+**The other 43** have their real Dutch copy, H1, title tag, meta description, four FAQs and two
+alt texts, but not yet their structured facts. The schema marks those fields optional and each
+block renders only when it has content, so a page is never half a table. Phase 2 makes them
+required before a location can be published.
+
+30 of the 46 carry an `editorialNote`: a contradictory tariff, an old brand name in the title, a
+missing fact. Never shown to a visitor; Phase 2 surfaces it in the Payload admin.
+
+## How it was generated
+
+`scripts/gen/extract.py` parses the export, `scripts/gen/assemble.py` merges in the hand-built
+reference data, `scripts/gen/placeholders.py` renders the images. None of the three runs at build
+time; they are kept so the migration is reproducible and reviewable.

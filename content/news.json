@@ -1,0 +1,48 @@
+[
+  {
+    "id": "news-sms-parkeren",
+    "title": "Zorgeloos parkeren op al onze locaties met SMS Parking",
+    "slug": "sms-parkeren-op-al-onze-locaties",
+    "publishedAt": "2026-06-18",
+    "excerpt": "Op al onze locaties kun je voortaan per sms starten en stoppen met parkeren. Handig als je vooraf niet weet hoe lang je blijft.",
+    "body": [
+      {
+        "heading": "Starten en stoppen per sms",
+        "paragraphs": [
+          "Je hoeft niet meer vooraf te bepalen hoe lang je blijft staan. Met SMS Parking start je je parkeersessie bij aankomst en stop je hem als je wegrijdt. Je betaalt alleen voor de tijd dat je er echt stond.",
+          "{{TODO-NL: het sms-nummer, de startinstructie en de kosten per sms opnemen. Deze details staan in de Zendesk-omgeving en niet op de oude website.}}"
+        ]
+      }
+    ],
+    "relatedCityIds": [],
+    "relatedLocationIds": [],
+    "seo": {
+      "title": "SMS Parking op al onze locaties | ParkingYou",
+      "description": "Start en stop je parkeersessie per sms op alle ParkingYou-locaties. Je betaalt alleen voor de tijd dat je er stond."
+    },
+    "published": true
+  },
+  {
+    "id": "news-vacature-klantenservice",
+    "title": "Vacature: medewerker klantenservice, 24 tot 32 uur",
+    "slug": "vacature-medewerker-klantenservice",
+    "publishedAt": "2026-08-05",
+    "excerpt": "We zoeken een collega voor de klantenservice in Eindhoven, voor 24 tot 32 uur per week.",
+    "body": [
+      {
+        "heading": "Wat je gaat doen",
+        "paragraphs": [
+          "Als medewerker klantenservice ben je het eerste aanspreekpunt voor onze parkeerders. Je helpt mensen met reserveringen, abonnementen en vragen over in- en uitrijden, per telefoon en per mail.",
+          "{{TODO-NL: volledige vacaturetekst opnemen: functie-eisen, arbeidsvoorwaarden en sollicitatieprocedure. Nu staat alleen het aantal uren vast.}}"
+        ]
+      }
+    ],
+    "relatedCityIds": ["city-eindhoven"],
+    "relatedLocationIds": [],
+    "seo": {
+      "title": "Vacature medewerker klantenservice | ParkingYou",
+      "description": "ParkingYou zoekt een medewerker klantenservice in Eindhoven voor 24 tot 32 uur per week."
+    },
+    "published": true
+  }
+]
