@@ -1,0 +1,130 @@
+[
+  {
+    "id": "poi-harbour-club",
+    "name": "The Harbour Club",
+    "slug": "the-harbour-club",
+    "cityId": "city-amsterdam",
+    "poiType": "restaurant",
+    "coordinates": { "lat": 52.3704, "lng": 4.9415 },
+    "intro": "Ga je uit eten bij The Harbour Club of naar een voorstelling in The Harbour Club Theater? Dan parkeer je op het Cruquius-eiland op één minuut lopen van de deur, overdekt en voor een vast tarief.",
+    "body": [
+      {
+        "heading": "Parkeren op loopafstand",
+        "paragraphs": [
+          "The Harbour Club zit aan de Cruquiusweg op het Cruquius-eiland, in Amsterdam-Oost. In de straten eromheen is betaald parkeren schaars en duur, zeker op vrijdag- en zaterdagavond. Parking Cruquius ligt direct naast het pand, dus je loopt in ongeveer een minuut van je auto naar de ingang.",
+          "De garage is overdekt en heeft camerabewaking, een lift en toegang voor rolstoelgebruikers. In- en uitrijden kan 24 uur per dag, dus of je nu vroeg aanschuift of laat weggaat, je komt er altijd uit."
+        ]
+      },
+      {
+        "heading": "'s Avonds de helft goedkoper",
+        "paragraphs": [
+          "Na 21.00 uur betaal je € 1,30 per 30 minuten in plaats van € 2,60. Op zondag geldt dat lage tarief de hele dag. Kom je 's avonds eten, dan scheelt dat flink."
+        ]
+      },
+      {
+        "heading": "Ook handig voor de buurt",
+        "paragraphs": [
+          "Vanaf dezelfde garage loop je naar Museum Perron Oost en de Entrepothaven. Wil je daarna nog de stad in, dan sta je met het openbaar vervoer binnen 25 minuten op Amsterdam Centraal."
+        ]
+      }
+    ],
+    "locationIds": ["loc-cruquius"],
+    "faqIds": ["faq-cruquius-1", "faq-cruquius-2"],
+    "seo": {
+      "title": "Parkeren bij The Harbour Club Amsterdam | ParkingYou",
+      "description": "Overdekt parkeren op één minuut lopen van The Harbour Club in Amsterdam-Oost. Na 21.00 uur en op zondag betaal je het halve tarief."
+    },
+    "published": true
+  },
+  {
+    "id": "poi-philips-stadion",
+    "name": "Philips Stadion",
+    "slug": "philips-stadion",
+    "cityId": "city-eindhoven",
+    "poiType": "stadion",
+    "coordinates": { "lat": 51.4417, "lng": 5.4674 },
+    "intro": "Naar een wedstrijd of een concert in het Philips Stadion? Let op: de garage bij het stadion is op die dagen juist gesloten. Hieronder lees je waar je op speeldagen wel terecht kunt.",
+    "body": [
+      {
+        "heading": "Op wedstrijddagen niet bij het stadion",
+        "paragraphs": [
+          "Dit is de fout die het vaakst gemaakt wordt. Parking Philips Stadion aan de Anton Philipslaan is tijdens wedstrijden en grote evenementen niet bereikbaar, ook niet voor abonnementhouders. Rijd je daar toch heen, dan sta je voor een dichte slagboom."
+        ]
+      },
+      {
+        "heading": "Waar je op speeldagen wel staat",
+        "paragraphs": [
+          "Op speeldagen gebruik je onze locaties in de omgeving van het stadion. Vanaf daar loop je in een kwartier naar het stadion, en na afloop rijd je weg zonder in de grootste drukte te staan.",
+          "{{TODO-NL: bevestigen welke locaties op wedstrijddagen open zijn en wat het wedstrijdtarief is. In Aeroparker bestaan producten voor Champions League, Eredivisie en KNVB, maar welke locatie bij welk evenement hoort staat nergens vast.}}"
+        ]
+      },
+      {
+        "heading": "Buiten wedstrijddagen",
+        "paragraphs": [
+          "Op alle andere dagen is Parking Philips Stadion een van de ruimste garages van Eindhoven: 700 overdekte plaatsen, waardoor je vrijwel altijd een plek vindt. Handig voor een afspraak in het stadiongebied, op Strijp of bij de kantoren rond de Frederiklaan."
+        ]
+      }
+    ],
+    "locationIds": ["loc-philips-stadion", "loc-philips-bedrijfsschool"],
+    "faqIds": ["faq-philips-stadion-1", "faq-philips-stadion-4"],
+    "seo": {
+      "title": "Parkeren bij het Philips Stadion Eindhoven | ParkingYou",
+      "description": "Op wedstrijddagen is de garage bij het Philips Stadion gesloten. Lees waar je dan wel parkeert, en wat de garage op gewone dagen kost."
+    },
+    "published": true
+  },
+  {
+    "id": "poi-artis",
+    "name": "Artis",
+    "slug": "artis",
+    "cityId": "city-amsterdam",
+    "poiType": "dierentuin",
+    "coordinates": { "lat": 52.3667, "lng": 4.9145 },
+    "intro": "Naar Artis met de auto? In de Plantagebuurt is straatparkeren duur en vaak vol. Bij Parking Plantage staat je auto overdekt, op loopafstand van de ingang, met een apart tarief voor Artis-bezoekers.",
+    "body": [
+      {
+        "heading": "Een vast bedrag in plaats van de parkeermeter",
+        "paragraphs": [
+          "Artis-bezoekers betalen bij Parking Plantage € 17,50 voor een dagkaart. Ben je Artis-lid, dan is dat € 15. Je weet dus vooraf wat een dagje dierentuin je aan parkeren kost, in plaats van steeds bij te moeten betalen bij de meter."
+        ]
+      },
+      {
+        "heading": "Loopafstand tot de ingang",
+        "paragraphs": [
+          "{{TODO-NL: exacte loopafstand van Parking Plantage naar de ingang van Artis opnemen, in minuten.}}"
+        ]
+      }
+    ],
+    "locationIds": ["loc-plantage"],
+    "faqIds": ["faq-plantage-1"],
+    "seo": {
+      "title": "Parkeren bij Artis Amsterdam | ParkingYou",
+      "description": "Overdekt parkeren op loopafstand van Artis. Bezoekers betalen € 17,50 voor een dagkaart, Artis-leden € 15."
+    },
+    "published": true
+  },
+  {
+    "id": "poi-diergaarde-blijdorp",
+    "name": "Diergaarde Blijdorp",
+    "slug": "diergaarde-blijdorp",
+    "cityId": "city-rotterdam",
+    "poiType": "dierentuin",
+    "coordinates": { "lat": 51.9271, "lng": 4.4462 },
+    "intro": "Ga je naar Diergaarde Blijdorp? Bij ParkingYou zet je de auto overdekt neer en loop je naar de ingang, zonder rondjes te rijden over een volle bezoekersparkeerplaats.",
+    "body": [
+      {
+        "heading": "Parkeren bij de diergaarde",
+        "paragraphs": [
+          "{{TODO-NL: deze pagina heeft de tarieven, de loopafstand en de openingstijden van Parking Diergaarde Blijdorp nodig. Die staan nog niet op de bronpagina.}}"
+        ]
+      }
+    ],
+    "locationIds": ["loc-diergaarde-blijdorp"],
+    "faqIds": [],
+    "seo": {
+      "title": "Parkeren bij Diergaarde Blijdorp Rotterdam | ParkingYou",
+      "description": "Overdekt parkeren op loopafstand van Diergaarde Blijdorp in Rotterdam. Reserveer online op kenteken en rijd zo door."
+    },
+    "published": true
+  }
+]

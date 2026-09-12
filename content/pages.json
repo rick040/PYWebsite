@@ -1,0 +1,210 @@
+[
+  {
+    "id": "page-abonnementen",
+    "slug": "abonnementen",
+    "h1": "Parkeerabonnementen",
+    "intro": "Sta je elke dag op dezelfde plek? Met een abonnement betaal je een vast bedrag per maand en rijd je in en uit zonder na te denken over tarieven.",
+    "sections": [
+      {
+        "heading": "Hoe het werkt",
+        "paragraphs": [
+          "Je kiest de locatie waar je wilt staan en het type abonnement dat bij je past. Na je aanvraag krijg je een toegangsmiddel: een pas, een tag of een handzender. Daarmee rijd je in en uit."
+        ],
+        "bullets": [
+          "Minimale looptijd van drie maanden",
+          "Daarna opzegbaar met één kalendermaand opzegtermijn",
+          "Vast bedrag per maand, geen verrassingen bij de slagboom"
+        ]
+      },
+      {
+        "heading": "Welke soorten er zijn",
+        "paragraphs": [
+          "Op de meeste locaties kun je kiezen tussen een kantoorabonnement, voor doordeweekse kantooruren, en een 24/7-abonnement waarmee je er altijd in kunt. Op sommige locaties bestaat daarnaast een avond- en weekendabonnement, en op enkele adressen een bewonersabonnement voor bewoners van het complex.",
+          "De prijs verschilt per locatie. Bij Parking Hofplein in Rotterdam kost een kantoorabonnement bijvoorbeeld € 280 per maand en 24/7-toegang € 330 per maand; bij Parking Philips Stadion in Eindhoven is dat € 135 en € 160."
+        ]
+      },
+      {
+        "heading": "Waar het kan",
+        "paragraphs": [
+          "Abonnementen zijn beschikbaar op locaties in Amsterdam, Rotterdam, Eindhoven, Rijswijk, Den Haag, Utrecht, Tilburg en Schiedam. Achttien van onze locaties zijn zelfs uitsluitend voor abonnees; daar is geen los uur- of dagtarief."
+        ]
+      }
+    ],
+    "cta": { "label": "Abonnement aanvragen", "href": "/abonnementen/aanvragen" },
+    "faqIds": ["faq-abonnement-opzeggen", "faq-reserveren-kenteken"],
+    "seo": {
+      "title": "Parkeerabonnement in Amsterdam, Rotterdam en Eindhoven | ParkingYou",
+      "description": "Een vast bedrag per maand op je eigen parkeerlocatie. Minimale looptijd drie maanden, daarna opzegbaar per kalendermaand."
+    },
+    "published": true
+  },
+  {
+    "id": "page-abonnement-aanvragen",
+    "slug": "abonnementen/aanvragen",
+    "h1": "Abonnement aanvragen",
+    "intro": "Laat weten op welke locatie je wilt staan en welk abonnement je zoekt. We nemen contact met je op over de beschikbaarheid en de voorwaarden.",
+    "sections": [
+      {
+        "heading": "Wat we van je nodig hebben",
+        "paragraphs": [
+          "Om je aanvraag te kunnen beoordelen hebben we een paar dingen nodig."
+        ],
+        "bullets": [
+          "De locatie waar je wilt parkeren",
+          "Het type abonnement: kantoor, 24/7, avond en weekend, of bewoner",
+          "De gewenste ingangsdatum",
+          "Je kenteken, naam en contactgegevens"
+        ]
+      },
+      {
+        "heading": "Het aanvraagformulier",
+        "paragraphs": [
+          "{{TODO-NL: het aanvraagformulier moet nog gebouwd worden. Eerst moet vastliggen waar de aanvraag naartoe gaat: naar Aeroparker, naar Zendesk, of naar een mailbox. Zolang dat niet vastligt, staat hier het telefoonnummer en het mailadres van de klantenservice.}}",
+          "Bel ons in de tussentijd op 040 8200 956 of mail naar info@parkingyou.nl."
+        ]
+      }
+    ],
+    "faqIds": ["faq-abonnement-opzeggen"],
+    "seo": {
+      "title": "Parkeerabonnement aanvragen | ParkingYou",
+      "description": "Vraag een parkeerabonnement aan op een van onze locaties. Geef je locatie, abonnementsvorm en ingangsdatum door."
+    },
+    "published": true
+  },
+  {
+    "id": "page-parkingpass",
+    "slug": "parkingpass",
+    "h1": "ParkingPass",
+    "intro": "Sta je regelmatig op dezelfde plek, maar niet elke dag? Met een ParkingPass koop je tien of vijfentwintig parkeerdagen vooruit tegen een lager tarief.",
+    "sections": [
+      {
+        "heading": "Voor wie het bedoeld is",
+        "paragraphs": [
+          "Een abonnement is voordelig als je er elke werkdag staat. Een losse dagkaart is prima als je er één keer komt. Zit je daartussenin, bijvoorbeeld twee of drie dagen per week op kantoor, dan is de ParkingPass meestal de goedkoopste optie."
+        ]
+      },
+      {
+        "heading": "Wat het kost",
+        "paragraphs": [
+          "De prijs verschilt per locatie. Bij Parking Cruquius in Amsterdam kost tien dagen € 190 en vijfentwintig dagen € 450; bij Parking Hofplein in Rotterdam kost tien dagen € 200. Dat komt neer op € 19 tot € 20 per dag, tegenover € 25 tot € 30 voor een losse dagkaart.",
+          "De ParkingPass is beschikbaar in Eindhoven, Amsterdam, Rotterdam en Rijswijk."
+        ]
+      },
+      {
+        "heading": "Hoe je hem gebruikt",
+        "paragraphs": [
+          "Je krijgt een reserveringscode die je een vast aantal keren kunt gebruiken, tien of vijfentwintig. Bij elke parkeersessie gaat er één dag van je saldo af.",
+          "{{TODO-NL: geldigheidsduur van een ParkingPass opnemen. Verloopt het saldo na een bepaalde periode, of blijft het onbeperkt geldig?}}"
+        ]
+      }
+    ],
+    "cta": { "label": "Bekijk onze locaties", "href": "/locaties" },
+    "faqIds": ["faq-parkingpass", "faq-goedkoper-reserveren"],
+    "seo": {
+      "title": "ParkingPass: tien of vijfentwintig parkeerdagen | ParkingYou",
+      "description": "Koop tien of vijfentwintig parkeerdagen vooruit tegen een lager tarief. Beschikbaar in Eindhoven, Amsterdam, Rotterdam en Rijswijk."
+    },
+    "published": true
+  },
+  {
+    "id": "page-zakelijk",
+    "slug": "zakelijk",
+    "h1": "Zakelijk parkeren",
+    "intro": "Parkeren voor je medewerkers, je bezoekers of je hele pand. En als je zelf parkeerruimte bezit: wij nemen de exploitatie over.",
+    "sections": [
+      {
+        "heading": "Parkeren voor je medewerkers",
+        "paragraphs": [
+          "Met zakelijke abonnementen zet je een vast aantal plekken vast op de locatie die het dichtst bij je kantoor ligt. Je krijgt één factuur in plaats van bonnetjes, en je medewerkers rijden in en uit op kenteken."
+        ]
+      },
+      {
+        "heading": "Parkeren voor je bezoekers",
+        "paragraphs": [
+          "Komen er regelmatig klanten of gasten langs, dan kun je waardekaarten bestellen. Je bezoeker parkeert daarmee zonder zelf af te rekenen, en jij betaalt achteraf voor wat er gebruikt is."
+        ]
+      },
+      {
+        "heading": "Je eigen parkeerruimte laten exploiteren",
+        "paragraphs": [
+          "ParkingYou beheert, exploiteert en transformeert bestaande en nieuwe parkeerlocaties. Staat je garage of terrein een deel van de dag leeg, dan kunnen wij die capaciteit verhuren en het beheer overnemen, zodat jij je met andere dingen bezig kunt houden.",
+          "We doen dit inmiddels op meer dan vijftig parkeerlocaties in Nederland."
+        ]
+      },
+      {
+        "heading": "Contact",
+        "paragraphs": [
+          "Bel 040 8200 956 of mail naar info@parkingyou.nl en vertel kort wat je zoekt. Dan kijken we samen wat er mogelijk is."
+        ]
+      }
+    ],
+    "cta": { "label": "Neem contact op", "href": "/contact" },
+    "faqIds": [],
+    "seo": {
+      "title": "Zakelijk parkeren en parkeerbeheer | ParkingYou",
+      "description": "Parkeerabonnementen voor medewerkers, waardekaarten voor bezoekers, en exploitatie van je eigen parkeerruimte. Meer dan vijftig locaties in Nederland."
+    },
+    "published": true
+  },
+  {
+    "id": "page-over-ons",
+    "slug": "over-ons",
+    "h1": "Over ParkingYou",
+    "intro": "ParkingYou beheert en exploiteert parkeerlocaties in heel Nederland. Elk jaar gebruiken meer dan vijfhonderdduizend parkeerders onze garages.",
+    "sections": [
+      {
+        "heading": "Wat we doen",
+        "paragraphs": [
+          "We maken bestaande parkeerruimte beter benut. Een kantoorgarage die na zessen leegstaat, een parkeerdek dat in het weekend niets doet: daar maken wij plekken van die je vooraf kunt reserveren, tegen een tarief dat je van tevoren kent.",
+          "Voor eigenaren betekent dat meer rendement uit vierkante meters die er toch al liggen. Voor parkeerders betekent het een centrale plek voor minder geld dan op straat."
+        ]
+      },
+      {
+        "heading": "Waar we staan",
+        "paragraphs": [
+          "Onze locaties liggen in Eindhoven, Rotterdam, Amsterdam, Zoetermeer, Almere, Heerhugowaard, Utrecht, Tilburg, Den Haag, Rijswijk, Schiedam, Dordrecht, Nijmegen en Ede."
+        ]
+      }
+    ],
+    "cta": { "label": "Bekijk onze locaties", "href": "/locaties" },
+    "faqIds": [],
+    "seo": {
+      "title": "Over ParkingYou | ParkingYou",
+      "description": "ParkingYou beheert en exploiteert parkeerlocaties in heel Nederland. Meer dan vijfhonderdduizend parkeerders per jaar."
+    },
+    "published": true
+  },
+  {
+    "id": "page-contact",
+    "slug": "contact",
+    "h1": "Contact",
+    "intro": "Vragen over een reservering, een abonnement of een factuur? Bel of mail ons, we helpen je graag verder.",
+    "sections": [
+      {
+        "heading": "Klantenservice",
+        "paragraphs": [
+          "Bel 040 8200 956 of mail naar info@parkingyou.nl.",
+          "{{TODO-NL: openingstijden van de klantenservice opnemen.}}"
+        ]
+      },
+      {
+        "heading": "Bezoekadres",
+        "paragraphs": [
+          "ParkingYou B.V., Victoriapark 4, 5611 BM Eindhoven."
+        ]
+      },
+      {
+        "heading": "Storing of een dichte slagboom",
+        "paragraphs": [
+          "Kom je er op locatie niet in of niet uit, gebruik dan de intercom bij de slagboom. Daarmee krijg je direct iemand aan de lijn die op afstand kan meekijken."
+        ]
+      }
+    ],
+    "faqIds": ["faq-reserveren-kenteken", "faq-annuleren"],
+    "seo": {
+      "title": "Contact | ParkingYou",
+      "description": "Bel 040 8200 956 of mail info@parkingyou.nl. ParkingYou B.V., Victoriapark 4, 5611 BM Eindhoven."
+    },
+    "published": true
+  }
+]

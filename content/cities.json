@@ -1,41 +1,268 @@
 [
   {
-    "id": "city-eindhoven",
-    "name": "Eindhoven",
-    "slug": "eindhoven",
-    "intro": "In Eindhoven staan de garages van ParkingYou rond het centrum, op Strijp en bij het stadiongebied. Je reserveert online op kenteken, zodat je bij aankomst zo doorrijdt.",
-    "centerPoint": { "lat": 51.4416, "lng": 5.4697 },
-    "seo": {
-      "title": "Parkeren in Eindhoven | ParkingYou",
-      "description": "Goedkoop en centraal parkeren in Eindhoven. Overdekte garages rond het centrum, op Strijp en bij het stadion. Reserveer online en rijd door op kenteken."
+    "id": "city-almere",
+    "name": "Almere",
+    "slug": "almere",
+    "intro": "In Almere heeft ParkingYou twee overdekte garages bij het WTC, op een paar minuten lopen van het centrum.",
+    "centerPoint": {
+      "lat": 52.3508,
+      "lng": 5.2647
     },
-    "faqIds": ["faq-reserveren-kenteken", "faq-annuleren"],
-    "published": true
-  },
-  {
-    "id": "city-rotterdam",
-    "name": "Rotterdam",
-    "slug": "rotterdam",
-    "intro": "De garages van ParkingYou in Rotterdam liggen op loopafstand van de binnenstad. In het weekend en 's nachts gelden op verschillende locaties lagere maximumtarieven.",
-    "centerPoint": { "lat": 51.9225, "lng": 4.47917 },
     "seo": {
-      "title": "Parkeren in Rotterdam | ParkingYou",
-      "description": "Centraal parkeren in Rotterdam op loopafstand van de Lijnbaan en de Koopgoot. Overdekte garages met cameratoezicht en scherpe weekendtarieven."
+      "title": "Parkeren in Almere | ParkingYou",
+      "description": "2 parkeerlocaties van ParkingYou in Almere. Reserveer online op kenteken en rijd zo door."
     },
-    "faqIds": ["faq-reserveren-kenteken", "faq-annuleren"],
+    "faqIds": [
+      "faq-reserveren-kenteken",
+      "faq-goedkoper-reserveren"
+    ],
     "published": true
   },
   {
     "id": "city-amsterdam",
     "name": "Amsterdam",
     "slug": "amsterdam",
-    "intro": "In Amsterdam staat ParkingYou onder meer op het Cruquius-eiland en de Zeeburgerkade in Oost. Je zet de auto hier neer en gaat met het openbaar vervoer verder de stad in.",
-    "centerPoint": { "lat": 52.3676, "lng": 4.9041 },
+    "intro": "In Amsterdam staat ParkingYou vooral in Oost, op het Cruquius-eiland en de Zeeburgerkade, en in West aan het Bos en Lommerplantsoen. Je zet de auto hier neer en gaat met het openbaar vervoer verder de stad in.",
+    "centerPoint": {
+      "lat": 52.3676,
+      "lng": 4.9041
+    },
     "seo": {
       "title": "Parkeren in Amsterdam | ParkingYou",
-      "description": "Overdekt parkeren in Amsterdam-Oost, met ruime doorrijhoogte en binnen 25 minuten met het ov op Amsterdam Centraal. Reserveer online op kenteken."
+      "description": "6 parkeerlocaties van ParkingYou in Amsterdam. Reserveer online op kenteken en rijd zo door."
     },
-    "faqIds": ["faq-reserveren-kenteken", "faq-annuleren"],
+    "faqIds": [
+      "faq-reserveren-kenteken",
+      "faq-goedkoper-reserveren"
+    ],
+    "published": true
+  },
+  {
+    "id": "city-den-haag",
+    "name": "Den Haag",
+    "slug": "den-haag",
+    "intro": "In Den Haag staat ParkingYou aan de Stationsweg in Ypenburg, handig als je de auto wilt neerzetten en met het openbaar vervoer verder wilt.",
+    "centerPoint": {
+      "lat": 52.0705,
+      "lng": 4.3007
+    },
+    "seo": {
+      "title": "Parkeren in Den Haag | ParkingYou",
+      "description": "1 parkeerlocatie van ParkingYou in Den Haag. Reserveer online op kenteken en rijd zo door."
+    },
+    "faqIds": [
+      "faq-reserveren-kenteken",
+      "faq-goedkoper-reserveren"
+    ],
+    "published": true
+  },
+  {
+    "id": "city-dordrecht",
+    "name": "Dordrecht",
+    "slug": "dordrecht",
+    "intro": "In Dordrecht parkeer je bij ParkingYou in garage De Holland, op loopafstand van de historische binnenstad.",
+    "centerPoint": {
+      "lat": 51.8133,
+      "lng": 4.6901
+    },
+    "seo": {
+      "title": "Parkeren in Dordrecht | ParkingYou",
+      "description": "1 parkeerlocatie van ParkingYou in Dordrecht. Reserveer online op kenteken en rijd zo door."
+    },
+    "faqIds": [
+      "faq-reserveren-kenteken",
+      "faq-goedkoper-reserveren"
+    ],
+    "published": true
+  },
+  {
+    "id": "city-ede",
+    "name": "Ede",
+    "slug": "ede",
+    "intro": "In Ede staat ParkingYou bij Pathé, handig voor een filmbezoek of een avond in het centrum.",
+    "centerPoint": {
+      "lat": 52.0402,
+      "lng": 5.6649
+    },
+    "seo": {
+      "title": "Parkeren in Ede | ParkingYou",
+      "description": "1 parkeerlocatie van ParkingYou in Ede. Reserveer online op kenteken en rijd zo door."
+    },
+    "faqIds": [
+      "faq-reserveren-kenteken",
+      "faq-goedkoper-reserveren"
+    ],
+    "published": true
+  },
+  {
+    "id": "city-eindhoven",
+    "name": "Eindhoven",
+    "slug": "eindhoven",
+    "intro": "Eindhoven is de thuisbasis van ParkingYou. De garages liggen rond het centrum, op Strijp en in het stadiongebied, met op drukke dagen aparte locaties voor wedstrijden en evenementen.",
+    "centerPoint": {
+      "lat": 51.4416,
+      "lng": 5.4697
+    },
+    "seo": {
+      "title": "Parkeren in Eindhoven | ParkingYou",
+      "description": "16 parkeerlocaties van ParkingYou in Eindhoven. Reserveer online op kenteken en rijd zo door."
+    },
+    "faqIds": [
+      "faq-reserveren-kenteken",
+      "faq-goedkoper-reserveren"
+    ],
+    "published": true
+  },
+  {
+    "id": "city-heerhugowaard",
+    "name": "Heerhugowaard",
+    "slug": "heerhugowaard",
+    "intro": "In Heerhugowaard heeft ParkingYou twee locaties bij Middenwaard, op loopafstand van de winkels.",
+    "centerPoint": {
+      "lat": 52.67,
+      "lng": 4.83
+    },
+    "seo": {
+      "title": "Parkeren in Heerhugowaard | ParkingYou",
+      "description": "2 parkeerlocaties van ParkingYou in Heerhugowaard. Reserveer online op kenteken en rijd zo door."
+    },
+    "faqIds": [
+      "faq-reserveren-kenteken",
+      "faq-goedkoper-reserveren"
+    ],
+    "published": true
+  },
+  {
+    "id": "city-nijmegen",
+    "name": "Nijmegen",
+    "slug": "nijmegen",
+    "intro": "In Nijmegen parkeer je bij ParkingYou aan de Lentse Plas, aan de noordkant van de stad.",
+    "centerPoint": {
+      "lat": 51.8126,
+      "lng": 5.8372
+    },
+    "seo": {
+      "title": "Parkeren in Nijmegen | ParkingYou",
+      "description": "1 parkeerlocatie van ParkingYou in Nijmegen. Reserveer online op kenteken en rijd zo door."
+    },
+    "faqIds": [
+      "faq-reserveren-kenteken",
+      "faq-goedkoper-reserveren"
+    ],
+    "published": true
+  },
+  {
+    "id": "city-rijswijk",
+    "name": "Rijswijk",
+    "slug": "rijswijk",
+    "intro": "In Rijswijk staat ParkingYou bij At the Park, op loopafstand van de kantoren in de omgeving.",
+    "centerPoint": {
+      "lat": 52.0365,
+      "lng": 4.3247
+    },
+    "seo": {
+      "title": "Parkeren in Rijswijk | ParkingYou",
+      "description": "1 parkeerlocatie van ParkingYou in Rijswijk. Reserveer online op kenteken en rijd zo door."
+    },
+    "faqIds": [
+      "faq-reserveren-kenteken",
+      "faq-goedkoper-reserveren"
+    ],
+    "published": true
+  },
+  {
+    "id": "city-rotterdam",
+    "name": "Rotterdam",
+    "slug": "rotterdam",
+    "intro": "De garages van ParkingYou in Rotterdam liggen op loopafstand van de binnenstad. Op verschillende locaties geldt in het weekend en ’s nachts een lager maximumtarief.",
+    "centerPoint": {
+      "lat": 51.9225,
+      "lng": 4.4792
+    },
+    "seo": {
+      "title": "Parkeren in Rotterdam | ParkingYou",
+      "description": "5 parkeerlocaties van ParkingYou in Rotterdam. Reserveer online op kenteken en rijd zo door."
+    },
+    "faqIds": [
+      "faq-reserveren-kenteken",
+      "faq-goedkoper-reserveren"
+    ],
+    "published": true
+  },
+  {
+    "id": "city-schiedam",
+    "name": "Schiedam",
+    "slug": "schiedam",
+    "intro": "In Schiedam heeft ParkingYou een P+R bij Schiedam Centrum: je zet de auto neer en reist met de metro door naar Rotterdam.",
+    "centerPoint": {
+      "lat": 51.9194,
+      "lng": 4.3889
+    },
+    "seo": {
+      "title": "Parkeren in Schiedam | ParkingYou",
+      "description": "1 parkeerlocatie van ParkingYou in Schiedam. Reserveer online op kenteken en rijd zo door."
+    },
+    "faqIds": [
+      "faq-reserveren-kenteken",
+      "faq-goedkoper-reserveren"
+    ],
+    "published": true
+  },
+  {
+    "id": "city-tilburg",
+    "name": "Tilburg",
+    "slug": "tilburg",
+    "intro": "In Tilburg parkeer je bij ParkingYou aan de zuidkant van het centrum, op loopafstand van de winkels.",
+    "centerPoint": {
+      "lat": 51.5555,
+      "lng": 5.0913
+    },
+    "seo": {
+      "title": "Parkeren in Tilburg | ParkingYou",
+      "description": "1 parkeerlocatie van ParkingYou in Tilburg. Reserveer online op kenteken en rijd zo door."
+    },
+    "faqIds": [
+      "faq-reserveren-kenteken",
+      "faq-goedkoper-reserveren"
+    ],
+    "published": true
+  },
+  {
+    "id": "city-utrecht",
+    "name": "Utrecht",
+    "slug": "utrecht",
+    "intro": "In Utrecht staat ParkingYou aan de Vliegend Hertlaan, net buiten het centrum. Je reserveert online op kenteken en rijdt zo door.",
+    "centerPoint": {
+      "lat": 52.0907,
+      "lng": 5.1214
+    },
+    "seo": {
+      "title": "Parkeren in Utrecht | ParkingYou",
+      "description": "1 parkeerlocatie van ParkingYou in Utrecht. Reserveer online op kenteken en rijd zo door."
+    },
+    "faqIds": [
+      "faq-reserveren-kenteken",
+      "faq-goedkoper-reserveren"
+    ],
+    "published": true
+  },
+  {
+    "id": "city-zoetermeer",
+    "name": "Zoetermeer",
+    "slug": "zoetermeer",
+    "intro": "Zoetermeer is de stad met de meeste ParkingYou-locaties buiten Eindhoven. De garages liggen verspreid rond het Stadshart en het Woonhart.",
+    "centerPoint": {
+      "lat": 52.0575,
+      "lng": 4.4931
+    },
+    "seo": {
+      "title": "Parkeren in Zoetermeer | ParkingYou",
+      "description": "7 parkeerlocaties van ParkingYou in Zoetermeer. Reserveer online op kenteken en rijd zo door."
+    },
+    "faqIds": [
+      "faq-reserveren-kenteken",
+      "faq-goedkoper-reserveren"
+    ],
     "published": true
   }
 ]

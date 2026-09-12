@@ -3,14 +3,23 @@ import type { z } from 'zod'
 import citiesJson from '@content/cities.json'
 import faqsJson from '@content/faqs.json'
 import locationsJson from '@content/locations.json'
+import newsJson from '@content/news.json'
+import pagesJson from '@content/pages.json'
+import poiJson from '@content/poi.json'
 
 import {
   CitiesFileSchema,
   FaqsFileSchema,
   LocationsFileSchema,
+  NewsFileSchema,
+  PagesFileSchema,
+  PoisFileSchema,
   type City,
   type Faq,
+  type FlatPage,
   type Location,
+  type NewsArticle,
+  type Poi,
 } from './schema'
 
 /**
@@ -37,6 +46,9 @@ function parseOrThrow<S extends z.ZodType>(label: string, schema: S, data: unkno
 const cities: City[] = parseOrThrow('content/cities.json', CitiesFileSchema, citiesJson)
 const locations: Location[] = parseOrThrow('content/locations.json', LocationsFileSchema, locationsJson)
 const faqs: Faq[] = parseOrThrow('content/faqs.json', FaqsFileSchema, faqsJson)
+const pois: Poi[] = parseOrThrow('content/poi.json', PoisFileSchema, poiJson)
+const news: NewsArticle[] = parseOrThrow('content/news.json', NewsFileSchema, newsJson)
+const pages: FlatPage[] = parseOrThrow('content/pages.json', PagesFileSchema, pagesJson)
 
 /** Referential integrity the schemas cannot express on their own. */
 function assertRelationships(): void {
@@ -60,6 +72,38 @@ function assertRelationships(): void {
       if (!faqIds.has(faqId)) {
         problems.push(`City "${city.id}" points at unknown FAQ "${faqId}"`)
       }
+    }
+  }
+
+  const locationIds = new Set(locations.map((location) => location.id))
+  for (const poi of pois) {
+    if (!cityIds.has(poi.cityId)) {
+      problems.push(`POI "${poi.id}" points at unknown city "${poi.cityId}"`)
+    }
+    for (const id of poi.locationIds) {
+      if (!locationIds.has(id)) {
+        problems.push(`POI "${poi.id}" points at unknown location "${id}"`)
+      }
+    }
+    for (const id of poi.faqIds) {
+      if (!faqIds.has(id)) problems.push(`POI "${poi.id}" points at unknown FAQ "${id}"`)
+    }
+  }
+
+  for (const article of news) {
+    for (const id of article.relatedCityIds) {
+      if (!cityIds.has(id)) problems.push(`News "${article.id}" points at unknown city "${id}"`)
+    }
+    for (const id of article.relatedLocationIds) {
+      if (!locationIds.has(id)) {
+        problems.push(`News "${article.id}" points at unknown location "${id}"`)
+      }
+    }
+  }
+
+  for (const page of pages) {
+    for (const id of page.faqIds) {
+      if (!faqIds.has(id)) problems.push(`Page "${page.id}" points at unknown FAQ "${id}"`)
     }
   }
 
@@ -139,4 +183,67 @@ export function getAllLocationParams(): ReadonlyArray<{ stad: string; locatie: s
   })
 }
 
-export type { City, Faq, Location } from './schema'
+export function getPois(): readonly Poi[] {
+  return pois.filter((poi) => poi.published)
+}
+
+export function getPoi(citySlug: string, poiSlug: string): Poi | undefined {
+  const city = getCityBySlug(citySlug)
+  if (city === undefined) return undefined
+  return getPois().find((poi) => poi.cityId === city.id && poi.slug === poiSlug)
+}
+
+/** POI pages that link to this location. Generated, so it cannot go stale. */
+export function getPoisForLocation(locationId: string): readonly Poi[] {
+  return getPois().filter((poi) => poi.locationIds.includes(locationId))
+}
+
+export function getPoisByCityId(cityId: string): readonly Poi[] {
+  return getPois().filter((poi) => poi.cityId === cityId)
+}
+
+export function getLocationsByIds(ids: readonly string[]): readonly Location[] {
+  const byId = new Map(getLocations().map((location) => [location.id, location]))
+  return ids.flatMap((id) => {
+    const location = byId.get(id)
+    return location === undefined ? [] : [location]
+  })
+}
+
+export function getAllPoiParams(): ReadonlyArray<{ stad: string; poi: string }> {
+  return getPois().flatMap((poi) => {
+    const city = getCityById(poi.cityId)
+    return city === undefined ? [] : [{ stad: city.slug, poi: poi.slug }]
+  })
+}
+
+export function getNews(): readonly NewsArticle[] {
+  return news
+    .filter((article) => article.published)
+    .toSorted((a, b) => b.publishedAt.localeCompare(a.publishedAt))
+}
+
+export function getNewsArticle(slug: string): NewsArticle | undefined {
+  return getNews().find((article) => article.slug === slug)
+}
+
+export function getPage(slug: string): FlatPage | undefined {
+  return pages.find((page) => page.published && page.slug === slug)
+}
+
+/** Every FAQ marked for the general FAQ page, grouped by category. */
+export function getGeneralFaqs(): readonly Faq[] {
+  return faqs.filter((faq) => faq.published && faq.showOnGeneralFaq)
+}
+
+/** The city URL for a location, resolved through its relationship. */
+export function getCityForLocation(location: Location): City | undefined {
+  return getCityById(location.cityId)
+}
+
+export type { City, Faq, FlatPage, Location, NewsArticle, Poi } from './schema'
+
+/** Slugs of every published flat page, for generateStaticParams. */
+export function getPageSlugs(): readonly string[] {
+  return pages.filter((page) => page.published).map((page) => page.slug)
+}

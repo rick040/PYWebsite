@@ -34,14 +34,23 @@ npx tsx scripts/screenshots.ts        # 390px and 1280px, into screenshots/
 
 ## Current state
 
-Phase 1 in progress. The scaffold, the design tokens and the location template exist; the
-remaining templates do not yet.
+Phase 1 complete on the templates. 78 statically generated pages: 46 locations, 14 cities,
+4 POI landing pages, 6 flat pages, the locations hub, the FAQ, news, and the home page.
 
-| Route | Status |
+| Route | What it is |
 | --- | --- |
-| `/parkeren/{stad}/{locatie}` | Built. The reference template |
-| `/` | Thin placeholder so the prototype is navigable |
-| `/locaties`, `/parkeren/{stad}`, `/parkeren-bij/...`, `/abonnementen`, `/zakelijk`, `/veelgestelde-vragen`, `/nieuws`, `/contact` | Not built yet |
+| `/` | Home |
+| `/locaties` | The hub: all 46 locations grouped by city |
+| `/parkeren/{stad}` | City page, 14 of them |
+| `/parkeren/{stad}/{locatie}` | Location page, the reference template, 46 of them |
+| `/parkeren-bij/{stad}/{poi}` | POI landing page, 4 of them |
+| `/abonnementen`, `/abonnementen/aanvragen`, `/parkingpass`, `/zakelijk`, `/over-ons`, `/contact` | Flat pages, one catch-all route |
+| `/veelgestelde-vragen` | General FAQ |
+| `/nieuws`, `/nieuws/{slug}` | News |
+
+Still missing: real photography, and the structured facts (address, tariffs, opening hours) for
+43 of the 46 locations. Both are tracked as `{{TODO-NL}}` markers; run `npm run content:validate`
+to list them.
 
 | Document | What it covers |
 | --- | --- |

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 import { Breadcrumbs } from '@/components/location/breadcrumbs'
@@ -6,7 +7,11 @@ import { BookingCta, StickyBookingBar } from '@/components/location/booking-cta'
 import { FaqBlock } from '@/components/location/faq-block'
 import { LocationMap } from '@/components/location/location-map'
 import { PhotoGallery } from '@/components/location/photo-gallery'
-import { AccessibilityFacts, RouteAndAccess } from '@/components/location/practical-info'
+import {
+  AccessibilityFacts,
+  hasPracticalInfo,
+  RouteAndAccess,
+} from '@/components/location/practical-info'
 import { RelatedLocations } from '@/components/location/related-locations'
 import { TariffTable } from '@/components/location/tariff-table'
 import { Badge } from '@/components/ui/card'
@@ -15,6 +20,7 @@ import {
   getCityById,
   getFaqsByIds,
   getLocation,
+  getPoisForLocation,
   getSiblingLocations,
 } from '@/lib/content'
 import { absoluteUrl, routes } from '@/lib/routes'
@@ -83,6 +89,7 @@ export default async function LocationPage({ params }: { params: Promise<PagePar
 
   const faqs = getFaqsByIds(location.faqIds)
   const siblings = getSiblingLocations(location)
+  const pois = getPoisForLocation(location.id)
 
   return (
     <article className="py-container flex flex-col gap-[var(--py-space-section)] py-[var(--py-space-6)]">
@@ -159,13 +166,15 @@ export default async function LocationPage({ params }: { params: Promise<PagePar
         <BookingCta location={location} className="lg:hidden" />
       </section>
 
-      <section aria-labelledby="praktisch" className="flex flex-col gap-[var(--py-space-6)]">
-        <h2 id="praktisch" className="text-2xl">
-          Praktische informatie
-        </h2>
-        <AccessibilityFacts location={location} />
-        <RouteAndAccess location={location} />
-      </section>
+      {hasPracticalInfo(location) && (
+        <section aria-labelledby="praktisch" className="flex flex-col gap-[var(--py-space-6)]">
+          <h2 id="praktisch" className="text-2xl">
+            Praktische informatie
+          </h2>
+          <AccessibilityFacts location={location} />
+          <RouteAndAccess location={location} />
+        </section>
+      )}
 
       <section aria-labelledby="kaart" className="flex flex-col gap-[var(--py-space-4)]">
         <h2 id="kaart" className="text-2xl">
@@ -175,6 +184,23 @@ export default async function LocationPage({ params }: { params: Promise<PagePar
       </section>
 
       <FaqBlock faqs={faqs} title={`Veelgestelde vragen over ${location.name}`} />
+
+      {pois.length > 0 && (
+        <section aria-labelledby="bestemmingen" className="flex flex-col gap-[var(--py-space-3)]">
+          <h2 id="bestemmingen" className="text-2xl">
+            In de buurt
+          </h2>
+          <ul className="flex flex-col gap-[var(--py-space-2)]">
+            {pois.map((poi) => (
+              <li key={poi.id}>
+                <Link href={routes.poi(city, poi.slug)} className="text-foreground-brand">
+                  Parkeren bij {poi.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <RelatedLocations city={city} locations={siblings} />
 

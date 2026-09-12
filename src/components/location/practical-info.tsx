@@ -12,76 +12,87 @@ function List({ items }: { items: readonly string[] }) {
   )
 }
 
+function Block({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
+  return (
+    <section aria-labelledby={id}>
+      <h3 id={id} className="mb-[var(--py-space-3)] text-lg font-[var(--py-weight-semibold)]">
+        {title}
+      </h3>
+      {children}
+    </section>
+  )
+}
+
+/**
+ * Every block renders only when it has content. 43 of the 46 locations have
+ * their Dutch copy but not yet their structured facts, and an empty "Inrijden"
+ * heading with nothing under it is worse than no heading at all.
+ */
 export function RouteAndAccess({ location }: { location: Location }) {
+  const blocks = [
+    location.routeDescription.length > 0,
+    location.openingHours !== undefined,
+    location.entryInstructions.length > 0,
+    location.exitInstructions.length > 0,
+  ]
+  if (!blocks.some(Boolean)) return null
+
   return (
     <div className="grid gap-[var(--py-space-6)] md:grid-cols-2">
-      <section aria-labelledby="route">
-        <h3 id="route" className="mb-[var(--py-space-3)] text-lg font-[var(--py-weight-semibold)]">
-          Route en bereikbaarheid
-        </h3>
-        <List items={location.routeDescription} />
-      </section>
+      {location.routeDescription.length > 0 && (
+        <Block id="route" title="Route en bereikbaarheid">
+          <List items={location.routeDescription} />
+        </Block>
+      )}
 
-      <section aria-labelledby="openingstijden">
-        <h3
-          id="openingstijden"
-          className="mb-[var(--py-space-3)] text-lg font-[var(--py-weight-semibold)]"
-        >
-          Openingstijden
-        </h3>
-        <Card>
-          <table className="w-full border-collapse text-left">
-            <caption className="sr-only">{`Openingstijden van ${location.name}`}</caption>
-            <tbody>
-              {location.openingHours.map((hours) => (
-                <tr key={hours.day} className="border-b border-border last:border-b-0">
-                  <th
-                    scope="row"
-                    className={[
-                      'px-[var(--py-space-4)] py-[var(--py-space-2)]',
-                      'font-[var(--py-weight-normal)] capitalize',
-                    ].join(' ')}
-                  >
-                    {formatDayName(hours.day)}
-                  </th>
-                  <td className="px-[var(--py-space-4)] py-[var(--py-space-2)] text-right">
-                    {formatOpeningHours(hours)}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </Card>
-      </section>
+      {location.openingHours !== undefined && (
+        <Block id="openingstijden" title="Openingstijden">
+          <Card>
+            <table className="w-full border-collapse text-left">
+              <caption className="sr-only">{`Openingstijden van ${location.name}`}</caption>
+              <tbody>
+                {location.openingHours.map((hours) => (
+                  <tr key={hours.day} className="border-b border-border last:border-b-0">
+                    <th
+                      scope="row"
+                      className={[
+                        'px-[var(--py-space-4)] py-[var(--py-space-2)]',
+                        'font-[var(--py-weight-normal)] capitalize',
+                      ].join(' ')}
+                    >
+                      {formatDayName(hours.day)}
+                    </th>
+                    <td className="px-[var(--py-space-4)] py-[var(--py-space-2)] text-right">
+                      {formatOpeningHours(hours)}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </Card>
+        </Block>
+      )}
 
-      <section aria-labelledby="inrijden">
-        <h3
-          id="inrijden"
-          className="mb-[var(--py-space-3)] text-lg font-[var(--py-weight-semibold)]"
-        >
-          Inrijden
-        </h3>
-        <List items={location.entryInstructions} />
-      </section>
+      {location.entryInstructions.length > 0 && (
+        <Block id="inrijden" title="Inrijden">
+          <List items={location.entryInstructions} />
+        </Block>
+      )}
 
-      <section aria-labelledby="uitrijden">
-        <h3
-          id="uitrijden"
-          className="mb-[var(--py-space-3)] text-lg font-[var(--py-weight-semibold)]"
-        >
-          Uitrijden
-        </h3>
-        <List items={location.exitInstructions} />
-      </section>
+      {location.exitInstructions.length > 0 && (
+        <Block id="uitrijden" title="Uitrijden">
+          <List items={location.exitInstructions} />
+        </Block>
+      )}
     </div>
   )
 }
 
 export function AccessibilityFacts({ location }: { location: Location }) {
-  const { accessibility: a } = location
+  const a = location.accessibility
 
   const facts: ReadonlyArray<{ label: string; value: string }> = [
-    ...(a.maxHeightMeters !== undefined
+    ...(a?.maxHeightMeters !== undefined
       ? [
           {
             label: 'Doorrijhoogte',
@@ -103,12 +114,18 @@ export function AccessibilityFacts({ location }: { location: Location }) {
           },
         ]
       : []),
-    { label: 'Overdekt', value: a.covered ? 'Ja' : 'Nee' },
-    { label: 'Lift', value: a.hasElevator ? 'Ja' : 'Nee' },
-    { label: 'Rolstoeltoegankelijk', value: a.wheelchairAccessible ? 'Ja' : 'Nee' },
-    { label: 'Cameratoezicht', value: a.cameraSurveillance ? 'Ja' : 'Nee' },
-    { label: 'Laadpaal', value: a.evCharging ? 'Ja' : 'Nee' },
+    ...(a === undefined
+      ? []
+      : [
+          { label: 'Overdekt', value: a.covered ? 'Ja' : 'Nee' },
+          { label: 'Lift', value: a.hasElevator ? 'Ja' : 'Nee' },
+          { label: 'Rolstoeltoegankelijk', value: a.wheelchairAccessible ? 'Ja' : 'Nee' },
+          { label: 'Cameratoezicht', value: a.cameraSurveillance ? 'Ja' : 'Nee' },
+          { label: 'Laadpaal', value: a.evCharging ? 'Ja' : 'Nee' },
+        ]),
   ]
+
+  if (facts.length === 0) return null
 
   return (
     <Card>
@@ -123,5 +140,18 @@ export function AccessibilityFacts({ location }: { location: Location }) {
         </dl>
       </CardBody>
     </Card>
+  )
+}
+
+/** True when the practical section has anything at all to show. */
+export function hasPracticalInfo(location: Location): boolean {
+  return (
+    location.accessibility !== undefined ||
+    location.capacity !== undefined ||
+    location.walkingDistanceToCenterMinutes !== undefined ||
+    location.openingHours !== undefined ||
+    location.routeDescription.length > 0 ||
+    location.entryInstructions.length > 0 ||
+    location.exitInstructions.length > 0
   )
 }

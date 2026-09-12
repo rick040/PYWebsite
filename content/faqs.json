@@ -8,82 +8,199 @@
     "published": true
   },
   {
+    "id": "faq-goedkoper-reserveren",
+    "question": "Is reserveren goedkoper dan betalen bij de slagboom?",
+    "answer": "Ja. Op vrijwel al onze locaties is een gereserveerde dagkaart goedkoper dan het losse dagtarief, en wie ruim vooraf boekt betaalt het minst.",
+    "category": "betalen",
+    "showOnGeneralFaq": true,
+    "published": true
+  },
+  {
     "id": "faq-annuleren",
     "question": "Kan ik mijn reservering annuleren?",
-    "answer": "{{TODO-NL: annuleringsvoorwaarden opvragen bij klantenservice. De oude site verwijst hiervoor naar Zendesk en noemt geen termijn.}}",
+    "answer": "{{TODO-NL: annuleringsvoorwaarden opvragen bij de klantenservice. De oude site verwijst hiervoor naar Zendesk en noemt geen termijn.}}",
     "category": "reserveren",
     "showOnGeneralFaq": true,
     "published": true
   },
-
   {
-    "id": "faq-psv-wedstrijd",
-    "question": "Kan ik hier parkeren tijdens een PSV-wedstrijd?",
-    "answer": "Nee. Tijdens wedstrijden en grote evenementen in het Philips Stadion is deze garage niet bereikbaar, ook niet voor abonnementhouders. Bekijk dan onze wedstrijdlocaties in de omgeving.",
-    "category": "toegang",
-    "showOnGeneralFaq": false,
+    "id": "faq-abonnement-opzeggen",
+    "question": "Hoe lang loopt een parkeerabonnement?",
+    "answer": "Een abonnement loopt minimaal drie maanden. Daarna zeg je op met een opzegtermijn van één kalendermaand.",
+    "category": "abonnementen",
+    "showOnGeneralFaq": true,
     "published": true
   },
   {
-    "id": "faq-psv-plaatsen",
-    "question": "Hoeveel parkeerplaatsen zijn er?",
-    "answer": "De garage heeft 700 overdekte parkeerplaatsen, waardoor er buiten wedstrijddagen bijna altijd plek is.",
+    "id": "faq-parkingpass",
+    "question": "Wat is een ParkingPass?",
+    "answer": "Met een ParkingPass koop je tien of vijfentwintig parkeersessies vooruit tegen een lager tarief. Handig als je regelmatig op dezelfde locatie staat, maar niet elke dag.",
+    "category": "parkingpass",
+    "showOnGeneralFaq": true,
+    "published": true
+  },
+  {
+    "id": "faq-p1-carlton-wtc-1",
+    "question": "Wat kost kort parkeren?",
+    "answer": "€ 1,00 per 20 minuten. Voor een hele dag geldt een dagtarief van € 30, dan is Parking P2 Mandela WTC met € 6 per dag voordeliger.",
     "category": "overig",
     "showOnGeneralFaq": false,
     "published": true
   },
   {
-    "id": "faq-psv-dagkaart",
+    "id": "faq-p1-carlton-wtc-2",
+    "question": "Moet ik vooraf reserveren?",
+    "answer": "Nee, je kunt direct inrijden.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p1-carlton-wtc-3",
+    "question": "Hoe ver is het lopen naar het centrum?",
+    "answer": "Ongeveer vier minuten.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p1-carlton-wtc-4",
+    "question": "Welke garage kies ik voor een hele dag?",
+    "answer": "Parking P2 Mandela WTC om de hoek, met een dagtarief van € 6.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p2-mandela-wtc-1",
+    "question": "Wat kost een dag parkeren in het centrum van Almere?",
+    "answer": "Bij P2 Mandela WTC betaal je maximaal € 6 per dag. Je tarief is € 1,00 per 20 minuten tot je het dagtarief bereikt.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p2-mandela-wtc-2",
+    "question": "Moet ik reserveren?",
+    "answer": "Nee, je kunt direct inrijden. Je kenteken wordt bij de slagboom herkend.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p2-mandela-wtc-3",
+    "question": "Hoe ver is het lopen naar het centrum?",
+    "answer": "Ongeveer vier minuten.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p2-mandela-wtc-4",
+    "question": "Is de garage 's nachts open?",
+    "answer": "Ja, in- en uitrijden kan 24 uur per dag, zeven dagen per week.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-b-amsterdam-b2-1",
+    "question": "Kan ik hier als bezoeker parkeren?",
+    "answer": "Alleen als je vooraf bent aangemeld. De garage zelf is voor abonnees; het bezoekersgedeelte werkt op aanmelding.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-b-amsterdam-b2-2",
+    "question": "Wat kost een abonnement?",
+    "answer": "€ 238,97 per maand, of € 246,86 inclusief € 5 servicekosten.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-b-amsterdam-b2-3",
+    "question": "Wat is de doorrijhoogte?",
+    "answer": "2,00 meter. Rijd je hoger, gebruik dan Parking B. Amsterdam (B1) met 2,40 meter.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-b-amsterdam-b2-4",
+    "question": "Waar kan ik in de buurt zonder aanmelding parkeren?",
+    "answer": "Bij Parking B. Amsterdam (B1) aan de Johan Huizingalaan. Daar rijd je direct in en betaal je maximaal € 15 per dag.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-b-amsterdam-b1-1",
+    "question": "Wat kost een dag parkeren?",
+    "answer": "Je betaalt € 2,50 per uur met een maximum van € 15 per dag.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-b-amsterdam-b1-2",
+    "question": "Moet ik vooraf reserveren?",
+    "answer": "Nee, bij deze garage kun je direct inrijden. Je kenteken wordt bij de slagboom herkend.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-b-amsterdam-b1-3",
+    "question": "Wat is de doorrijhoogte?",
+    "answer": "2,40 meter, wat deze garage geschikt maakt voor bestelbussen, hoge SUV's en auto's met dakkoffer.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-b-amsterdam-b1-4",
+    "question": "Kan ik parkeren voor mijn bezoekers regelen?",
+    "answer": "Ja, bedrijven kunnen waardekaarten bestellen. Neem daarvoor contact met ons op.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-bos-en-lommerplantsoen-1",
+    "question": "Hoe kom ik vanaf hier in het centrum?",
+    "answer": "Met de tram sta je in ongeveer vijftien minuten in het centrum van Amsterdam, zonder overstappen.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-bos-en-lommerplantsoen-2",
     "question": "Wat kost een dagkaart?",
-    "answer": "Zonder reservering € 15. Reserveer je online vooraf, dan betaal je € 12,50 voor een hele dag.",
-    "category": "betalen",
+    "answer": "€ 17,50 zonder reservering, € 16 met reservering en € 14 als je ruim vooraf boekt.",
+    "category": "overig",
     "showOnGeneralFaq": false,
     "published": true
   },
   {
-    "id": "faq-psv-openingstijden",
-    "question": "Is de garage 24 uur per dag open?",
-    "answer": "Ja, in- en uitrijden kan zeven dagen per week, de klok rond, behalve op dagen met een wedstrijd of groot evenement in het stadion.",
-    "category": "toegang",
-    "showOnGeneralFaq": false,
-    "published": true
-  },
-
-  {
-    "id": "faq-hofplein-weekend",
-    "question": "Wat kost parkeren in het weekend?",
-    "answer": "Op zaterdag en zondag geldt een maximumtarief van € 15 voor een hele dag.",
-    "category": "betalen",
+    "id": "faq-bos-en-lommerplantsoen-3",
+    "question": "Wie komt in aanmerking voor het bewonersabonnement?",
+    "answer": "Alleen bewoners van het appartementencomplex aan het Bos en Lommerplantsoen. Andere bewoners van de buurt kunnen het 24/7-abonnement afnemen.",
+    "category": "overig",
     "showOnGeneralFaq": false,
     "published": true
   },
   {
-    "id": "faq-hofplein-nacht",
-    "question": "Is er een nachttarief?",
-    "answer": "Ja, tussen 00.00 en 09.00 uur betaal je maximaal € 15.",
-    "category": "betalen",
+    "id": "faq-bos-en-lommerplantsoen-4",
+    "question": "Kan ik hier elektrisch laden?",
+    "answer": "Ja, er zijn laadpunten voor elektrische auto's aanwezig.",
+    "category": "overig",
     "showOnGeneralFaq": false,
     "published": true
   },
   {
-    "id": "faq-hofplein-reserveren",
-    "question": "Hoeveel scheelt online reserveren?",
-    "answer": "Op werkdagen kost een dagkaart € 30 zonder reservering, € 25 met reservering en € 20 bij vroeg boeken.",
-    "category": "reserveren",
-    "showOnGeneralFaq": false,
-    "published": true
-  },
-  {
-    "id": "faq-hofplein-werkzaamheden",
-    "question": "Is de garage bereikbaar tijdens de wegwerkzaamheden?",
-    "answer": "Ja. Rond de garage vinden werkzaamheden plaats, maar de garage is altijd bereikbaar. Volg de borden ter plaatse.",
-    "category": "toegang",
-    "showOnGeneralFaq": false,
-    "published": true
-  },
-
-  {
-    "id": "faq-cruquius-harbour-club",
+    "id": "faq-cruquius-1",
     "question": "Hoe ver is het lopen naar The Harbour Club?",
     "answer": "Ongeveer één minuut. De garage ligt vlak naast The Harbour Club en het Harbour Club Theater.",
     "category": "overig",
@@ -91,25 +208,1305 @@
     "published": true
   },
   {
-    "id": "faq-cruquius-doorrijhoogte",
+    "id": "faq-cruquius-2",
     "question": "Wat is de doorrijhoogte?",
     "answer": "2,70 meter op de bovenste niveaus. Op niveau -2 is dat 2,14 meter.",
-    "category": "toegang",
+    "category": "overig",
     "showOnGeneralFaq": false,
     "published": true
   },
   {
-    "id": "faq-cruquius-zondag",
+    "id": "faq-cruquius-3",
     "question": "Is parkeren op zondag goedkoper?",
     "answer": "Ja. Op zondag geldt de hele dag het lage tarief van € 1,30 per 30 minuten, net als op andere dagen tussen 21.00 en 09.00 uur.",
-    "category": "betalen",
+    "category": "overig",
     "showOnGeneralFaq": false,
     "published": true
   },
   {
-    "id": "faq-cruquius-centrum",
+    "id": "faq-cruquius-4",
     "question": "Hoe kom ik vanaf hier in het centrum?",
     "answer": "Met het openbaar vervoer sta je binnen 25 minuten op Amsterdam Centraal.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-plantage-1",
+    "question": "Wat kost parkeren bij Artis?",
+    "answer": "Artis-bezoekers betalen € 17,50 voor een dagkaart. Ben je Artis-lid, dan is dat € 15. Overige bezoekers betalen het reguliere tarief.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-plantage-2",
+    "question": "Hoe ver is het lopen naar de ingang van Artis?",
+    "answer": "De parking ligt direct naast Artis, dus je staat vrijwel meteen bij de ingang.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-plantage-3",
+    "question": "Is er 's avonds een goedkoper tarief?",
+    "answer": "Ja. Tussen 18.00 en 09.00 uur betaal je € 22 in plaats van het dagtarief.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-plantage-4",
+    "question": "Kan ik hier mijn autoban­den oppompen?",
+    "answer": "Ja, op de locatie mag je gratis gebruikmaken van de luchtpomp.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-zeeburgerkade-1",
+    "question": "Wat is de doorrijhoogte?",
+    "answer": "2,10 meter. Rijd je een hogere auto, dan kun je bij Parking Cruquius in de buurt terecht met 2,70 meter.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-zeeburgerkade-2",
+    "question": "Hoe ver is het naar het centrum van Amsterdam?",
+    "answer": "Ongeveer 4,5 kilometer tot de Dam. Met de bus sta je binnen een half uur op Amsterdam Centraal.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-zeeburgerkade-3",
+    "question": "Wat kost een dagkaart?",
+    "answer": "€ 25 zonder reservering, € 22,50 met reservering en € 17,50 als je ruim vooraf boekt.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-zeeburgerkade-4",
+    "question": "Is er een AED aanwezig?",
+    "answer": "Ja, in de garage hangt een hartdefibrillator.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-stationsweg-ypenburg-1",
+    "question": "Wat kost parkeren als ik naar de bioscoop ga?",
+    "answer": "Bioscoopbezoekers betalen € 4,75 voor de eerste vier uur.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-stationsweg-ypenburg-2",
+    "question": "Hoe ver is het lopen naar het station?",
+    "answer": "De parking ligt direct naast station Ypenburg.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-stationsweg-ypenburg-3",
+    "question": "Tot hoe laat is de parking open?",
+    "answer": "Van 07.00 tot 01.00 uur. Kom je later terug, dan kun je je auto vanaf 07.00 uur weer ophalen.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-stationsweg-ypenburg-4",
+    "question": "Wat is de doorrijhoogte?",
+    "answer": "2,24 meter, ruim genoeg voor SUV's en auto's met een dakkoffer.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-de-holland-1",
+    "question": "Wat kost een vaste parkeerplaats in Dordrecht?",
+    "answer": "€ 101,80 per maand voor een 24/7-abonnement. Bewoners van de directe omgeving betalen € 85 per maand.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-de-holland-2",
+    "question": "Kan ik hier eenmalig parkeren?",
+    "answer": "Nee, deze locatie is alleen toegankelijk voor abonnees. Er is geen uur- of dagtarief.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-de-holland-3",
+    "question": "Hoe ver is het naar het station?",
+    "answer": "Zeven minuten lopen naar Dordrecht Centraal.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-de-holland-4",
+    "question": "Kom ik in aanmerking voor het bewonerstarief?",
+    "answer": "Dat hangt af van je adres. Neem contact met ons op en we kijken het voor je na.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-pathe-1",
+    "question": "Wat kost parkeren bij Pathé Ede?",
+    "answer": "Bioscoopbezoekers betalen € 4,50 voor maximaal vier uur. Daarbuiten geldt € 0,85 per 20 minuten met een maximum van € 17,50 per dag.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-pathe-2",
+    "question": "Kan ik vooraf een plek reserveren?",
+    "answer": "Nee, bij deze locatie is reserveren niet mogelijk. Je rijdt direct in en betaalt bij het uitrijden.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-pathe-3",
+    "question": "Tot hoe laat is de parking open?",
+    "answer": "Elke dag vanaf 8.30 uur tot na afloop van de laatste film.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-pathe-4",
+    "question": "Hoe rijd ik ernaartoe?",
+    "answer": "De parking ligt vlak bij de afrit van de A12, aan de Laan der Verenigde Naties.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-bd7-1",
+    "question": "Wat kost een vaste parkeerplaats bij BD7?",
+    "answer": "€ 90 per maand, inclusief € 5 servicekosten.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-bd7-2",
+    "question": "Kan ik hier eenmalig parkeren?",
+    "answer": "Nee, BD7 is uitsluitend voor abonnees. Voor losse uren of dagkaarten kun je bij onze publieke garages in Eindhoven terecht.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-bd7-3",
+    "question": "Is de locatie 's nachts toegankelijk?",
+    "answer": "Ja, je kunt 24 uur per dag, zeven dagen per week in- en uitrijden.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-bd7-4",
+    "question": "Hoe vraag ik een abonnement aan?",
+    "answer": "Online via onze abonnementenpagina. Je kiest de locatie, vult je gegevens in en ontvangt daarna je toegangsmiddel.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-city-tower-1",
+    "question": "Wat is de doorrijhoogte bij City Tower?",
+    "answer": "1,95 meter. Dat is de laagste van onze Eindhovense locaties, rijd je hoger, kies dan het DLL-parkeerdek (2,50 m) of Cornelis Paradise (2,33 m).",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-city-tower-2",
+    "question": "Wat kost een abonnement?",
+    "answer": "€ 120 per maand, inclusief € 5 servicekosten.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-city-tower-3",
+    "question": "Wat ligt er in de buurt?",
+    "answer": "De Woenselse Markt, Eindhoven Centraal en het Beursgebouw liggen op korte afstand.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-city-tower-4",
+    "question": "Kan ik hier los parkeren?",
+    "answer": "Nee, de garage is uitsluitend toegankelijk voor abonnees.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-cornelis-paradise-1",
+    "question": "Wat is de doorrijhoogte?",
+    "answer": "2,33 meter, een van de hoogste van onze centrumlocaties in Eindhoven, dus ook geschikt voor hogere auto's en kleine bestelbussen.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-cornelis-paradise-2",
+    "question": "Kan ik hier elektrisch laden?",
+    "answer": "Ja, de garage beschikt over laadpunten voor elektrische auto's.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-cornelis-paradise-3",
+    "question": "Wat kost een abonnement?",
+    "answer": "€ 135 per maand, inclusief € 5 servicekosten.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-cornelis-paradise-4",
+    "question": "Kan ik hier per uur parkeren?",
+    "answer": "Nee, alleen abonnees kunnen hier terecht. Op hetzelfde plein ligt Parking TD-gebouw, waar je wel per uur of per dag kunt parkeren.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-dll-garage-1",
+    "question": "Wanneer is de DLL-garage open?",
+    "answer": "Van maandag tot en met vrijdag kun je tussen 17.00 en 06.00 uur naar binnen. Tijdens kantooruren is de garage voorbehouden aan medewerkers van het gebouw.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-dll-garage-2",
+    "question": "Wat kost een dag parkeren in de DLL-garage?",
+    "answer": "Een dagkaart kost € 15 zonder reservering en € 14 met reservering. Boek je ruim vooraf, dan betaal je vanaf € 12.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-dll-garage-3",
+    "question": "Hoe hoog mag mijn auto zijn?",
+    "answer": "De doorrijhoogte is 2,05 meter. Is je auto hoger, gebruik dan het DLL-parkeerdek aan hetzelfde adres: daar is 2,50 meter mogelijk.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-dll-garage-4",
+    "question": "Hoe ver is het lopen naar het centrum?",
+    "answer": "Je staat op ongeveer vier minuten lopen van het Stadhuisplein en de uitgaansstraten in het centrum van Eindhoven.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-dll-parkeerdek-1",
+    "question": "Wat is het verschil met de DLL-garage?",
+    "answer": "Het parkeerdek is de bovenste, open laag met een doorrijhoogte van 2,50 meter. De garage eronder is overdekt, maar heeft een doorrijhoogte van 2,05 meter.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-dll-parkeerdek-2",
+    "question": "Kan ik hier met een bestelbus parkeren?",
+    "answer": "Ja. Met 2,50 meter doorrijhoogte passen de meeste bestelbussen, hoge SUV's en auto's met dakkoffer op het dek.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-dll-parkeerdek-3",
+    "question": "Vanaf welk tijdstip kan ik inrijden?",
+    "answer": "Van maandag tot en met vrijdag tussen 17.00 en 06.00 uur. Tijdens kantooruren is het dek in gebruik door medewerkers van het gebouw.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-dll-parkeerdek-4",
+    "question": "Sta ik hier overdekt?",
+    "answer": "Nee, het parkeerdek ligt in de open lucht. Wil je overdekt parkeren, kies dan de DLL-garage op hetzelfde adres.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-evoluon-1",
+    "question": "Hoe ver is het lopen naar de ingang van het Evoluon?",
+    "answer": "Ongeveer twee minuten. Het parkeerterrein ligt op het terrein van het Evoluon zelf.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-evoluon-2",
+    "question": "Wat kost een dag parkeren bij het Evoluon?",
+    "answer": "€ 10 zonder reservering en € 9 als je online vooraf reserveert.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-evoluon-3",
+    "question": "Hoe rijd ik naar de parking?",
+    "answer": "Neem afslag 30 vanaf de snelweg. De inrit van het terrein ligt aan de kant van de Beukenlaan.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-evoluon-4",
+    "question": "Zijn er genoeg plaatsen tijdens een evenement?",
+    "answer": "De parking heeft 350 plaatsen. Bij grote evenementen adviseren we toch online te reserveren, dan is je plek zeker.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-hoog-bergen-1",
+    "question": "Wat kost een abonnement bij Hoog Bergen?",
+    "answer": "€ 120 per maand, inclusief € 5 servicekosten.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-hoog-bergen-2",
+    "question": "Kan ik hier als bezoeker parkeren?",
+    "answer": "Nee, de locatie is alleen toegankelijk voor abonnees. Bezoekers kunnen terecht bij onze publieke garages in het centrum van Eindhoven.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-hoog-bergen-3",
+    "question": "Hoe ver is het naar het centrum?",
+    "answer": "De wijk Bergen ligt op loopafstand van het centrum en het Stratumseind.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-hoog-bergen-4",
+    "question": "Wanneer kan ik in- en uitrijden?",
+    "answer": "24 uur per dag, zeven dagen per week.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-hoog-stratum-1",
+    "question": "Wat kost een vaste plek bij Hoog Stratum?",
+    "answer": "€ 140 per maand, inclusief € 5 servicekosten.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-hoog-stratum-2",
+    "question": "Is deze locatie toegankelijk voor bezoekers?",
+    "answer": "Nee, alleen abonnees kunnen hier naar binnen. Voor kort parkeren verwijzen we je naar onze publieke garages in het centrum.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-hoog-stratum-3",
+    "question": "Hoe ver is het naar het centrum van Eindhoven?",
+    "answer": "Stratum grenst aan de ring rond het centrum; lopend of fietsend ben je er in een paar minuten.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-hoog-stratum-4",
+    "question": "Kan ik het abonnement maandelijks opzeggen?",
+    "answer": "Na een minimale looptijd van drie maanden kun je met één maand opzegtermijn stoppen.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-lichttoren-1",
+    "question": "Wat kost een vaste plek bij de Lichttoren?",
+    "answer": "€ 205 per maand, inclusief € 5 servicekosten. Het is onze meest centraal gelegen abonnementslocatie in Eindhoven.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-lichttoren-2",
+    "question": "Wat is de doorrijhoogte?",
+    "answer": "2,05 meter. Rijd je hoger, kijk dan naar het DLL-parkeerdek met 2,50 meter.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-lichttoren-3",
+    "question": "Sta ik hier overdekt?",
+    "answer": "Ja, het is een overdekte parkeergarage in het Lichttoren-gebouw.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-lichttoren-4",
+    "question": "Kan ik hier per uur parkeren?",
+    "answer": "Nee, deze garage is uitsluitend voor abonnees. Voor kort parkeren in het centrum verwijzen we je naar onze publieke locaties.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-mauritsstraat-1",
+    "question": "Wat kost een vaste plek aan de Mauritsstraat?",
+    "answer": "€ 145 per maand, inclusief € 5 servicekosten.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-mauritsstraat-2",
+    "question": "Kan ik hier als bezoeker terecht?",
+    "answer": "Nee, de locatie is alleen voor abonnees. Voor kort parkeren in het centrum kun je terecht bij de DLL-garage of Parking Onyx.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-mauritsstraat-3",
+    "question": "Is de locatie 's nachts toegankelijk?",
+    "answer": "Ja, abonnees kunnen 24 uur per dag in- en uitrijden.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-mauritsstraat-4",
+    "question": "Zijn er goedkopere vaste plekken in Eindhoven?",
+    "answer": "Ja. Aan de Beukenlaan betaal je € 85 per maand en aan de Boschdijk € 90, beide iets verder van het centrum.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-onyx-1",
+    "question": "Wat kost 's nachts parkeren bij Parking Onyx?",
+    "answer": "Tussen 18.00 en 08.00 uur betaal je € 1,00 per uur met een maximum van € 5 per nacht.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-onyx-2",
+    "question": "Hoe ver is het lopen naar het centrum?",
+    "answer": "In ongeveer zeven minuten sta je in hartje Eindhoven. Het Philips Museum ligt op vier minuten lopen.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-onyx-3",
+    "question": "Zijn de eerste uren echt gratis?",
+    "answer": "Bij een bezoek aan een van de aangesloten bedrijven in het gebouw zijn de eerste twee uur gratis. Bij de Jumbo is het eerste half uur gratis.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-onyx-4",
+    "question": "Kan ik hier elektrisch laden?",
+    "answer": "Ja, op de locatie zijn laadpunten voor elektrische auto's aanwezig.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-paradijslaan-1",
+    "question": "Hoe ver is het naar het stadhuis?",
+    "answer": "Het stadhuis en het Stadhuisplein liggen op een paar minuten lopen van de parking.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-paradijslaan-2",
+    "question": "Wat kost een abonnement aan de Paradijslaan?",
+    "answer": "€ 135 per maand, inclusief € 5 servicekosten.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-paradijslaan-3",
+    "question": "Kan ik hier een dagkaart kopen?",
+    "answer": "Nee, deze locatie is alleen voor abonnees. Voor een dagkaart in het centrum kun je terecht bij de DLL-garage of Parking Onyx.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-paradijslaan-4",
+    "question": "Is de parking 24 uur per dag toegankelijk?",
+    "answer": "Ja, abonnees kunnen dag en nacht in- en uitrijden.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-philips-bedrijfsschool-1",
+    "question": "Wat kost parkeren 's avonds?",
+    "answer": "Tussen 21.00 en 09.00 uur betaal je € 0,65 per 20 minuten. Tussen 09.00 en 21.00 uur is dat € 1,30 per 20 minuten.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-philips-bedrijfsschool-2",
+    "question": "Hoe ver is het lopen naar Strijp-S?",
+    "answer": "Het Klokgebouw en de Cultuurhallen op Strijp-S liggen op een paar minuten lopen. Naar het centrum van Eindhoven loop je ongeveer tien minuten.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-philips-bedrijfsschool-3",
+    "question": "Kan ik hier parkeren tijdens een PSV-wedstrijd?",
+    "answer": "Nee. Tijdens wedstrijden en grote evenementen in het Philips Stadion is deze locatie niet beschikbaar.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-philips-bedrijfsschool-4",
+    "question": "Wat is de goedkoopste manier om hier vaker te parkeren?",
+    "answer": "Met een ParkingPass: tien dagen voor € 90 of vijfentwintig dagen voor € 200. Dat komt neer op € 8 tot € 9 per dag.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-philips-stadion-1",
+    "question": "Kan ik hier parkeren tijdens een PSV-wedstrijd?",
+    "answer": "Nee. Tijdens wedstrijden en grote evenementen in het Philips Stadion is deze garage niet bereikbaar, ook niet voor abonnementhouders. Bekijk dan onze wedstrijdlocaties in de omgeving.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-philips-stadion-2",
+    "question": "Hoeveel parkeerplaatsen zijn er?",
+    "answer": "De garage heeft 700 overdekte parkeerplaatsen, waardoor er buiten wedstrijddagen bijna altijd plek is.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-philips-stadion-3",
+    "question": "Wat kost een dagkaart?",
+    "answer": "Zonder reservering € 15. Reserveer je online vooraf, dan betaal je € 12,50 voor een hele dag.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-philips-stadion-4",
+    "question": "Is de garage 24 uur per dag open?",
+    "answer": "Ja, in- en uitrijden kan zeven dagen per week, de klok rond, behalve op dagen met een wedstrijd of groot evenement in het stadion.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-td-gebouw-1",
+    "question": "Hoe ver is het lopen naar het Van Abbemuseum?",
+    "answer": "Ongeveer zes minuten. Het museum ligt aan de andere kant van het Anne Frankplantsoen.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-td-gebouw-2",
+    "question": "Wat kost een uur parkeren?",
+    "answer": "Je betaalt € 1,50 per 20 minuten, dus € 3,00 per uur. Voor een hele dag is de dagkaart voordeliger: vanaf € 12 bij vroeg boeken.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-td-gebouw-3",
+    "question": "Is de parking 's nachts open?",
+    "answer": "Ja, in- en uitrijden kan elke dag, 24 uur per dag.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-td-gebouw-4",
+    "question": "Kan ik hier overstappen op het openbaar vervoer?",
+    "answer": "Er is een bushalte op ongeveer vijf minuten lopen van de parking.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-the-beech-1",
+    "question": "Kan ik hier per uur of per dag parkeren?",
+    "answer": "Nee, deze locatie is uitsluitend voor abonnees. Voor losse uren of een dagkaart kun je terecht bij onze publieke garages in het centrum van Eindhoven.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-the-beech-2",
+    "question": "Wat kost een abonnement?",
+    "answer": "€ 85 per maand, inclusief € 5 servicekosten. Dat is onze voordeligste abonnementslocatie in Eindhoven.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-the-beech-3",
+    "question": "Wanneer kan ik in- en uitrijden?",
+    "answer": "24 uur per dag, zeven dagen per week.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-the-beech-4",
+    "question": "Hoe lang zit ik vast aan een abonnement?",
+    "answer": "De minimale looptijd is drie maanden, met een opzegtermijn van één maand.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p1-zuidtangent-1",
+    "question": "Wat kost parkeren bij Middenwaard?",
+    "answer": "€ 0,20 per 12 minuten, dus € 1 per uur, met een maximum van € 9 per dag.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p1-zuidtangent-2",
+    "question": "Is de parkeerkelder altijd open?",
+    "answer": "Nee. De kelder is van maandag tot en met zaterdag open tussen 07.45 en 21.00 uur en op zondag tussen 09.45 en 20.00 uur. Het terrein is 24 uur per dag toegankelijk.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p1-zuidtangent-3",
+    "question": "Hoeveel parkeerplaatsen zijn er?",
+    "answer": "794, verdeeld over het terrein en de parkeerkelder.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p1-zuidtangent-4",
+    "question": "Moet ik reserveren?",
+    "answer": "Nee, je kunt direct inrijden.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p2-middenwaard-1",
+    "question": "Is P2 Middenwaard 24 uur per dag open?",
+    "answer": "Ja, in- en uitrijden kan de klok rond. Bij P1 Zuidtangent heeft de parkeerkelder wel beperkte openingstijden.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p2-middenwaard-2",
+    "question": "Wat is de doorrijhoogte?",
+    "answer": "2,10 meter, ruimer dan de 1,90 meter bij P1 Zuidtangent.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p2-middenwaard-3",
+    "question": "Wat kost een dag parkeren?",
+    "answer": "€ 1 per uur (€ 0,20 per 12 minuten), met een maximum van € 9 per dag.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p2-middenwaard-4",
+    "question": "Wat is het verschil met P1 Zuidtangent?",
+    "answer": "P1 is groter (794 plaatsen) maar lager (1,90 m) en de kelder heeft beperkte openingstijden. P2 is 24 uur open en heeft 2,10 meter doorrijhoogte.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-lentse-plas-1",
+    "question": "Wat kost parkeren bij Pathé Nijmegen?",
+    "answer": "Bioscoopbezoekers betalen € 3,75 voor de eerste vier uur. Je kunt je kaart in de bioscoop afwaarderen.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-lentse-plas-2",
+    "question": "Wat is het dagtarief?",
+    "answer": "€ 1,10 per 20 minuten, met een maximum van € 21,50 per dag.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-lentse-plas-3",
+    "question": "Is de parking 's nachts open?",
+    "answer": "Ja, de parking is 24 uur per dag toegankelijk, ook na een late voorstelling.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-lentse-plas-4",
+    "question": "Is er een hoogtebeperking?",
+    "answer": "Op de pagina staat geen doorrijhoogte vermeld, wat betekent dat ook hogere auto's er terechtkunnen.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-at-the-park-1",
+    "question": "Wat is de goedkoopste manier om hier te parkeren?",
+    "answer": "Een dagkaart vanaf € 7 bij vroeg boeken, of een ParkingPass van tien dagen voor € 80, dat is € 8 per dag.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-at-the-park-2",
+    "question": "Hoe ver is het lopen naar het station?",
+    "answer": "Ongeveer zeven minuten. Het centrum van Rijswijk ligt ook op loopafstand.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-at-the-park-3",
+    "question": "Wat is de doorrijhoogte?",
+    "answer": "2,18 meter, ruim genoeg voor de meeste SUV's en auto's met een dakkoffer.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-at-the-park-4",
+    "question": "Kan ik hier elektrisch laden?",
+    "answer": "Ja, er zijn laadpunten voor elektrische auto's aanwezig.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-diergaarde-blijdorp-1",
+    "question": "Wat kost parkeren bij Diergaarde Blijdorp?",
+    "answer": "Een vast dagtarief van € 12,50. Met een ParkingYou-abonnement betaal je € 8,50.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-diergaarde-blijdorp-2",
+    "question": "Moet ik vooraf reserveren?",
+    "answer": "Nee, je kunt hier direct inrijden. Je kenteken wordt bij de slagboom herkend.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-diergaarde-blijdorp-3",
+    "question": "Hoe kan ik betalen?",
+    "answer": "Met pin en creditcard.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-diergaarde-blijdorp-4",
+    "question": "Is er ook een tarief per uur?",
+    "answer": "Nee, hier geldt één vast dagtarief, of je twee uur of de hele dag blijft.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-europoint-1",
+    "question": "Hoeveel parkeerplaatsen heeft Parking Europoint?",
+    "answer": "1.133 overdekte plaatsen. Het is daarmee onze grootste garage.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-europoint-2",
+    "question": "Wat kost een dag parkeren?",
+    "answer": "Maximaal € 15 zonder reservering, € 14 met reservering en € 12 als je ruim vooraf boekt.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-europoint-3",
+    "question": "Wie komt in aanmerking voor het bewonersabonnement van € 95?",
+    "answer": "Bewoners van de omliggende complexen. Neem contact met ons op om te horen of jouw adres daaronder valt.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-europoint-4",
+    "question": "Ligt de garage dichter bij Rotterdam of bij Schiedam?",
+    "answer": "De garage ligt tussen beide steden in, aan de westkant van Rotterdam, op korte afstand van Schiedam.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-hofplein-1",
+    "question": "Wat kost parkeren in het weekend?",
+    "answer": "Op zaterdag en zondag geldt een maximumtarief van € 15 voor een hele dag.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-hofplein-2",
+    "question": "Is er een nachttarief?",
+    "answer": "Ja, tussen 00.00 en 09.00 uur betaal je maximaal € 15.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-hofplein-3",
+    "question": "Hoeveel scheelt online reserveren?",
+    "answer": "Op werkdagen kost een dagkaart € 30 zonder reservering, € 25 met reservering en € 20 bij vroeg boeken.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-hofplein-4",
+    "question": "Is de garage bereikbaar tijdens de wegwerkzaamheden?",
+    "answer": "Ja. Rond de garage vinden werkzaamheden plaats, maar de garage is altijd bereikbaar. Volg de borden ter plaatse.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-maashaven-1",
+    "question": "Zijn de eerste twee uur echt gratis?",
+    "answer": "Ja, de eerste twee uur parkeer je hier gratis. Daarna gaat het reguliere tarief lopen.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-maashaven-2",
+    "question": "Tot hoe laat is de parking open?",
+    "answer": "Maandag tot en met vrijdag tot 23.00 uur, op zaterdag tot 18.00 uur en op zondag tot 17.00 uur. Ga je naar een laat evenement, kies dan een locatie die 24 uur open is.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-maashaven-3",
+    "question": "Hoe ver is het lopen naar de Maassilo?",
+    "answer": "Ongeveer zeven minuten.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-maashaven-4",
+    "question": "Moet ik reserveren?",
+    "answer": "Nee, je kunt hier direct inrijden.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-shopping-center-1",
+    "question": "Wat kost het eerste uur?",
+    "answer": "Het eerste uur kost € 1. Daarna betaal je € 1,25 per 30 minuten.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-shopping-center-2",
+    "question": "Hoe ver is het lopen naar Alexandrium?",
+    "answer": "Ongeveer drie minuten. Je loopt overdekt weg vanaf de garage.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-shopping-center-3",
+    "question": "Wat is de goedkoopste dagkaart?",
+    "answer": "€ 9 als je ruim vooraf boekt. Zonder reservering betaal je € 12,50, met reservering € 11.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-shopping-center-4",
+    "question": "Kan ik parkeren voor mijn klanten regelen?",
+    "answer": "Ja, bedrijven en winkeliers kunnen waardekaarten bestellen. Neem daarvoor contact met ons op.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p-r-centrum-1",
+    "question": "Wat kost P+R parkeren bij Schiedam Centraal?",
+    "answer": "€ 3,64 per dag met een geldige OV-chipkaart, NS-Business Card of e-ticket. Dit tarief geldt van maandag tot en met vrijdag bij inrijden tussen 05.15 en 19.00 uur.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p-r-centrum-2",
+    "question": "Geldt het P+R-tarief ook in het weekend?",
+    "answer": "Nee. In het weekend en buiten de genoemde uren geldt het reguliere tarief van € 1,25 per 20 minuten met een maximum van € 23 per dag.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p-r-centrum-3",
+    "question": "Hoe ver is het lopen naar het station?",
+    "answer": "Ongeveer vier minuten naar station Schiedam Centraal.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p-r-centrum-4",
+    "question": "Tot hoe laat kan ik mijn auto ophalen?",
+    "answer": "Van zondag tot en met donderdag tot 01.00 uur, op vrijdag en zaterdag tot 02.00 uur. Daarna gaat de garage om 05.15 uur weer open.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-pakhuis-1",
+    "question": "Wat kost een vaste parkeerplaats in Tilburg?",
+    "answer": "€ 120 per maand voor een 24/7-abonnement. Bewoners van de directe omgeving betalen € 90 per maand.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-pakhuis-2",
+    "question": "Sta ik hier overdekt?",
+    "answer": "Ja, Parking Pakhuis is een overdekte locatie.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-pakhuis-3",
+    "question": "Kan ik hier eenmalig parkeren?",
+    "answer": "Nee, de locatie is uitsluitend toegankelijk voor abonnees.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-pakhuis-4",
+    "question": "Kom ik in aanmerking voor het bewonerstarief?",
+    "answer": "Dat hangt af van je adres. Neem contact met ons op en we kijken het na.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-vliegend-hert-1",
+    "question": "Wat kost een vaste parkeerplaats in Utrecht?",
+    "answer": "€ 145 per maand, inclusief € 5 servicekosten.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-vliegend-hert-2",
+    "question": "Kan ik hier per uur of per dag parkeren?",
+    "answer": "Nee, deze locatie is uitsluitend toegankelijk voor abonnees.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-vliegend-hert-3",
+    "question": "Is de locatie 's nachts toegankelijk?",
+    "answer": "Ja, abonnees kunnen 24 uur per dag in- en uitrijden.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-vliegend-hert-4",
+    "question": "Hoe kom ik vanaf hier in het centrum?",
+    "answer": "Met de fiets, tram of bus. De locatie ligt net buiten het centrum in het kantorengebied Kanaleneiland-Noord.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p1-belgielaan-1",
+    "question": "Tot hoe laat kan ik inrijden bij P1?",
+    "answer": "Maandag tot en met donderdag tot 19.00 uur, op vrijdag tot 21.00 uur en in het weekend tot 19.00 uur. Uitrijden kan altijd.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p1-belgielaan-2",
+    "question": "Wat is de doorrijhoogte?",
+    "answer": "2,00 meter, samen met P2 Onderlangs de ruimste van het Stadshart.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p1-belgielaan-3",
+    "question": "Zijn de eerste twee uur gratis?",
+    "answer": "Ja. Daarna € 3 per uur, met een maximum van € 15 per dag.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p1-belgielaan-4",
+    "question": "Welke garage is 's avonds laat open?",
+    "answer": "P2 Bovenlangs, P2 Onderlangs, P4 Luxemburglaan en P9 Duitslandlaan zijn 24 uur per dag toegankelijk.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p2-bovenlangs-1",
+    "question": "Wat is de doorrijhoogte bij P2 Bovenlangs?",
+    "answer": "1,95 meter. Is je auto hoger, kies dan P2 Onderlangs of P1 Belgielaan met 2,00 meter.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p2-bovenlangs-2",
+    "question": "Kan ik hier elektrisch laden?",
+    "answer": "Ja, er zijn laadpunten voor elektrische auto's aanwezig.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p2-bovenlangs-3",
+    "question": "Is de garage 's nachts open?",
+    "answer": "Ja, in- en uitrijden kan 24 uur per dag.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p2-bovenlangs-4",
+    "question": "Zijn de eerste twee uur gratis?",
+    "answer": "Ja. Daarna betaal je € 3 per uur, met een maximum van € 15 per dag.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p2-onderlangs-1",
+    "question": "Moet ik vooraf reserveren?",
+    "answer": "Nee, bij P2 Onderlangs kun je direct inrijden.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p2-onderlangs-2",
+    "question": "Wat is de doorrijhoogte?",
+    "answer": "2,00 meter, iets ruimer dan bij P2 Bovenlangs, P4 en P5 in het Stadshart.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p2-onderlangs-3",
+    "question": "Hoeveel plaatsen zijn er?",
+    "answer": "287 plaatsen. Het is de compactste garage van Stadshart Zoetermeer, waardoor je snel in- en uitrijdt.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p2-onderlangs-4",
+    "question": "Zijn de eerste twee uur gratis?",
+    "answer": "Ja. Daarna € 3 per uur, met een maximum van € 15 per dag.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p4-luxemburglaan-1",
+    "question": "Is P4 dag en nacht open?",
+    "answer": "Ja, in- en uitrijden kan 24 uur per dag.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p4-luxemburglaan-2",
+    "question": "Wat is de doorrijhoogte?",
+    "answer": "1,90 meter, de laagste in het Stadshart, samen met P5 Amsterdamstraat. Rijd je hoger, kies dan P1 Belgielaan of P2 Onderlangs.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p4-luxemburglaan-3",
+    "question": "Hoeveel plaatsen zijn er?",
+    "answer": "453 overdekte plaatsen.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p4-luxemburglaan-4",
+    "question": "Wat kost parkeren?",
+    "answer": "De eerste twee uur zijn gratis, daarna € 3 per uur met een maximum van € 15 per dag.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p5-amsterdamstraat-1",
+    "question": "Tot hoe laat kan ik inrijden?",
+    "answer": "Maandag tot en met donderdag tot 19.00 uur, vrijdag tot 21.00 uur en in het weekend tot 19.00 uur. Uitrijden kan 24 uur per dag.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p5-amsterdamstraat-2",
+    "question": "Wat is de doorrijhoogte?",
+    "answer": "1,90 meter. Rijd je hoger, kies dan P1 Belgielaan of P2 Onderlangs met 2,00 meter.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p5-amsterdamstraat-3",
+    "question": "Zijn de eerste twee uur gratis?",
+    "answer": "Ja. Daarna € 3 per uur, met een maximum van € 15 per dag.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p5-amsterdamstraat-4",
+    "question": "Kan ik hier elektrisch laden?",
+    "answer": "Ja, er zijn laadpunten voor elektrische auto's aanwezig.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p8-nederlandlaan-1",
+    "question": "Zijn de eerste twee uur gratis?",
+    "answer": "Ja. Daarna betaal je € 3 per uur, met een maximum van € 15 per dag.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p8-nederlandlaan-2",
+    "question": "Tot hoe laat kan ik inrijden?",
+    "answer": "Inrijden kan tussen 07.00 en 22.30 uur. Uitrijden kan 24 uur per dag.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p8-nederlandlaan-3",
+    "question": "Hoeveel plaatsen heeft P8?",
+    "answer": "659 overdekte plaatsen, de grootste garage van Stadshart Zoetermeer.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p8-nederlandlaan-4",
+    "question": "Wie kan een winkelabonnement afnemen?",
+    "answer": "Alleen winkeliers in het Stadshart. Voor anderen is er het 24/7- of kantoorabonnement.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p9-duitslandlaan-1",
+    "question": "Is P9 dag en nacht open?",
+    "answer": "Ja, in- en uitrijden kan 24 uur per dag. Dat geldt niet voor alle garages in het Stadshart.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p9-duitslandlaan-2",
+    "question": "Wat kost parkeren?",
+    "answer": "De eerste twee uur zijn gratis. Daarna € 3 per uur, met een maximum van € 15 per dag.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p9-duitslandlaan-3",
+    "question": "Is er een lift?",
+    "answer": "Ja, de garage heeft een lift. Handig met boodschappen, een kinderwagen of een rollator.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-p9-duitslandlaan-4",
+    "question": "Wat is de doorrijhoogte?",
+    "answer": "2 meter.",
     "category": "overig",
     "showOnGeneralFaq": false,
     "published": true
