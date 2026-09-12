@@ -2,34 +2,16 @@ import type { ComponentProps } from 'react'
 
 import { cn } from '@/lib/utils'
 
+/** A plain bordered panel, the prototype's default surface for grouped content. */
 export function Card({ className, ...props }: ComponentProps<'div'>) {
-  return (
-    <div
-      className={cn(
-        'rounded-[var(--py-radius-lg)] border border-border bg-surface',
-        'shadow-[var(--py-shadow-sm)]',
-        className,
-      )}
-      {...props}
-    />
-  )
+  return <div className={cn('py-panel', className)} {...props} />
 }
 
 export function CardBody({ className, ...props }: ComponentProps<'div'>) {
-  return <div className={cn('p-[var(--py-space-5)]', className)} {...props} />
+  return <div className={cn(className)} {...props} />
 }
 
+/** The prototype's pill tag, used for location features. */
 export function Badge({ className, ...props }: ComponentProps<'span'>) {
-  return (
-    <span
-      className={cn(
-        'inline-flex items-center rounded-[var(--py-radius-full)]',
-        'bg-surface-brand-subtle text-foreground-brand',
-        'px-[var(--py-space-3)] py-[var(--py-space-1)] text-sm',
-        'font-[var(--py-weight-medium)]',
-        className,
-      )}
-      {...props}
-    />
-  )
+  return <span className={cn('py-tag', className)} {...props} />
 }

@@ -1,0 +1,1016 @@
+/**
+ * Component styles, ported from the rebranding prototype.
+ *
+ * The prototype is plain CSS over BEM-ish `.py-*` class names, and that is kept
+ * deliberately: it is the design of record, it reads the same in both projects,
+ * and the PWA can lift any block of it without a build step. Every literal
+ * colour, size and shadow from the prototype has been replaced by the matching
+ * token, so a palette change happens in one file.
+ */
+
+/* -------------------------------------------------------------------------- */
+/* Layout primitives                                                          */
+/* -------------------------------------------------------------------------- */
+
+.py-container {
+  width: min(var(--py-container-max), calc(100% - (2 * var(--py-space-gutter))));
+  margin-inline: auto;
+}
+
+.py-section {
+  padding-block: var(--py-space-section);
+  background: var(--py-color-surface);
+}
+.py-section--paper {
+  background: var(--py-color-surface-subtle);
+}
+
+.py-section-intro {
+  margin-bottom: var(--py-space-8);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--py-space-8);
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.py-section-intro h2 {
+  margin: 0;
+  color: var(--py-color-foreground-brand);
+  font-size: var(--py-text-3xl);
+  line-height: 1.08;
+}
+.py-section-intro p {
+  max-width: 40rem;
+  margin: var(--py-space-3) 0 0;
+  color: var(--py-color-foreground-muted);
+  font-size: var(--py-text-lg);
+  font-weight: var(--py-weight-light);
+  line-height: var(--py-leading-relaxed);
+}
+
+.py-prose {
+  max-width: var(--py-measure);
+}
+.py-prose > * + * {
+  margin-top: var(--py-space-4);
+}
+.py-prose h2 {
+  margin-top: var(--py-space-10);
+  color: var(--py-color-foreground-brand);
+  font-size: var(--py-text-2xl);
+}
+.py-prose h3 {
+  margin-top: var(--py-space-8);
+  font-size: var(--py-text-xl);
+}
+.py-prose p {
+  color: var(--py-color-foreground);
+  font-weight: var(--py-weight-light);
+  line-height: var(--py-leading-relaxed);
+}
+.py-prose ul {
+  margin: 0;
+  padding-left: var(--py-space-5);
+  color: var(--py-color-foreground);
+  font-weight: var(--py-weight-light);
+}
+.py-prose li + li {
+  margin-top: var(--py-space-2);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Logo                                                                        */
+/* -------------------------------------------------------------------------- */
+
+.py-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--py-color-foreground-brand);
+}
+.py-logo__mark {
+  width: 42px;
+  height: 42px;
+  /* The pin silhouette: round on three corners, squared off at the bottom left. */
+  border-radius: 50% 50% 50% 12px;
+  display: grid;
+  place-items: center;
+  background: var(--py-color-primary);
+  color: var(--py-color-primary-foreground);
+  font-size: 23px;
+  font-weight: var(--py-weight-bold);
+  line-height: 1;
+  box-shadow: 0 10px 24px rgb(55 78 157 / 0.22);
+}
+.py-logo strong {
+  display: block;
+  font-size: 22px;
+  line-height: 1;
+}
+.py-logo small {
+  display: block;
+  margin-top: 3px;
+  font-size: 10px;
+  font-weight: var(--py-weight-medium);
+  color: var(--py-color-foreground-muted);
+}
+.py-logo--inverted {
+  color: var(--py-white);
+}
+.py-logo--inverted .py-logo__mark {
+  background: var(--py-white);
+  color: var(--py-color-primary);
+}
+.py-logo--inverted small {
+  color: rgb(255 255 255 / 0.72);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Buttons                                                                     */
+/* -------------------------------------------------------------------------- */
+
+.py-button {
+  min-height: var(--py-tap-target-min);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 22px;
+  border: 0;
+  border-radius: var(--py-radius-pill);
+  font-weight: var(--py-weight-bold);
+  font-size: 15px;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    transform var(--py-duration-fast) ease,
+    box-shadow var(--py-duration-fast) ease,
+    background var(--py-duration-fast) ease;
+}
+.py-button:hover {
+  transform: translateY(-2px);
+}
+.py-button:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.py-button--primary {
+  background: var(--py-color-primary);
+  color: var(--py-color-primary-foreground);
+  box-shadow: var(--py-shadow-brand);
+}
+.py-button--primary:hover {
+  background: var(--py-color-primary-hover);
+}
+.py-button--aqua {
+  background: var(--py-color-accent);
+  color: var(--py-color-accent-foreground);
+  box-shadow: var(--py-shadow-accent);
+}
+.py-button--outline {
+  background: transparent;
+  color: var(--py-color-foreground-brand);
+  box-shadow: inset 0 0 0 2px var(--py-color-primary);
+}
+.py-button--ghost {
+  background: transparent;
+  color: var(--py-color-foreground-brand);
+}
+.py-button--on-dark {
+  background: transparent;
+  color: var(--py-white);
+  box-shadow: inset 0 0 0 1.5px rgb(255 255 255 / 0.42);
+}
+.py-button--block {
+  width: 100%;
+}
+
+.py-tag,
+.py-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: var(--py-radius-pill);
+  font-size: 13px;
+  font-weight: var(--py-weight-bold);
+}
+.py-tag {
+  padding: 6px 10px;
+  background: var(--py-color-surface-subtle);
+  color: var(--py-color-foreground-brand);
+}
+.py-tag--blue {
+  background: var(--py-color-primary);
+  color: var(--py-color-primary-foreground);
+}
+.py-pill {
+  padding: 8px 14px;
+  background: var(--py-color-surface);
+  color: var(--py-color-foreground-brand);
+  border: 1px solid var(--py-color-border);
+  text-decoration: none;
+  min-height: 2.75rem;
+}
+.py-pill:hover {
+  background: var(--py-color-surface-subtle);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Header                                                                      */
+/* -------------------------------------------------------------------------- */
+
+.py-header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: rgb(255 255 255 / 0.94);
+  backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: 1px solid var(--py-color-border);
+}
+.py-header__inner {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--py-space-6);
+}
+.py-header__nav,
+.py-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+.py-header__nav a {
+  font-size: 15px;
+  font-weight: var(--py-weight-medium);
+  color: var(--py-color-foreground);
+  text-decoration: none;
+}
+.py-header__nav a:hover,
+.py-header__nav a.is-active {
+  color: var(--py-color-foreground-brand);
+  font-weight: var(--py-weight-bold);
+}
+.py-header__phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--py-color-foreground-muted);
+  font-size: 14px;
+  font-weight: var(--py-weight-medium);
+  text-decoration: none;
+}
+
+/* The mobile menu is a native <details>, so the header ships no JavaScript. */
+.py-menu {
+  display: none;
+}
+.py-menu__button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--py-radius-md);
+  color: var(--py-color-foreground-brand);
+  list-style: none;
+}
+.py-menu__panel {
+  position: absolute;
+  inset-inline: 0;
+  z-index: 59;
+  display: grid;
+  gap: var(--py-space-1);
+  padding: var(--py-space-3) var(--py-space-gutter) var(--py-space-6);
+  background: var(--py-color-surface);
+  border-top: 1px solid var(--py-color-border);
+  box-shadow: var(--py-shadow-md);
+}
+.py-menu__panel a:not(.py-button) {
+  display: flex;
+  align-items: center;
+  min-height: var(--py-tap-target-min);
+  padding: 15px 0;
+  border-bottom: 1px solid var(--py-color-border);
+  font-weight: var(--py-weight-bold);
+  color: var(--py-color-foreground);
+  text-decoration: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Hero                                                                        */
+/* -------------------------------------------------------------------------- */
+
+.py-hero {
+  padding: var(--py-space-16) 0 var(--py-space-8);
+  background:
+    radial-gradient(circle at 80% 18%, rgb(121 202 220 / 0.24), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f7f9fd 100%);
+  overflow: hidden;
+}
+.py-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  gap: var(--py-space-16);
+  align-items: center;
+}
+.py-hero h1,
+.py-page-hero h1 {
+  margin: 0;
+  max-width: 47.5rem;
+  font-size: var(--py-text-4xl);
+  line-height: var(--py-leading-tight);
+  color: var(--py-color-foreground-brand);
+}
+.py-hero h1 em,
+.py-page-hero h1 em {
+  /* The only italic on the site, so it gets its own single-face family rather
+     than pulling four unused italic weights. Naming it explicitly also avoids
+     the browser synthesising a slanted roman. */
+  font-family: var(--py-font-ubuntu-italic), var(--py-font-sans);
+  font-style: italic;
+}
+.py-hero p,
+.py-page-hero p {
+  max-width: 38rem;
+  margin: var(--py-space-5) 0 0;
+  color: var(--py-color-foreground);
+  font-size: var(--py-text-lg);
+  font-weight: var(--py-weight-light);
+  line-height: var(--py-leading-relaxed);
+}
+
+.py-quick-cities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: var(--py-space-6);
+}
+
+.py-hero__visual {
+  position: relative;
+  min-height: 440px;
+}
+.py-pin-photo {
+  width: min(470px, 100%);
+  height: 440px;
+  margin-left: auto;
+  /* The same pin silhouette as the logo mark, rotated. */
+  border-radius: 50% 50% 50% 12%;
+  overflow: hidden;
+  transform: rotate(-6deg);
+  background: linear-gradient(150deg, var(--py-blue) 0%, var(--py-mid) 60%, var(--py-deep) 100%);
+  box-shadow: 0 34px 70px rgb(35 58 137 / 0.24);
+  display: grid;
+  place-items: center;
+}
+.py-pin-photo__label {
+  transform: rotate(6deg);
+  padding: var(--py-space-6);
+  text-align: center;
+  color: rgb(255 255 255 / 0.82);
+  font-size: var(--py-text-sm);
+}
+.py-hero-ticket,
+.py-hero-stat {
+  position: absolute;
+  background: var(--py-color-surface);
+  border-radius: var(--py-radius-md);
+  box-shadow: var(--py-shadow-lg);
+}
+.py-hero-ticket {
+  left: 0;
+  bottom: 64px;
+  width: 260px;
+  padding: 18px;
+}
+.py-hero-ticket > span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--py-color-foreground-accent);
+  font-weight: var(--py-weight-bold);
+  font-size: 13px;
+}
+.py-hero-ticket strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 20px;
+  color: var(--py-color-foreground-brand);
+}
+.py-hero-ticket small {
+  display: block;
+  margin-top: 4px;
+  color: var(--py-color-foreground-muted);
+}
+.py-hero-stat {
+  right: 8px;
+  bottom: 8px;
+  width: 160px;
+  padding: 20px;
+}
+.py-hero-stat strong {
+  display: block;
+  font-size: 34px;
+  line-height: 1;
+  color: var(--py-color-foreground-brand);
+}
+.py-hero-stat span {
+  display: block;
+  margin-top: 5px;
+  color: var(--py-color-foreground-muted);
+  font-size: 13px;
+}
+
+.py-proofbar {
+  margin-top: var(--py-space-10);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--py-color-border);
+}
+.py-proofbar div {
+  padding: var(--py-space-6) var(--py-space-6) 0 0;
+}
+.py-proofbar strong {
+  display: block;
+  font-size: 25px;
+  color: var(--py-color-foreground-brand);
+}
+.py-proofbar span {
+  display: block;
+  margin-top: 4px;
+  color: var(--py-color-foreground-muted);
+  font-size: 14px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Page hero, used by every template that is not the home page                 */
+/* -------------------------------------------------------------------------- */
+
+.py-page-hero {
+  padding: var(--py-space-12) 0 var(--py-space-12);
+  background: linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%);
+}
+.py-page-hero--accent {
+  background: linear-gradient(135deg, #ffffff 0%, #eef9fc 100%);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Cards                                                                       */
+/* -------------------------------------------------------------------------- */
+
+.py-garage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--py-space-6);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.py-garage-card {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--py-color-surface);
+  border: 1px solid var(--py-color-border);
+  border-radius: var(--py-radius-md);
+  overflow: hidden;
+  box-shadow: var(--py-shadow-sm);
+  transition:
+    transform var(--py-duration-base) ease,
+    box-shadow var(--py-duration-base) ease;
+}
+.py-garage-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--py-shadow-lg);
+}
+.py-garage-card__image {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: linear-gradient(150deg, var(--py-blue) 0%, var(--py-mid) 60%, var(--py-deep) 100%);
+}
+.py-garage-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.py-garage-card__city {
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  left: 14px;
+  padding: 7px 12px;
+  border-radius: var(--py-radius-pill);
+  background: var(--py-color-surface);
+  color: var(--py-color-foreground-brand);
+  font-size: 13px;
+  font-weight: var(--py-weight-bold);
+}
+.py-garage-card__body {
+  padding: 38px var(--py-space-5) var(--py-space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--py-space-2);
+  flex: 1;
+}
+.py-garage-card h3 {
+  margin: 0;
+  font-size: var(--py-text-xl);
+  color: var(--py-color-foreground-brand);
+}
+.py-garage-card h3 a {
+  text-decoration: none;
+  color: inherit;
+}
+.py-garage-card p {
+  margin: 0;
+  color: var(--py-color-foreground-muted);
+  font-size: 14px;
+  line-height: var(--py-leading-normal);
+  font-weight: var(--py-weight-light);
+}
+.py-garage-card__price {
+  margin-top: auto;
+  padding-top: var(--py-space-2);
+  color: var(--py-color-foreground-brand);
+  font-weight: var(--py-weight-bold);
+}
+
+/* The circular price badge that overhangs the card image. */
+.py-price-blob {
+  width: 84px;
+  height: 84px;
+  border-radius: var(--py-radius-full);
+  display: grid;
+  place-items: center;
+  align-content: center;
+  text-align: center;
+  color: var(--py-color-accent-foreground);
+  background: var(--py-color-accent);
+  box-shadow: 0 18px 36px rgb(35 58 137 / 0.18);
+}
+.py-garage-card__image .py-price-blob {
+  position: absolute;
+  right: 14px;
+  bottom: -22px;
+  z-index: 3;
+}
+.py-price-blob strong {
+  display: block;
+  font-size: 18px;
+  line-height: 1;
+}
+.py-price-blob small {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  font-weight: var(--py-weight-bold);
+}
+
+.py-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Generic panels                                                              */
+/* -------------------------------------------------------------------------- */
+
+.py-panel {
+  padding: var(--py-space-6);
+  border: 1px solid var(--py-color-border);
+  border-radius: var(--py-radius-md);
+  background: var(--py-color-surface);
+}
+.py-panel--paper {
+  background: var(--py-color-surface-subtle);
+}
+.py-panel--brand {
+  background: var(--py-color-surface-brand);
+  color: var(--py-color-foreground-on-brand);
+  border-color: transparent;
+  box-shadow: var(--py-shadow-lg);
+}
+
+.py-benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--py-space-4);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.py-benefit-grid article {
+  height: 100%;
+  padding: var(--py-space-6);
+  border: 1px solid var(--py-color-border);
+  border-radius: var(--py-radius-md);
+  background: var(--py-color-surface);
+}
+.py-benefit-grid span.py-icon-circle {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--py-radius-full);
+  background: var(--py-color-accent);
+  color: var(--py-color-accent-foreground);
+}
+.py-benefit-grid h3 {
+  margin: var(--py-space-4) 0 var(--py-space-2);
+  font-size: var(--py-text-xl);
+  color: var(--py-color-foreground-brand);
+}
+.py-benefit-grid p {
+  margin: 0;
+  color: var(--py-color-foreground-muted);
+  line-height: var(--py-leading-normal);
+  font-weight: var(--py-weight-light);
+}
+
+/* The blue strip of city links. */
+.py-city-strip {
+  padding: var(--py-space-5) 0;
+  background: var(--py-color-surface-brand);
+  color: var(--py-color-foreground-on-brand);
+}
+.py-city-strip__inner {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: rgb(255 255 255 / 0.18);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.py-city-strip a {
+  min-height: 72px;
+  padding: 0 var(--py-space-5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--py-space-2);
+  background: var(--py-color-surface-brand);
+  color: inherit;
+  font-size: 17px;
+  font-weight: var(--py-weight-bold);
+  text-decoration: none;
+}
+.py-city-strip a:hover {
+  background: var(--py-blue-800);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Tables                                                                      */
+/* -------------------------------------------------------------------------- */
+
+.py-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+.py-table tr {
+  border-bottom: 1px solid var(--py-color-border);
+}
+.py-table tr:last-child {
+  border-bottom: 0;
+}
+.py-table th {
+  padding: var(--py-space-4);
+  font-weight: var(--py-weight-normal);
+  color: var(--py-color-foreground);
+  vertical-align: top;
+}
+.py-table td {
+  padding: var(--py-space-4);
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: top;
+}
+.py-table small {
+  display: block;
+  margin-top: var(--py-space-1);
+  color: var(--py-color-foreground-muted);
+  font-size: var(--py-text-sm);
+}
+.py-table strong {
+  color: var(--py-color-foreground-brand);
+}
+
+/* -------------------------------------------------------------------------- */
+/* FAQ, a native <details> list                                                */
+/* -------------------------------------------------------------------------- */
+
+.py-faq {
+  max-width: var(--py-container-prose);
+}
+.py-faq__list {
+  display: grid;
+  gap: var(--py-space-3);
+}
+.py-faq details {
+  border-radius: var(--py-radius-md);
+  background: var(--py-color-surface);
+  border: 1px solid var(--py-color-border);
+  overflow: hidden;
+}
+.py-faq details[open] {
+  box-shadow: var(--py-shadow-md);
+}
+.py-faq summary {
+  min-height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px var(--py-space-6);
+  color: var(--py-color-foreground-brand);
+  font-weight: var(--py-weight-bold);
+  font-size: var(--py-text-lg);
+}
+.py-faq summary:hover {
+  background: var(--py-color-surface-subtle);
+}
+.py-faq details[open] summary svg {
+  transform: rotate(180deg);
+}
+.py-faq summary svg {
+  flex-shrink: 0;
+  transition: transform var(--py-duration-fast) ease;
+}
+.py-faq__answer {
+  margin: 0;
+  padding: 0 var(--py-space-6) 22px;
+  color: var(--py-color-foreground-muted);
+  line-height: var(--py-leading-relaxed);
+  font-weight: var(--py-weight-light);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Dark banner and footer                                                      */
+/* -------------------------------------------------------------------------- */
+
+.py-banner {
+  padding: var(--py-space-12) 0;
+  background: var(--py-color-surface-deep);
+  color: var(--py-white);
+}
+.py-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--py-space-6);
+  flex-wrap: wrap;
+}
+.py-banner h2 {
+  margin: 0;
+  color: var(--py-white);
+  font-size: var(--py-text-3xl);
+  line-height: 1.1;
+}
+.py-banner p {
+  margin: 10px 0 0;
+  color: rgb(255 255 255 / 0.74);
+  font-weight: var(--py-weight-light);
+}
+
+.py-footer {
+  padding: var(--py-space-16) 0 var(--py-space-6);
+  background: var(--py-color-surface-deep);
+  color: var(--py-color-foreground-on-deep);
+}
+.py-footer__grid {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: var(--py-space-10);
+}
+.py-footer p,
+.py-footer address {
+  max-width: 21rem;
+  margin: var(--py-space-5) 0 0;
+  color: rgb(255 255 255 / 0.68);
+  line-height: var(--py-leading-relaxed);
+  font-weight: var(--py-weight-light);
+  font-style: normal;
+}
+.py-footer nav {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+.py-footer nav h2 {
+  margin: 0 0 5px;
+  color: var(--py-aqua);
+  font-size: 13px;
+  font-weight: var(--py-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--py-tracking-wide);
+}
+.py-footer nav ul {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.py-footer a {
+  color: rgb(255 255 255 / 0.82);
+  font-size: 14px;
+  text-decoration: none;
+}
+.py-footer a:hover {
+  color: var(--py-white);
+  text-decoration: underline;
+}
+.py-footer__bottom {
+  margin-top: var(--py-space-10);
+  padding-top: var(--py-space-5);
+  border-top: 1px solid rgb(255 255 255 / 0.12);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--py-space-4);
+  flex-wrap: wrap;
+  color: rgb(255 255 255 / 0.55);
+  font-size: 13px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Breadcrumbs, notices, misc                                                  */
+/* -------------------------------------------------------------------------- */
+
+.py-breadcrumbs {
+  font-size: var(--py-text-sm);
+  color: var(--py-color-foreground-muted);
+}
+.py-breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--py-space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.py-breadcrumbs a {
+  color: inherit;
+  text-decoration: none;
+}
+.py-breadcrumbs a:hover {
+  color: var(--py-color-foreground-brand);
+  text-decoration: underline;
+}
+
+.py-notice {
+  border-radius: var(--py-radius-md);
+  border: 1px solid var(--py-color-border);
+  padding: var(--py-space-4) var(--py-space-5);
+  font-size: var(--py-text-sm);
+}
+.py-notice--warning {
+  background: var(--py-color-warning-surface);
+  color: var(--py-color-warning);
+}
+
+.py-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--py-space-section);
+}
+.py-stack--tight {
+  gap: var(--py-space-4);
+}
+.py-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--py-space-3);
+  margin-top: var(--py-space-6);
+}
+
+/* Sticky booking bar, phones only. Pure CSS, so it costs nothing to hydrate. */
+.py-sticky-cta {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 40;
+  display: none;
+  gap: var(--py-space-3);
+  align-items: center;
+  padding: var(--py-space-3) var(--py-space-gutter);
+  background: rgb(255 255 255 / 0.96);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--py-color-border);
+  box-shadow: var(--py-shadow-lg);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Responsive, at the prototype's own breakpoints                              */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 980px) {
+  .py-header__nav,
+  .py-header__actions {
+    display: none;
+  }
+  .py-menu {
+    display: block;
+  }
+  .py-hero__grid {
+    grid-template-columns: 1fr;
+  }
+  .py-hero__visual {
+    min-height: 380px;
+  }
+  .py-pin-photo {
+    height: 360px;
+    margin-inline: auto;
+  }
+  .py-garage-grid,
+  .py-benefit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .py-city-strip__inner,
+  .py-proofbar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .py-footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .py-hero {
+    padding-top: var(--py-space-8);
+  }
+  .py-hero__visual {
+    display: none;
+  }
+  .py-garage-grid,
+  .py-benefit-grid,
+  .py-city-strip__inner,
+  .py-footer__grid,
+  .py-proofbar {
+    grid-template-columns: 1fr;
+  }
+  .py-proofbar div {
+    padding-right: 0;
+  }
+  .py-section-intro,
+  .py-banner__inner,
+  .py-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .py-sticky-cta {
+    display: flex;
+  }
+  .py-button {
+    width: 100%;
+  }
+  .py-sticky-cta .py-button,
+  .py-header .py-button,
+  .py-pill {
+    width: auto;
+  }
+}
+
+/* Skip link: off-screen until focused, then a normal pill button. */
+.py-skip-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 100;
+}
+.py-skip-link:focus {
+  left: var(--py-space-4);
+  top: var(--py-space-4);
+  padding: var(--py-space-3) var(--py-space-5);
+  border-radius: var(--py-radius-pill);
+  background: var(--py-color-primary);
+  color: var(--py-color-primary-foreground);
+  font-weight: var(--py-weight-bold);
+  text-decoration: none;
+}
+
+/* Stand-in art inside a card image band, while photography is missing. */
+.py-garage-card__art {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: var(--py-space-2);
+  padding: var(--py-space-5);
+  text-align: center;
+  color: rgb(255 255 255 / 0.72);
+}
+.py-garage-card__art > span {
+  font-size: var(--py-text-sm);
+  font-weight: var(--py-weight-medium);
+}

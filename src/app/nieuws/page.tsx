@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
-import { Breadcrumbs } from '@/components/location/breadcrumbs'
+import { PageHero } from '@/components/site/page-hero'
 import { Card, CardBody } from '@/components/ui/card'
 import { getNews } from '@/lib/content'
 import { formatDate } from '@/lib/format'
@@ -17,12 +17,13 @@ export default function NewsIndexPage() {
   const articles = getNews()
 
   return (
-    <div className="py-container flex flex-col gap-[var(--py-space-section)] py-[var(--py-space-6)]">
-      <header className="flex flex-col gap-[var(--py-space-4)]">
-        <Breadcrumbs items={[{ label: 'Home', href: routes.home() }, { label: 'Nieuws' }]} />
-        <h1 className="text-4xl">Nieuws</h1>
-      </header>
-
+    <>
+      <PageHero
+        crumbs={[{ label: 'Home', href: routes.home() }, { label: 'Nieuws' }]}
+        title="Nieuws"
+        intro="Updates over onze locaties, tarieven en dienstverlening."
+      />
+      <div className="py-section py-container">
       <ul className="flex flex-col gap-[var(--py-space-4)]">
         {articles.map((article) => (
           <li key={article.id}>
@@ -31,7 +32,7 @@ export default function NewsIndexPage() {
                 <time dateTime={article.publishedAt} className="text-sm text-foreground-muted">
                   {formatDate(article.publishedAt)}
                 </time>
-                <h2 className="text-xl font-[var(--py-weight-semibold)]">
+                <h2 className="text-xl font-[var(--py-weight-bold)]">
                   <Link href={`${routes.news()}/${article.slug}`} className="no-underline">
                     <span className="absolute inset-0" aria-hidden="true" />
                     {article.title}
@@ -43,6 +44,7 @@ export default function NewsIndexPage() {
           </li>
         ))}
       </ul>
-    </div>
+      </div>
+    </>
   )
 }

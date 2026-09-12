@@ -23,7 +23,7 @@ export function BookingCta({
     <div className={className}>
       <ButtonLink
         href={location.bookingUrl}
-        size="lg"
+        variant="primary"
         rel="noopener"
         aria-label={`Reserveer een plek bij ${location.name}`}
       >
@@ -49,27 +49,26 @@ export function StickyBookingBar({ location }: { location: Location }) {
   return (
     <>
       <div aria-hidden="true" className="h-[5.5rem] md:hidden" />
-      <div
-        className={[
-          'fixed inset-x-0 bottom-0 z-40 md:hidden',
-          'border-t border-border bg-surface/95 backdrop-blur',
-          'px-[var(--py-space-gutter)] py-[var(--py-space-3)]',
-          'shadow-[var(--py-shadow-lg)]',
-        ].join(' ')}
-      >
-        <div className="flex items-center gap-[var(--py-space-3)]">
-          <div className="min-w-0 flex-1">
-            <p className="truncate text-sm font-[var(--py-weight-semibold)]">{location.name}</p>
-            {price !== null && (
-              <p className="truncate text-sm text-foreground-muted">
-                vanaf {formatEuros(price)} per dag
-              </p>
-            )}
-          </div>
-          <ButtonLink href={location.bookingUrl} rel="noopener" className="shrink-0">
-            Reserveren
-          </ButtonLink>
+      <div className="py-sticky-cta">
+        <div className="min-w-0 flex-1">
+          <p className="truncate font-[var(--py-weight-bold)] text-foreground-brand">
+            {location.name}
+          </p>
+          {price !== null && (
+            <p className="truncate text-sm text-foreground-muted">
+              vanaf {formatEuros(price)} per dag
+            </p>
+          )}
         </div>
+        <ButtonLink
+          href={location.bookingUrl}
+          variant="primary"
+          icon={null}
+          rel="noopener"
+          className="shrink-0"
+        >
+          Reserveren
+        </ButtonLink>
       </div>
     </>
   )

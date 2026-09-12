@@ -30,8 +30,14 @@
         ]
       }
     ],
-    "cta": { "label": "Abonnement aanvragen", "href": "/abonnementen/aanvragen" },
-    "faqIds": ["faq-abonnement-opzeggen", "faq-reserveren-kenteken"],
+    "cta": {
+      "label": "Abonnement aanvragen",
+      "href": "/abonnementen/aanvragen"
+    },
+    "faqIds": [
+      "faq-abonnement-opzeggen",
+      "faq-reserveren-kenteken"
+    ],
     "seo": {
       "title": "Parkeerabonnement in Amsterdam, Rotterdam en Eindhoven | ParkingYou",
       "description": "Een vast bedrag per maand op je eigen parkeerlocatie. Minimale looptijd drie maanden, daarna opzegbaar per kalendermaand."
@@ -64,7 +70,9 @@
         ]
       }
     ],
-    "faqIds": ["faq-abonnement-opzeggen"],
+    "faqIds": [
+      "faq-abonnement-opzeggen"
+    ],
     "seo": {
       "title": "Parkeerabonnement aanvragen | ParkingYou",
       "description": "Vraag een parkeerabonnement aan op een van onze locaties. Geef je locatie, abonnementsvorm en ingangsdatum door."
@@ -98,8 +106,14 @@
         ]
       }
     ],
-    "cta": { "label": "Bekijk onze locaties", "href": "/locaties" },
-    "faqIds": ["faq-parkingpass", "faq-goedkoper-reserveren"],
+    "cta": {
+      "label": "Bekijk onze locaties",
+      "href": "/locaties"
+    },
+    "faqIds": [
+      "faq-parkingpass",
+      "faq-goedkoper-reserveren"
+    ],
     "seo": {
       "title": "ParkingPass: tien of vijfentwintig parkeerdagen | ParkingYou",
       "description": "Koop tien of vijfentwintig parkeerdagen vooruit tegen een lager tarief. Beschikbaar in Eindhoven, Amsterdam, Rotterdam en Rijswijk."
@@ -138,7 +152,10 @@
         ]
       }
     ],
-    "cta": { "label": "Neem contact op", "href": "/contact" },
+    "cta": {
+      "label": "Neem contact op",
+      "href": "/contact"
+    },
     "faqIds": [],
     "seo": {
       "title": "Zakelijk parkeren en parkeerbeheer | ParkingYou",
@@ -166,7 +183,10 @@
         ]
       }
     ],
-    "cta": { "label": "Bekijk onze locaties", "href": "/locaties" },
+    "cta": {
+      "label": "Bekijk onze locaties",
+      "href": "/locaties"
+    },
     "faqIds": [],
     "seo": {
       "title": "Over ParkingYou | ParkingYou",
@@ -200,10 +220,41 @@
         ]
       }
     ],
-    "faqIds": ["faq-reserveren-kenteken", "faq-annuleren"],
+    "faqIds": [
+      "faq-reserveren-kenteken",
+      "faq-annuleren"
+    ],
     "seo": {
       "title": "Contact | ParkingYou",
       "description": "Bel 040 8200 956 of mail info@parkingyou.nl. ParkingYou B.V., Victoriapark 4, 5611 BM Eindhoven."
+    },
+    "published": true
+  },
+  {
+    "id": "page-algemene-voorwaarden",
+    "slug": "algemene-voorwaarden",
+    "h1": "Algemene voorwaarden",
+    "intro": "Onze voorwaarden voor reserveringen, abonnementen en het gebruik van onze parkeerlocaties.",
+    "sections": [
+      {
+        "heading": "De voorwaarden",
+        "paragraphs": [
+          "{{TODO-NL: de volledige algemene voorwaarden overnemen van de huidige site (parkingyou.nl/nl/algemene-voorwaarden). Die tekst is juridisch bindend en mag niet worden herschreven of samengevat; hij moet letterlijk worden overgenomen en door de business gecontroleerd voordat deze pagina live gaat.}}"
+        ],
+        "bullets": []
+      },
+      {
+        "heading": "Vragen over de voorwaarden",
+        "paragraphs": [
+          "Kom je ergens niet uit? Bel 040 8200 956 of mail naar info@parkingyou.nl."
+        ],
+        "bullets": []
+      }
+    ],
+    "faqIds": [],
+    "seo": {
+      "title": "Algemene voorwaarden | ParkingYou",
+      "description": "De algemene voorwaarden van ParkingYou B.V. voor reserveringen, abonnementen en het gebruik van onze parkeerlocaties."
     },
     "published": true
   }

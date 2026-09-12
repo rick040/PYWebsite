@@ -1,45 +1,49 @@
 {
   "$description": "ParkingYou design tokens. Generated from src/styles/tokens.css by scripts/export-tokens.ts. Do not edit by hand.",
   "$source": "src/styles/tokens.css",
+  "aqua": {
+    "aqua": "#79cadc"
+  },
   "blue": {
-    "50": "#f2f6fe",
-    "100": "#e1ebfe",
-    "200": "#c9dafd",
-    "300": "#a8c1f8",
-    "400": "#82a2e9",
-    "500": "#5e80d0",
-    "600": "#3c5daf",
-    "700": "#203d8b",
-    "800": "#162e70",
-    "900": "#0f2153",
-    "950": "#081435"
+    "50": "#eef1f9",
+    "100": "#dbe1f2",
+    "700": "#374e9d",
+    "800": "#2c3f80",
+    "900": "#233266",
+    "blue": "#374e9d"
   },
   "bp": {
     "sm": "480px",
-    "md": "768px",
-    "lg": "1024px",
-    "xl": "1280px"
+    "md": "720px",
+    "lg": "980px",
+    "xl": "1180px"
   },
   "color": {
     "background": "#ffffff",
     "surface": "#ffffff",
-    "surface-subtle": "#f9fafc",
-    "surface-sunken": "#f2f4f7",
-    "surface-brand": "#203d8b",
-    "surface-brand-subtle": "#f2f6fe",
-    "surface-accent-subtle": "#e0f4f9",
-    "foreground": "#24262a",
-    "foreground-muted": "#63676e",
+    "surface-subtle": "#f5f7fb",
+    "surface-sunken": "#eef1f9",
+    "surface-brand": "#374e9d",
+    "surface-brand-subtle": "#eef1f9",
+    "surface-deep": "#0d142e",
+    "surface-accent": "#79cadc",
+    "surface-accent-subtle": "#e6f5f9",
+    "foreground": "#24335f",
+    "foreground-muted": "#627092",
+    "foreground-brand": "#374e9d",
     "foreground-on-brand": "#ffffff",
-    "foreground-brand": "#203d8b",
-    "border": "#e4e6ec",
-    "border-strong": "#d2d5dc",
-    "border-interactive": "#82868e",
-    "primary": "#203d8b",
-    "primary-hover": "#162e70",
-    "primary-active": "#0f2153",
+    "foreground-on-deep": "rgb(255 255 255 / 0.82)",
+    "foreground-accent": "#b8560f",
+    "border": "#dfe5f0",
+    "border-strong": "#c3cde2",
+    "border-interactive": "#8492b3",
+    "primary": "#374e9d",
+    "primary-hover": "#2c3f80",
+    "primary-active": "#233266",
     "primary-foreground": "#ffffff",
-    "focus-ring": "#3c5daf",
+    "accent": "#79cadc",
+    "accent-foreground": "#24335f",
+    "focus-ring": "#374e9d",
     "success": "#11794a",
     "success-surface": "#eefbf3",
     "warning": "#8a5a06",
@@ -48,75 +52,65 @@
     "danger-surface": "#fdf2f2"
   },
   "container": {
-    "max": "75rem",
-    "prose": "45rem"
+    "max": "73.75rem",
+    "prose": "55rem"
   },
-  "cyan": {
-    "50": "#f2fbfd",
-    "100": "#e0f4f9",
-    "200": "#c6eaf3",
-    "300": "#a4dcea",
-    "400": "#79c9dc",
-    "500": "#56b2c7",
-    "600": "#4098ab",
-    "700": "#2d7a8b",
-    "800": "#235f6c",
-    "900": "#1c4751",
-    "950": "#0e2a31"
-  },
-  "danger": {
-    "50": "#fdf2f2",
-    "600": "#b4231f",
-    "700": "#8f1a17"
+  "deep": {
+    "deep": "#0d142e"
   },
   "duration": {
-    "fast": "120ms",
-    "base": "200ms"
+    "fast": "160ms",
+    "base": "180ms"
   },
   "ease": {
     "out": "cubic-bezier(0.16, 1, 0.3, 1)"
   },
   "font": {
-    "sans": "ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
-    "mono": "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace"
+    "ubuntu": "'Ubuntu'",
+    "sans": "'Ubuntu', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif",
+    "mono": "ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace"
   },
   "leading": {
-    "tight": "1.15",
-    "snug": "1.3",
+    "tight": "1.05",
+    "snug": "1.2",
     "normal": "1.55",
-    "relaxed": "1.7"
+    "relaxed": "1.6"
+  },
+  "line": {
+    "line": "#dfe5f0",
+    "strong": "#8492b3"
   },
   "measure": {
-    "measure": "68ch"
+    "measure": "66ch"
   },
-  "neutral": {
-    "0": "#ffffff",
-    "50": "#f9fafc",
-    "100": "#f2f4f7",
-    "200": "#e4e6ec",
-    "300": "#d2d5dc",
-    "400": "#a7abb3",
-    "500": "#82868e",
-    "600": "#63676e",
-    "700": "#4c4f56",
-    "800": "#36393e",
-    "900": "#24262a",
-    "950": "#141518"
+  "mid": {
+    "mid": "#233a89"
+  },
+  "muted": {
+    "muted": "#627092"
+  },
+  "orange": {
+    "orange": "#ee7d2c",
+    "text": "#b8560f"
+  },
+  "paper": {
+    "paper": "#f5f7fb"
   },
   "radius": {
-    "sm": "0.25rem",
+    "sm": "0.4375rem",
     "md": "0.5rem",
     "lg": "0.75rem",
-    "xl": "1rem",
-    "full": "9999px"
+    "pill": "999px",
+    "full": "50%"
   },
   "shadow": {
-    "sm": "0 1px 2px 0 rgb(15 33 83 / 0.06)",
-    "md": "0 2px 4px -1px rgb(15 33 83 / 0.08), 0 4px 12px -2px rgb(15 33 83 / 0.08)",
-    "lg": "0 4px 8px -2px rgb(15 33 83 / 0.1), 0 12px 28px -4px rgb(15 33 83 / 0.12)"
+    "sm": "0 10px 26px rgb(35 58 137 / 0.08)",
+    "md": "0 12px 28px rgb(35 58 137 / 0.1)",
+    "lg": "0 18px 44px rgb(35 58 137 / 0.14)",
+    "brand": "0 12px 26px rgb(55 78 157 / 0.24)",
+    "accent": "0 12px 26px rgb(121 202 220 / 0.22)"
   },
   "space": {
-    "0": "0",
     "1": "0.25rem",
     "2": "0.5rem",
     "3": "0.75rem",
@@ -129,40 +123,34 @@
     "16": "4rem",
     "20": "5rem",
     "24": "6rem",
-    "section": "clamp(2.5rem, 1.8rem + 3vw, 4.5rem)",
-    "gutter": "clamp(1rem, 0.6rem + 1.8vw, 2rem)"
-  },
-  "success": {
-    "50": "#eefbf3",
-    "600": "#11794a",
-    "700": "#0c5f3a"
+    "section": "clamp(3rem, 2rem + 4.4vw, 5.75rem)",
+    "gutter": "clamp(1rem, 0.7rem + 1.4vw, 1.5rem)"
   },
   "tap": {
-    "target-min": "2.75rem"
+    "target-min": "3rem"
   },
   "text": {
+    "": "#24335f",
     "xs": "clamp(0.75rem, 0.73rem + 0.09vw, 0.8125rem)",
-    "sm": "clamp(0.875rem, 0.855rem + 0.09vw, 0.9375rem)",
-    "base": "clamp(1rem, 0.97rem + 0.13vw, 1.0625rem)",
-    "lg": "clamp(1.125rem, 1.08rem + 0.2vw, 1.25rem)",
-    "xl": "clamp(1.25rem, 1.17rem + 0.35vw, 1.5rem)",
-    "2xl": "clamp(1.5rem, 1.36rem + 0.6vw, 1.875rem)",
-    "3xl": "clamp(1.75rem, 1.5rem + 1.1vw, 2.5rem)",
-    "4xl": "clamp(2.125rem, 1.75rem + 1.6vw, 3.25rem)"
+    "sm": "clamp(0.8125rem, 0.79rem + 0.11vw, 0.875rem)",
+    "base": "clamp(0.9375rem, 0.91rem + 0.13vw, 1rem)",
+    "lg": "clamp(1rem, 0.95rem + 0.22vw, 1.1875rem)",
+    "xl": "clamp(1.1875rem, 1.11rem + 0.33vw, 1.375rem)",
+    "2xl": "clamp(1.375rem, 1.24rem + 0.55vw, 1.5rem)",
+    "3xl": "clamp(1.625rem, 1.35rem + 1.15vw, 2.625rem)",
+    "4xl": "clamp(2.125rem, 1.5rem + 2.6vw, 4rem)"
   },
   "tracking": {
-    "tight": "-0.02em",
-    "normal": "0"
-  },
-  "warning": {
-    "50": "#fdf6e7",
-    "600": "#8a5a06",
-    "700": "#6e4705"
+    "tight": "-0.01em",
+    "wide": "0.06em"
   },
   "weight": {
+    "light": "300",
     "normal": "400",
     "medium": "500",
-    "semibold": "600",
     "bold": "700"
+  },
+  "white": {
+    "white": "#ffffff"
   }
 }

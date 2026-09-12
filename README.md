@@ -34,7 +34,7 @@ npx tsx scripts/screenshots.ts        # 390px and 1280px, into screenshots/
 
 ## Current state
 
-Phase 1 complete on the templates. 78 statically generated pages: 46 locations, 14 cities,
+Phase 1 complete on the templates, styled from the rebranding prototype. 79 statically generated pages: 46 locations, 14 cities,
 4 POI landing pages, 6 flat pages, the locations hub, the FAQ, news, and the home page.
 
 | Route | What it is |

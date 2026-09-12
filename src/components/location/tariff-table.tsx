@@ -37,11 +37,7 @@ export function TariffTable({ location }: { location: Location }) {
       {(sync.status === 'stale' || sync.status === 'superseded') && (
         <p
           role="status"
-          className={[
-            'rounded-[var(--py-radius-md)] border border-border',
-            'bg-warning-surface text-warning',
-            'px-[var(--py-space-4)] py-[var(--py-space-3)] text-sm',
-          ].join(' ')}
+          className="py-notice py-notice--warning"
         >
           Deze tarieven zijn voor het laatst bevestigd op {formatDate(sync.syncedAt)}. Bij het
           reserveren zie je altijd de prijs die op dat moment geldt.
@@ -52,37 +48,23 @@ export function TariffTable({ location }: { location: Location }) {
         <section key={group.title} aria-labelledby={`tarief-${slugify(group.title)}`}>
           <h3
             id={`tarief-${slugify(group.title)}`}
-            className="mb-[var(--py-space-2)] text-lg font-[var(--py-weight-semibold)]"
+            className="mb-[var(--py-space-2)] text-lg font-[var(--py-weight-bold)] text-foreground-brand"
           >
             {group.title}
           </h3>
           <Card>
-            <table className="w-full border-collapse text-left">
+            <table className="py-table">
               <caption className="sr-only">{`${group.title} voor ${location.name}`}</caption>
               <tbody>
                 {group.rows.map((row) => (
-                  <tr key={row.label} className="border-b border-border last:border-b-0">
-                    <th
-                      scope="row"
-                      className={[
-                        'p-[var(--py-space-4)] align-top',
-                        'font-[var(--py-weight-normal)]',
-                      ].join(' ')}
-                    >
+                  <tr key={row.label}>
+                    <th scope="row">
                       {row.label}
-                      {row.note !== undefined && (
-                        <span className="mt-[var(--py-space-1)] block text-sm text-foreground-muted">
-                          {row.note}
-                        </span>
-                      )}
+                      {row.note !== undefined && <small>{row.note}</small>}
                     </th>
-                    <td className="p-[var(--py-space-4)] text-right align-top whitespace-nowrap">
-                      <span className="font-[var(--py-weight-semibold)]">
-                        {formatEurosExact(row.amountCents)}
-                      </span>
-                      <span className="block text-sm text-foreground-muted">
-                        {formatTariffUnit(row.unit)}
-                      </span>
+                    <td>
+                      <strong>{formatEurosExact(row.amountCents)}</strong>
+                      <small>{formatTariffUnit(row.unit)}</small>
                     </td>
                   </tr>
                 ))}
