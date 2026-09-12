@@ -13,6 +13,10 @@ answers itself.
 
 Admin field labels and help text are **Dutch**. Field names in code are **English**. Both, always.
 
+The site runs two locales, `nl` (default, unprefixed) and `en` (under `/en`). **Section 13 sets out
+exactly which fields are localised and which are not**, as one rule rather than a marker repeated
+down every table below.
+
 ## 1. Collections at a glance
 
 | Collection | Dutch admin label | Rows | Who creates them |
@@ -25,7 +29,7 @@ Admin field labels and help text are **Dutch**. Field names in code are **Englis
 | `subscriptions` | Abonnementen | few | Admin |
 | `pages` | Losse pagina's | ~8 | Admin |
 | `media` | Media | grows | Editor |
-| `redirects` | Redirects | 249+ | Admin |
+| `redirects` | Redirects | 269+ | Admin |
 | `aeroparkerProducts` | Aeroparker-producten | synced | **Nobody. Written by the sync.** |
 | `aeroparkerTariffs` | Aeroparker-tarieven | synced | **Nobody. Written by the sync.** |
 | `syncRuns` | Synchronisaties | synced | **Nobody. Written by the sync.** |
@@ -247,8 +251,56 @@ next request; it needs no build and no deployment.
    operated car parks versus published pages. Decides how many records we seed.
 2. **Is `CarPark/@ID` stable** across Aeroparker product changes? `aeroparkerCarParkId` is the
    join key for the entire model; if it is not stable, the model needs a different key.
-3. **Does D2 (see `IA.md`) make every text field translatable?** If `/en/` survives, that is a
-   structural change to every collection and has to land in Phase 2, not later.
+3. **Who writes the English?** D2 is answered and the model supports it (section 13), but the
+   translation itself is editorial work nobody has been assigned yet.
 4. **Who owns tariff corrections?** When the Aeroparker tariff is wrong, the fix belongs in
    Aeroparker. Confirm that the business accepts this and does not expect a CMS override, because
    an override field would quietly become the place where prices go stale.
+
+## 13. Localisation
+
+Decision D2 (`IA.md` §2) keeps English as a real hreflang counterpart rather than redirecting it
+away. Payload localisation is configured with `nl` as the default locale and `en` as the second,
+and **fallback is off**.
+
+### What is localised, and what is not
+
+| Localised **(L)** | Single-valued |
+| --- | --- |
+| Every `text`, `textarea` and `richText` field a visitor reads | `slug` |
+| `seoTitle`, `seoDescription` | `coordinates`, `centerPoint`, `address` |
+| `media.alt`, `media.caption` | every relationship field |
+| `features`, `benefits`, array item labels | `aeroparkerCarParkId`, `aeroparkerSubscriptionId` |
+| `published` | every field written by the sync |
+
+Three of those deserve the reasoning:
+
+- **`slug` is not localised.** URL paths and slugs are Dutch in both locales, per the language
+  rule. `/en/parkeren/eindhoven/philips-stadion` is the English page. One slug means one document,
+  one redirect map, and no chance of the two trees drifting apart.
+- **`published` is localised.** This is the important one. A location goes live in Dutch the moment
+  the editor publishes it; the English version stays unreachable until somebody has translated it.
+- **Nothing from the Aeroparker sync is localised.** A price is a price. The sync writes one value
+  and both locales render it.
+
+### Fallback is deliberately off
+
+Payload can fall back to the default locale for an untranslated field. We do not use it, because
+the result is an English page with Dutch paragraphs in it: bad for the reader, and worse for
+search, since a mostly-Dutch page under an `en` hreflang tag is a quality signal against both
+URLs.
+
+Instead: an English page that is not marked published in `en` returns **404**, is absent from the
+English sitemap, and emits **no** hreflang link. Its Dutch counterpart emits no `en` alternate
+either, so the hreflang set stays reciprocal, which is the condition Google requires for it to be
+honoured at all.
+
+### What this costs the editor
+
+Every new location and POI page is now two pieces of writing. The admin makes that visible rather
+than letting it rot: the collection list shows a per-row locale status (Dutch published, English
+missing), so the backlog of untranslated pages is a list somebody can work through instead of an
+invisible gap.
+
+The Phase 2 acceptance test is run in Dutch only. Publishing a Dutch page without an English
+translation must work and must not block; that is the normal case, not an error.

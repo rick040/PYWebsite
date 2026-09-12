@@ -1,7 +1,7 @@
 # Information architecture and URL structure
 
-Status: Phase 0 proposal. Nothing here is built yet. Two decisions (D1, D2) need an explicit
-answer before Phase 1 starts, because both are expensive to reverse once the redirect map ships.
+Status: Phase 0, approved. Nothing here is built yet. The two open decisions (D1, D2) were
+answered on 12 September 2026 and this document reflects those answers.
 
 Language rule, applied without exception: code and documentation in English, every URL path, slug,
 label and piece of copy in Dutch.
@@ -45,6 +45,11 @@ Two content problems from the same export, which the new IA has to fix rather th
 
 ## 2. Proposed structure
 
+Dutch is the default locale and carries no prefix. English is a full hreflang counterpart under
+`/en`, with **Dutch slugs in both locales** (decision D2, and the language rule: URL paths and
+slugs are Dutch without exception). So `/parkeren/eindhoven/philips-stadion` and
+`/en/parkeren/eindhoven/philips-stadion` are the same document in two locales, not two documents.
+
 ```
 /                                     home
 /locaties                             all 46 locations, filterable, the hub
@@ -65,6 +70,8 @@ Two content problems from the same export, which the new IA has to fix rather th
 /algemene-voorwaarden                 terms
 /privacy                              privacy statement
 /nieuwsbrief                          newsletter signup
+
+/en/...                               the same tree, English copy, Dutch slugs
 ```
 
 Rules that make this hold together:
@@ -81,12 +88,12 @@ Rules that make this hold together:
 - **No trailing slashes, lowercase, hyphens.** Enforced by middleware, with a 301 to the canonical
   form so a mistyped link never returns a 404 or a soft duplicate.
 
-### Decision D1: restructure, or preserve the current paths?
+### Decision D1 (answered: restructure)
 
-The conservative alternative is to keep today's wording and only strip the noise:
+The conservative alternative was to keep today's wording and only strip the noise:
 `/nl/locaties/parking-philips-stadion/id=7` becomes `/locaties/parking-philips-stadion`.
 
-I recommend **restructuring**, for one reason: *every URL on the site changes regardless*. The
+**Restructuring was chosen**, for one reason: *every URL on the site changes regardless*. The
 `/nl/` prefix and the `id=` suffix both have to go, so there is no version of this project where
 the old URLs survive untouched. Once every URL is being redirected anyway, the marginal risk of
 also improving the path is small, and the gain is a hierarchy that can actually rank for
@@ -97,22 +104,25 @@ The risk is real and I am not going to pretend otherwise: a large-scale URL chan
 stability for roughly four to eight weeks even when the redirects are perfect. The mitigations are
 in section 6.
 
-**This needs an explicit yes before Phase 1.**
+### Decision D2 (answered: keep English as a real hreflang pair)
 
-### Decision D2: what happens to `/en/`?
+The English tree survives. `/en/` is a proper locale, not a redirect. Three consequences, all of
+which land in Phase 2 rather than being retrofitted later:
 
-The brief specifies `hreflang nl-NL` and Dutch copy everywhere, which reads as "Dutch only". The
-inventory therefore 301s every `/en/` URL to its Dutch equivalent, and roughly 90 English URLs
-stop existing.
+1. **Every text field in every collection becomes localised.** Slugs, coordinates, relationships
+   and everything written by the Aeroparker sync stay single-valued. See `CONTENT-MODEL.md` §13.
+2. **Publication state is per locale.** A page goes live in Dutch first; its English version only
+   becomes reachable when someone has actually translated it. An untranslated `/en/` URL returns
+   404 and emits no hreflang, because a half-Dutch English page is worse for both languages than
+   no English page at all.
+3. **hreflang is emitted as a reciprocal set** on every page that exists in both locales:
+   `nl-NL` → the Dutch URL, `en` → the `/en` URL, `x-default` → the Dutch URL.
 
-Before that ships, somebody should look at Search Console and answer: **how much traffic and how
-many conversions do the English pages actually bring?** ParkingYou serves airport-adjacent and
-event parking, where non-Dutch visitors are plausible. If the answer is "meaningful", the right
-move is `/en/` as a proper hreflang pair rather than a redirect, and that changes the content
-model (translatable fields on every collection) enough that it has to be decided now, not in
-Phase 4.
+The ongoing cost is editorial, not technical: every new location and POI page is now two pieces of
+writing. That is the trade accepted in exchange for keeping the English traffic.
 
-**I cannot answer this from here; I have no Search Console access.**
+The Search Console baseline described in section 6 should still be taken per locale, so the
+English tree's performance after cutover can be judged on its own numbers.
 
 ## 3. The three page types that carry the SEO
 
@@ -195,7 +205,6 @@ Two guards, both enforced by test in Phase 4:
 - **The PWA.** Separate project. The design tokens are shared (Phase 1); the code is not.
 - **A booking funnel.** Every booking CTA deep links into Aeroparker. We never take a booking.
 - **A customer account area.** That is Aeroparker's and the PWA's.
-- **An English tree**, pending decision D2.
 - **The FAQ on Zendesk.** Today the FAQ lives at `parkingyou.zendesk.com`. The brief requires an
   FAQ a business user edits in our admin, so `/veelgestelde-vragen` is a new page in this site.
   Zendesk stays as the customer-service helpdesk; it stops being the public FAQ. This is a new
@@ -226,12 +235,17 @@ The live parkingyou.nl site **could not be crawled from this environment**. Outb
 
 So the structure above is reconstructed from:
 
-- **Verified**: 46 location URLs with their IDs and cities, from the August 2026 SEO export made
-  against the live pages; roughly 30 further URLs seen directly in search-engine results.
-- **Pattern-derived**: the `/en/` mirrors, the city-nested location forms, and the region mapping
-  for cities the search results did not cover. Every such row is marked `pattern` in
-  `URL-INVENTORY.csv`.
+- **Verified** (101 rows): 46 location URLs with their IDs and cities, from the August 2026 SEO
+  export made against the live pages; roughly 30 further URLs seen directly in search-engine
+  results.
+- **Pattern-derived** (154 rows): most `/en/` counterparts, the city-nested location forms, and
+  the region mapping for cities the search results did not cover. Every such row is marked
+  `pattern` in `URL-INVENTORY.csv`.
+- **New pages** (14 rows): city pages for the cities the live site folded into a region.
 
 **Before the redirect map goes live, somebody with Search Console access has to export the full
 list of indexed URLs and reconcile it against this inventory.** The structure will hold; the row
-count will grow. I would rather say that plainly than present 249 rows as a finished crawl.
+count will grow. Three pattern rows in particular are placeholders with no real IDs behind them
+yet: news articles, `abonnementen/subscription={id}` and `abonnementen/location={id}`.
+
+I would rather say that plainly than present 269 rows as a finished crawl.

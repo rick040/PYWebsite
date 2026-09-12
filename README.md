@@ -23,12 +23,14 @@ Phase 0 (recon and plan). No application code yet.
 | Document | What it covers |
 | --- | --- |
 | [`docs/AEROPARKER-AUDIT.md`](docs/AEROPARKER-AUDIT.md) | Endpoints, auth, freshness, failure modes, and the design that survives them |
-| [`docs/URL-INVENTORY.csv`](docs/URL-INVENTORY.csv) | 249 old URLs mapped to proposed new URLs and 301 targets |
+| [`docs/URL-INVENTORY.csv`](docs/URL-INVENTORY.csv) | 269 old URLs mapped to proposed new URLs and 301 targets |
 | [`docs/IA.md`](docs/IA.md) | Information architecture, Dutch URL structure, internal linking |
 | [`docs/CONTENT-MODEL.md`](docs/CONTENT-MODEL.md) | Collections, fields, editable versus Aeroparker-synced |
 
-Two decisions need an answer before Phase 1 starts; both are in `docs/IA.md` §2 (D1: restructure
-the URLs or preserve today's paths, D2: what happens to the English tree).
+Two decisions were open and are now answered (`docs/IA.md` §2):
+
+- **D1: restructure the URLs.** `/parkeren/{stad}/{locatie}` and `/parkeren-bij/{stad}/{poi}`.
+- **D2: keep English as a real hreflang pair** under `/en`, with Dutch slugs in both locales.
 
 ## Planned phases
 

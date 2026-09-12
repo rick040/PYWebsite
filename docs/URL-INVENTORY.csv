@@ -1,250 +1,270 @@
 old_url,page_type,proposed_new_url,redirect_target,redirect_type,source_confidence,notes
-/nl/,home,/,/,301,verified,Dutch home becomes the root.
-/en/,home-en,(retired),/,301,verified,English tree retired; see IA.md open decision D2.
-/nl/locaties,locatie-overzicht,/locaties,/locaties,301,verified,All-locations overview.
-/en/locaties,locatie-overzicht-en,(retired),/locaties,301,verified,
+/nl/,home,/,/,301,verified,Dutch is the default locale and has no prefix; English lives under /en.
+/en/,home-en,/en/,/en/,301,verified,Dutch is the default locale and has no prefix; English lives under /en.
+/nl/locaties,locatie-overzicht,/locaties,/locaties,301,verified,
+/en/locaties,locatie-overzicht-en,/en/locaties,/en/locaties,301,verified,
 /nl/alles-over-onze-parkeeroplossingen,content,/parkeeroplossingen,/parkeeroplossingen,301,verified,
-/en/alles-over-onze-parkeeroplossingen,content-en,(retired),/parkeeroplossingen,301,verified,
+/en/alles-over-onze-parkeeroplossingen,content-en,/en/parkeeroplossingen,/en/parkeeroplossingen,301,verified,
 /nl/abonnementen,abonnementen,/abonnementen,/abonnementen,301,verified,
-/en/abonnementen,abonnementen-en,(retired),/abonnementen,301,verified,
+/en/abonnementen,abonnementen-en,/en/abonnementen,/en/abonnementen,301,verified,
 /nl/abonnementen/aanvraag-abonnement,formulier,/abonnementen/aanvragen,/abonnementen/aanvragen,301,verified,
-/en/abonnementen/aanvraag-abonnement,formulier-en,(retired),/abonnementen/aanvragen,301,verified,
+/en/abonnementen/aanvraag-abonnement,formulier-en,/en/abonnementen/aanvragen,/en/abonnementen/aanvragen,301,verified,
 /nl/strippenkaarten,parkingpass,/parkingpass,/parkingpass,301,verified,"Live name ""strippenkaarten""; brand name is ParkingPass."
-/en/strippenkaarten,parkingpass-en,(retired),/parkingpass,301,verified,
+/en/strippenkaarten,parkingpass-en,/en/parkingpass,/en/parkingpass,301,verified,"Live name ""strippenkaarten""; brand name is ParkingPass."
 /nl/zakelijk,zakelijk,/zakelijk,/zakelijk,301,verified,
-/en/zakelijk,zakelijk-en,(retired),/zakelijk,301,verified,
+/en/zakelijk,zakelijk-en,/en/zakelijk,/en/zakelijk,301,verified,
 /nl/nieuws,nieuws-overzicht,/nieuws,/nieuws,301,verified,
-/en/nieuws,nieuws-overzicht-en,(retired),/nieuws,301,verified,
-/nl/news/nieuws,nieuws-overzicht-dupe,(retired),/nieuws,301,verified,Duplicate of /nl/nieuws; collapse.
-/en/news/nieuws,nieuws-overzicht-dupe,(retired),/nieuws,301,verified,
+/en/nieuws,nieuws-overzicht-en,/en/nieuws,/en/nieuws,301,verified,
 /nl/over/parkingyou,over,/over-ons,/over-ons,301,verified,
-/en/over/parkingyou,over-en,(retired),/over-ons,301,verified,
+/en/over/parkingyou,over-en,/en/over-ons,/en/over-ons,301,verified,
 /nl/over/contact,contact,/contact,/contact,301,verified,
-/en/over/contact,contact-en,(retired),/contact,301,verified,
+/en/over/contact,contact-en,/en/contact,/en/contact,301,verified,
 /nl/over/nieuwsbriefabonnement,nieuwsbrief,/nieuwsbrief,/nieuwsbrief,301,verified,
-/en/over/nieuwsbriefabonnement,nieuwsbrief-en,(retired),/nieuwsbrief,301,verified,
+/en/over/nieuwsbriefabonnement,nieuwsbrief-en,/en/nieuwsbrief,/en/nieuwsbrief,301,verified,
 /nl/algemene-voorwaarden,juridisch,/algemene-voorwaarden,/algemene-voorwaarden,301,verified,
-/en/algemene-voorwaarden,juridisch-en,(retired),/algemene-voorwaarden,301,verified,
+/en/algemene-voorwaarden,juridisch-en,/en/algemene-voorwaarden,/en/algemene-voorwaarden,301,verified,
+/nl/news/nieuws,nieuws-overzicht-dupe,(retired),/nieuws,301,verified,Duplicate of /nl/nieuws; collapse.
+/en/news/nieuws,nieuws-overzicht-dupe-en,(retired),/en/nieuws,301,verified,Duplicate of /en/nieuws; collapse.
 /nl/producten/klantenservice/werken-bij-parkingyou/producten,onbekend,/werken-bij,/werken-bij,301,verified,Live path nests four unrelated segments; confirm intent before redirecting.
 /nl/locaties/almere/cid=21,stad,/parkeren/almere,/parkeren/almere,301,verified,
-/en/locaties/almere/cid=21,stad-en,(retired),/parkeren/almere,301,verified,
-/nl/locaties/almere,stad-zonder-cid,/parkeren/almere,/parkeren/almere,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
+/en/locaties/almere/cid=21,stad-en,/en/parkeren/almere,/en/parkeren/almere,301,verified,
+/nl/locaties/almere,stad-zonder-cid,(retired),/parkeren/almere,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
+/en/locaties/almere,stad-zonder-cid-en,(retired),/en/parkeren/almere,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
 /nl/locaties/amsterdam/cid=1,stad,/parkeren/amsterdam,/parkeren/amsterdam,301,verified,
-/en/locaties/amsterdam/cid=1,stad-en,(retired),/parkeren/amsterdam,301,verified,
-/nl/locaties/amsterdam,stad-zonder-cid,/parkeren/amsterdam,/parkeren/amsterdam,301,verified,Bare-slug variant indexed alongside the cid variant; duplicate content today.
-/nl/locaties/regio-zuid-holland/cid=9,stad,(see notes),/locaties,301,pattern,"Live container is a region, not a city; splits into one city page per city in the new IA."
-/en/locaties/regio-zuid-holland/cid=9,stad-en,(retired),/locaties,301,pattern,"Live container is a region, not a city; splits into one city page per city in the new IA."
-/nl/locaties/regio-zuid-holland,stad-zonder-cid,(see notes),/locaties,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
-/nl/locaties/regio-gelderland/cid=13,stad,(see notes),/locaties,301,pattern,"Live container is a region, not a city; splits into one city page per city in the new IA."
-/en/locaties/regio-gelderland/cid=13,stad-en,(retired),/locaties,301,pattern,"Live container is a region, not a city; splits into one city page per city in the new IA."
-/nl/locaties/regio-gelderland,stad-zonder-cid,(see notes),/locaties,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
+/en/locaties/amsterdam/cid=1,stad-en,/en/parkeren/amsterdam,/en/parkeren/amsterdam,301,verified,
+/nl/locaties/amsterdam,stad-zonder-cid,(retired),/parkeren/amsterdam,301,verified,Bare-slug variant indexed alongside the cid variant; duplicate content today.
+/en/locaties/amsterdam,stad-zonder-cid-en,(retired),/en/parkeren/amsterdam,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
+/nl/locaties/regio-zuid-holland/cid=9,stad,(retired),/locaties,301,pattern,"Live container is a region, not a city; it splits into one city page per city in the new IA, so there is no single successor. Points at the location hub."
+/en/locaties/regio-zuid-holland/cid=9,stad-en,(retired),/en/locaties,301,pattern,"Live container is a region, not a city; it splits into one city page per city in the new IA, so there is no single successor. Points at the location hub."
+/nl/locaties/regio-zuid-holland,stad-zonder-cid,(retired),/locaties,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
+/en/locaties/regio-zuid-holland,stad-zonder-cid-en,(retired),/en/locaties,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
+/nl/locaties/regio-gelderland/cid=13,stad,(retired),/locaties,301,pattern,"Live container is a region, not a city; it splits into one city page per city in the new IA, so there is no single successor. Points at the location hub."
+/en/locaties/regio-gelderland/cid=13,stad-en,(retired),/en/locaties,301,pattern,"Live container is a region, not a city; it splits into one city page per city in the new IA, so there is no single successor. Points at the location hub."
+/nl/locaties/regio-gelderland,stad-zonder-cid,(retired),/locaties,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
+/en/locaties/regio-gelderland,stad-zonder-cid-en,(retired),/en/locaties,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
 /nl/locaties/eindhoven/cid=3,stad,/parkeren/eindhoven,/parkeren/eindhoven,301,verified,
-/en/locaties/eindhoven/cid=3,stad-en,(retired),/parkeren/eindhoven,301,verified,
-/nl/locaties/eindhoven,stad-zonder-cid,/parkeren/eindhoven,/parkeren/eindhoven,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
-/nl/locaties/regio-noord-holland,stad-zonder-cid,(see notes),/locaties,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
+/en/locaties/eindhoven/cid=3,stad-en,/en/parkeren/eindhoven,/en/parkeren/eindhoven,301,verified,
+/nl/locaties/eindhoven,stad-zonder-cid,(retired),/parkeren/eindhoven,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
+/en/locaties/eindhoven,stad-zonder-cid-en,(retired),/en/parkeren/eindhoven,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
+/nl/locaties/regio-noord-holland,stad-zonder-cid,(retired),/locaties,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
+/en/locaties/regio-noord-holland,stad-zonder-cid-en,(retired),/en/locaties,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
 /nl/locaties/rotterdam/cid=5,stad,/parkeren/rotterdam,/parkeren/rotterdam,301,verified,
-/en/locaties/rotterdam/cid=5,stad-en,(retired),/parkeren/rotterdam,301,verified,
-/nl/locaties/rotterdam,stad-zonder-cid,/parkeren/rotterdam,/parkeren/rotterdam,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
+/en/locaties/rotterdam/cid=5,stad-en,/en/parkeren/rotterdam,/en/parkeren/rotterdam,301,verified,
+/nl/locaties/rotterdam,stad-zonder-cid,(retired),/parkeren/rotterdam,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
+/en/locaties/rotterdam,stad-zonder-cid-en,(retired),/en/parkeren/rotterdam,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
 /nl/locaties/tilburg/cid=7,stad,/parkeren/tilburg,/parkeren/tilburg,301,verified,
-/en/locaties/tilburg/cid=7,stad-en,(retired),/parkeren/tilburg,301,verified,
-/nl/locaties/tilburg,stad-zonder-cid,/parkeren/tilburg,/parkeren/tilburg,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
+/en/locaties/tilburg/cid=7,stad-en,/en/parkeren/tilburg,/en/parkeren/tilburg,301,verified,
+/nl/locaties/tilburg,stad-zonder-cid,(retired),/parkeren/tilburg,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
+/en/locaties/tilburg,stad-zonder-cid-en,(retired),/en/parkeren/tilburg,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
 /nl/locaties/utrecht/cid=15,stad,/parkeren/utrecht,/parkeren/utrecht,301,verified,
-/en/locaties/utrecht/cid=15,stad-en,(retired),/parkeren/utrecht,301,verified,
-/nl/locaties/utrecht,stad-zonder-cid,/parkeren/utrecht,/parkeren/utrecht,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
+/en/locaties/utrecht/cid=15,stad-en,/en/parkeren/utrecht,/en/parkeren/utrecht,301,verified,
+/nl/locaties/utrecht,stad-zonder-cid,(retired),/parkeren/utrecht,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
+/en/locaties/utrecht,stad-zonder-cid-en,(retired),/en/parkeren/utrecht,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
 /nl/locaties/zoetermeer/cid=19,stad,/parkeren/zoetermeer,/parkeren/zoetermeer,301,verified,
-/en/locaties/zoetermeer/cid=19,stad-en,(retired),/parkeren/zoetermeer,301,verified,
-/nl/locaties/zoetermeer,stad-zonder-cid,/parkeren/zoetermeer,/parkeren/zoetermeer,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
-(none - new page),stad,/parkeren/den-haag,-,301,n/a,New city page; live site folded Den Haag into regio-zuid-holland.
-(none - new page),stad,/parkeren/dordrecht,-,301,n/a,New city page; live site folded Dordrecht into regio-zuid-holland.
-(none - new page),stad,/parkeren/ede,-,301,n/a,New city page; live site folded Ede into regio-gelderland.
-(none - new page),stad,/parkeren/heerhugowaard,-,301,n/a,New city page; live site folded Heerhugowaard into regio-noord-holland.
-(none - new page),stad,/parkeren/nijmegen,-,301,n/a,New city page; live site folded Nijmegen into regio-gelderland.
-(none - new page),stad,/parkeren/rijswijk,-,301,n/a,New city page; live site folded Rijswijk into regio-zuid-holland.
-(none - new page),stad,/parkeren/schiedam,-,301,n/a,New city page; live site folded Schiedam into regio-zuid-holland.
+/en/locaties/zoetermeer/cid=19,stad-en,/en/parkeren/zoetermeer,/en/parkeren/zoetermeer,301,verified,
+/nl/locaties/zoetermeer,stad-zonder-cid,(retired),/parkeren/zoetermeer,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
+/en/locaties/zoetermeer,stad-zonder-cid-en,(retired),/en/parkeren/zoetermeer,301,pattern,Bare-slug variant indexed alongside the cid variant; duplicate content today.
+(none - new page),stad,/parkeren/den-haag,-,301,n/a,New city page; the live site folded Den Haag into regio-zuid-holland.
+(none - new page),stad-en,/en/parkeren/den-haag,-,301,n/a,New city page; the live site folded Den Haag into regio-zuid-holland.
+(none - new page),stad,/parkeren/dordrecht,-,301,n/a,New city page; the live site folded Dordrecht into regio-zuid-holland.
+(none - new page),stad-en,/en/parkeren/dordrecht,-,301,n/a,New city page; the live site folded Dordrecht into regio-zuid-holland.
+(none - new page),stad,/parkeren/ede,-,301,n/a,New city page; the live site folded Ede into regio-gelderland.
+(none - new page),stad-en,/en/parkeren/ede,-,301,n/a,New city page; the live site folded Ede into regio-gelderland.
+(none - new page),stad,/parkeren/heerhugowaard,-,301,n/a,New city page; the live site folded Heerhugowaard into regio-noord-holland.
+(none - new page),stad-en,/en/parkeren/heerhugowaard,-,301,n/a,New city page; the live site folded Heerhugowaard into regio-noord-holland.
+(none - new page),stad,/parkeren/nijmegen,-,301,n/a,New city page; the live site folded Nijmegen into regio-gelderland.
+(none - new page),stad-en,/en/parkeren/nijmegen,-,301,n/a,New city page; the live site folded Nijmegen into regio-gelderland.
+(none - new page),stad,/parkeren/rijswijk,-,301,n/a,New city page; the live site folded Rijswijk into regio-zuid-holland.
+(none - new page),stad-en,/en/parkeren/rijswijk,-,301,n/a,New city page; the live site folded Rijswijk into regio-zuid-holland.
+(none - new page),stad,/parkeren/schiedam,-,301,n/a,New city page; the live site folded Schiedam into regio-zuid-holland.
+(none - new page),stad-en,/en/parkeren/schiedam,-,301,n/a,New city page; the live site folded Schiedam into regio-zuid-holland.
 /nl/locaties/parking-p1-carlton-wtc/id=123,locatie,/parkeren/almere/p1-carlton-wtc,/parkeren/almere/p1-carlton-wtc,301,verified,Aeroparker/CMS location id 123.
-/en/locaties/parking-p1-carlton-wtc/id=123,locatie-en,(retired),/parkeren/almere/p1-carlton-wtc,301,pattern,
+/en/locaties/parking-p1-carlton-wtc/id=123,locatie-en,/en/parkeren/almere/p1-carlton-wtc,/en/parkeren/almere/p1-carlton-wtc,301,pattern,
 /nl/locaties/almere/parking-p1-carlton-wtc/id=123,locatie-genest,(retired),/parkeren/almere/p1-carlton-wtc,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/almere/parking-p1-carlton-wtc/id=123,locatie-genest-en,(retired),/parkeren/almere/p1-carlton-wtc,301,pattern,
+/en/locaties/almere/parking-p1-carlton-wtc/id=123,locatie-genest-en,(retired),/en/parkeren/almere/p1-carlton-wtc,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-p2-mandela-wtc/id=125,locatie,/parkeren/almere/p2-mandela-wtc,/parkeren/almere/p2-mandela-wtc,301,verified,Aeroparker/CMS location id 125.
-/en/locaties/parking-p2-mandela-wtc/id=125,locatie-en,(retired),/parkeren/almere/p2-mandela-wtc,301,pattern,
+/en/locaties/parking-p2-mandela-wtc/id=125,locatie-en,/en/parkeren/almere/p2-mandela-wtc,/en/parkeren/almere/p2-mandela-wtc,301,pattern,
 /nl/locaties/almere/parking-p2-mandela-wtc/id=125,locatie-genest,(retired),/parkeren/almere/p2-mandela-wtc,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/almere/parking-p2-mandela-wtc/id=125,locatie-genest-en,(retired),/parkeren/almere/p2-mandela-wtc,301,pattern,
+/en/locaties/almere/parking-p2-mandela-wtc/id=125,locatie-genest-en,(retired),/en/parkeren/almere/p2-mandela-wtc,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/amsterdam-parking-b2/id=67,locatie,/parkeren/amsterdam/b-amsterdam-b2,/parkeren/amsterdam/b-amsterdam-b2,301,verified,Aeroparker/CMS location id 67.
-/en/locaties/amsterdam-parking-b2/id=67,locatie-en,(retired),/parkeren/amsterdam/b-amsterdam-b2,301,pattern,
+/en/locaties/amsterdam-parking-b2/id=67,locatie-en,/en/parkeren/amsterdam/b-amsterdam-b2,/en/parkeren/amsterdam/b-amsterdam-b2,301,pattern,
 /nl/locaties/amsterdam/amsterdam-parking-b2/id=67,locatie-genest,(retired),/parkeren/amsterdam/b-amsterdam-b2,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/amsterdam/amsterdam-parking-b2/id=67,locatie-genest-en,(retired),/parkeren/amsterdam/b-amsterdam-b2,301,pattern,
+/en/locaties/amsterdam/amsterdam-parking-b2/id=67,locatie-genest-en,(retired),/en/parkeren/amsterdam/b-amsterdam-b2,301,verified,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-b-amsterdam-b1/id=23,locatie,/parkeren/amsterdam/b-amsterdam-b1,/parkeren/amsterdam/b-amsterdam-b1,301,verified,Aeroparker/CMS location id 23.
-/en/locaties/parking-b-amsterdam-b1/id=23,locatie-en,(retired),/parkeren/amsterdam/b-amsterdam-b1,301,pattern,
+/en/locaties/parking-b-amsterdam-b1/id=23,locatie-en,/en/parkeren/amsterdam/b-amsterdam-b1,/en/parkeren/amsterdam/b-amsterdam-b1,301,pattern,
 /nl/locaties/amsterdam/parking-b-amsterdam-b1/id=23,locatie-genest,(retired),/parkeren/amsterdam/b-amsterdam-b1,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/amsterdam/parking-b-amsterdam-b1/id=23,locatie-genest-en,(retired),/parkeren/amsterdam/b-amsterdam-b1,301,pattern,
+/en/locaties/amsterdam/parking-b-amsterdam-b1/id=23,locatie-genest-en,(retired),/en/parkeren/amsterdam/b-amsterdam-b1,301,verified,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-bos-en-lommerplantsoen/id=21,locatie,/parkeren/amsterdam/bos-en-lommerplantsoen,/parkeren/amsterdam/bos-en-lommerplantsoen,301,verified,Aeroparker/CMS location id 21.
-/en/locaties/parking-bos-en-lommerplantsoen/id=21,locatie-en,(retired),/parkeren/amsterdam/bos-en-lommerplantsoen,301,pattern,
+/en/locaties/parking-bos-en-lommerplantsoen/id=21,locatie-en,/en/parkeren/amsterdam/bos-en-lommerplantsoen,/en/parkeren/amsterdam/bos-en-lommerplantsoen,301,pattern,
 /nl/locaties/amsterdam/parking-bos-en-lommerplantsoen/id=21,locatie-genest,(retired),/parkeren/amsterdam/bos-en-lommerplantsoen,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/amsterdam/parking-bos-en-lommerplantsoen/id=21,locatie-genest-en,(retired),/parkeren/amsterdam/bos-en-lommerplantsoen,301,pattern,
+/en/locaties/amsterdam/parking-bos-en-lommerplantsoen/id=21,locatie-genest-en,(retired),/en/parkeren/amsterdam/bos-en-lommerplantsoen,301,verified,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-cruquius/id=27,locatie,/parkeren/amsterdam/cruquius,/parkeren/amsterdam/cruquius,301,verified,Aeroparker/CMS location id 27.
-/en/locaties/parking-cruquius/id=27,locatie-en,(retired),/parkeren/amsterdam/cruquius,301,pattern,
+/en/locaties/parking-cruquius/id=27,locatie-en,/en/parkeren/amsterdam/cruquius,/en/parkeren/amsterdam/cruquius,301,pattern,
 /nl/locaties/amsterdam/parking-cruquius/id=27,locatie-genest,(retired),/parkeren/amsterdam/cruquius,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/amsterdam/parking-cruquius/id=27,locatie-genest-en,(retired),/parkeren/amsterdam/cruquius,301,pattern,
+/en/locaties/amsterdam/parking-cruquius/id=27,locatie-genest-en,(retired),/en/parkeren/amsterdam/cruquius,301,verified,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-plantage/id=35,locatie,/parkeren/amsterdam/plantage,/parkeren/amsterdam/plantage,301,verified,Aeroparker/CMS location id 35.
-/en/locaties/parking-plantage/id=35,locatie-en,(retired),/parkeren/amsterdam/plantage,301,pattern,
+/en/locaties/parking-plantage/id=35,locatie-en,/en/parkeren/amsterdam/plantage,/en/parkeren/amsterdam/plantage,301,pattern,
 /nl/locaties/amsterdam/parking-plantage/id=35,locatie-genest,(retired),/parkeren/amsterdam/plantage,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/amsterdam/parking-plantage/id=35,locatie-genest-en,(retired),/parkeren/amsterdam/plantage,301,pattern,
+/en/locaties/amsterdam/parking-plantage/id=35,locatie-genest-en,(retired),/en/parkeren/amsterdam/plantage,301,verified,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-zeeburgerkade/id=45,locatie,/parkeren/amsterdam/zeeburgerkade,/parkeren/amsterdam/zeeburgerkade,301,verified,Aeroparker/CMS location id 45.
-/en/locaties/parking-zeeburgerkade/id=45,locatie-en,(retired),/parkeren/amsterdam/zeeburgerkade,301,pattern,
+/en/locaties/parking-zeeburgerkade/id=45,locatie-en,/en/parkeren/amsterdam/zeeburgerkade,/en/parkeren/amsterdam/zeeburgerkade,301,pattern,
 /nl/locaties/amsterdam/parking-zeeburgerkade/id=45,locatie-genest,(retired),/parkeren/amsterdam/zeeburgerkade,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/amsterdam/parking-zeeburgerkade/id=45,locatie-genest-en,(retired),/parkeren/amsterdam/zeeburgerkade,301,pattern,
+/en/locaties/amsterdam/parking-zeeburgerkade/id=45,locatie-genest-en,(retired),/en/parkeren/amsterdam/zeeburgerkade,301,verified,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parkingyou-stationsweg-ypenburg/id=57,locatie,/parkeren/den-haag/stationsweg-ypenburg,/parkeren/den-haag/stationsweg-ypenburg,301,verified,Aeroparker/CMS location id 57.
-/en/locaties/parkingyou-stationsweg-ypenburg/id=57,locatie-en,(retired),/parkeren/den-haag/stationsweg-ypenburg,301,pattern,
+/en/locaties/parkingyou-stationsweg-ypenburg/id=57,locatie-en,/en/parkeren/den-haag/stationsweg-ypenburg,/en/parkeren/den-haag/stationsweg-ypenburg,301,pattern,
 /nl/locaties/regio-zuid-holland/parkingyou-stationsweg-ypenburg/id=57,locatie-genest,(retired),/parkeren/den-haag/stationsweg-ypenburg,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/regio-zuid-holland/parkingyou-stationsweg-ypenburg/id=57,locatie-genest-en,(retired),/parkeren/den-haag/stationsweg-ypenburg,301,pattern,
+/en/locaties/regio-zuid-holland/parkingyou-stationsweg-ypenburg/id=57,locatie-genest-en,(retired),/en/parkeren/den-haag/stationsweg-ypenburg,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-de-holland-/id=73,locatie,/parkeren/dordrecht/de-holland,/parkeren/dordrecht/de-holland,301,verified,Aeroparker/CMS location id 73.
-/en/locaties/parking-de-holland-/id=73,locatie-en,(retired),/parkeren/dordrecht/de-holland,301,pattern,
+/en/locaties/parking-de-holland-/id=73,locatie-en,/en/parkeren/dordrecht/de-holland,/en/parkeren/dordrecht/de-holland,301,pattern,
 /nl/locaties/regio-zuid-holland/parking-de-holland-/id=73,locatie-genest,(retired),/parkeren/dordrecht/de-holland,301,verified,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/regio-zuid-holland/parking-de-holland-/id=73,locatie-genest-en,(retired),/parkeren/dordrecht/de-holland,301,pattern,
+/en/locaties/regio-zuid-holland/parking-de-holland-/id=73,locatie-genest-en,(retired),/en/parkeren/dordrecht/de-holland,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parkingyou-pathe-ede-/id=61,locatie,/parkeren/ede/pathe,/parkeren/ede/pathe,301,verified,Aeroparker/CMS location id 61.
-/en/locaties/parkingyou-pathe-ede-/id=61,locatie-en,(retired),/parkeren/ede/pathe,301,pattern,
+/en/locaties/parkingyou-pathe-ede-/id=61,locatie-en,/en/parkeren/ede/pathe,/en/parkeren/ede/pathe,301,pattern,
 /nl/locaties/regio-gelderland/parkingyou-pathe-ede-/id=61,locatie-genest,(retired),/parkeren/ede/pathe,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/regio-gelderland/parkingyou-pathe-ede-/id=61,locatie-genest-en,(retired),/parkeren/ede/pathe,301,pattern,
+/en/locaties/regio-gelderland/parkingyou-pathe-ede-/id=61,locatie-genest-en,(retired),/en/parkeren/ede/pathe,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-bd7-/id=85,locatie,/parkeren/eindhoven/bd7,/parkeren/eindhoven/bd7,301,verified,Aeroparker/CMS location id 85.
-/en/locaties/parking-bd7-/id=85,locatie-en,(retired),/parkeren/eindhoven/bd7,301,pattern,
+/en/locaties/parking-bd7-/id=85,locatie-en,/en/parkeren/eindhoven/bd7,/en/parkeren/eindhoven/bd7,301,pattern,
 /nl/locaties/eindhoven/parking-bd7-/id=85,locatie-genest,(retired),/parkeren/eindhoven/bd7,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/eindhoven/parking-bd7-/id=85,locatie-genest-en,(retired),/parkeren/eindhoven/bd7,301,pattern,
+/en/locaties/eindhoven/parking-bd7-/id=85,locatie-genest-en,(retired),/en/parkeren/eindhoven/bd7,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-city-tower/id=91,locatie,/parkeren/eindhoven/city-tower,/parkeren/eindhoven/city-tower,301,verified,Aeroparker/CMS location id 91.
-/en/locaties/parking-city-tower/id=91,locatie-en,(retired),/parkeren/eindhoven/city-tower,301,pattern,
+/en/locaties/parking-city-tower/id=91,locatie-en,/en/parkeren/eindhoven/city-tower,/en/parkeren/eindhoven/city-tower,301,pattern,
 /nl/locaties/eindhoven/parking-city-tower/id=91,locatie-genest,(retired),/parkeren/eindhoven/city-tower,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/eindhoven/parking-city-tower/id=91,locatie-genest-en,(retired),/parkeren/eindhoven/city-tower,301,pattern,
+/en/locaties/eindhoven/parking-city-tower/id=91,locatie-genest-en,(retired),/en/parkeren/eindhoven/city-tower,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-cornelis-paradise/id=87,locatie,/parkeren/eindhoven/cornelis-paradise,/parkeren/eindhoven/cornelis-paradise,301,verified,Aeroparker/CMS location id 87.
-/en/locaties/parking-cornelis-paradise/id=87,locatie-en,(retired),/parkeren/eindhoven/cornelis-paradise,301,pattern,
+/en/locaties/parking-cornelis-paradise/id=87,locatie-en,/en/parkeren/eindhoven/cornelis-paradise,/en/parkeren/eindhoven/cornelis-paradise,301,pattern,
 /nl/locaties/eindhoven/parking-cornelis-paradise/id=87,locatie-genest,(retired),/parkeren/eindhoven/cornelis-paradise,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/eindhoven/parking-cornelis-paradise/id=87,locatie-genest-en,(retired),/parkeren/eindhoven/cornelis-paradise,301,pattern,
+/en/locaties/eindhoven/parking-cornelis-paradise/id=87,locatie-genest-en,(retired),/en/parkeren/eindhoven/cornelis-paradise,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-dll-garage-centrum/id=5,locatie,/parkeren/eindhoven/dll-garage,/parkeren/eindhoven/dll-garage,301,verified,Aeroparker/CMS location id 5.
-/en/locaties/parking-dll-garage-centrum/id=5,locatie-en,(retired),/parkeren/eindhoven/dll-garage,301,pattern,
+/en/locaties/parking-dll-garage-centrum/id=5,locatie-en,/en/parkeren/eindhoven/dll-garage,/en/parkeren/eindhoven/dll-garage,301,pattern,
 /nl/locaties/eindhoven/parking-dll-garage-centrum/id=5,locatie-genest,(retired),/parkeren/eindhoven/dll-garage,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/eindhoven/parking-dll-garage-centrum/id=5,locatie-genest-en,(retired),/parkeren/eindhoven/dll-garage,301,pattern,
+/en/locaties/eindhoven/parking-dll-garage-centrum/id=5,locatie-genest-en,(retired),/en/parkeren/eindhoven/dll-garage,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-dll-parkeerdek-centrum/id=101,locatie,/parkeren/eindhoven/dll-parkeerdek,/parkeren/eindhoven/dll-parkeerdek,301,verified,Aeroparker/CMS location id 101.
-/en/locaties/parking-dll-parkeerdek-centrum/id=101,locatie-en,(retired),/parkeren/eindhoven/dll-parkeerdek,301,pattern,
+/en/locaties/parking-dll-parkeerdek-centrum/id=101,locatie-en,/en/parkeren/eindhoven/dll-parkeerdek,/en/parkeren/eindhoven/dll-parkeerdek,301,pattern,
 /nl/locaties/eindhoven/parking-dll-parkeerdek-centrum/id=101,locatie-genest,(retired),/parkeren/eindhoven/dll-parkeerdek,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/eindhoven/parking-dll-parkeerdek-centrum/id=101,locatie-genest-en,(retired),/parkeren/eindhoven/dll-parkeerdek,301,pattern,
+/en/locaties/eindhoven/parking-dll-parkeerdek-centrum/id=101,locatie-genest-en,(retired),/en/parkeren/eindhoven/dll-parkeerdek,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-evoluon/id=103,locatie,/parkeren/eindhoven/evoluon,/parkeren/eindhoven/evoluon,301,verified,Aeroparker/CMS location id 103.
-/en/locaties/parking-evoluon/id=103,locatie-en,(retired),/parkeren/eindhoven/evoluon,301,pattern,
+/en/locaties/parking-evoluon/id=103,locatie-en,/en/parkeren/eindhoven/evoluon,/en/parkeren/eindhoven/evoluon,301,pattern,
 /nl/locaties/eindhoven/parking-evoluon/id=103,locatie-genest,(retired),/parkeren/eindhoven/evoluon,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/eindhoven/parking-evoluon/id=103,locatie-genest-en,(retired),/parkeren/eindhoven/evoluon,301,pattern,
+/en/locaties/eindhoven/parking-evoluon/id=103,locatie-genest-en,(retired),/en/parkeren/eindhoven/evoluon,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-hoog-bergen/id=95,locatie,/parkeren/eindhoven/hoog-bergen,/parkeren/eindhoven/hoog-bergen,301,verified,Aeroparker/CMS location id 95.
-/en/locaties/parking-hoog-bergen/id=95,locatie-en,(retired),/parkeren/eindhoven/hoog-bergen,301,pattern,
+/en/locaties/parking-hoog-bergen/id=95,locatie-en,/en/parkeren/eindhoven/hoog-bergen,/en/parkeren/eindhoven/hoog-bergen,301,pattern,
 /nl/locaties/eindhoven/parking-hoog-bergen/id=95,locatie-genest,(retired),/parkeren/eindhoven/hoog-bergen,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/eindhoven/parking-hoog-bergen/id=95,locatie-genest-en,(retired),/parkeren/eindhoven/hoog-bergen,301,pattern,
+/en/locaties/eindhoven/parking-hoog-bergen/id=95,locatie-genest-en,(retired),/en/parkeren/eindhoven/hoog-bergen,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-hoog-stratum/id=97,locatie,/parkeren/eindhoven/hoog-stratum,/parkeren/eindhoven/hoog-stratum,301,verified,Aeroparker/CMS location id 97.
-/en/locaties/parking-hoog-stratum/id=97,locatie-en,(retired),/parkeren/eindhoven/hoog-stratum,301,pattern,
+/en/locaties/parking-hoog-stratum/id=97,locatie-en,/en/parkeren/eindhoven/hoog-stratum,/en/parkeren/eindhoven/hoog-stratum,301,pattern,
 /nl/locaties/eindhoven/parking-hoog-stratum/id=97,locatie-genest,(retired),/parkeren/eindhoven/hoog-stratum,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/eindhoven/parking-hoog-stratum/id=97,locatie-genest-en,(retired),/parkeren/eindhoven/hoog-stratum,301,pattern,
+/en/locaties/eindhoven/parking-hoog-stratum/id=97,locatie-genest-en,(retired),/en/parkeren/eindhoven/hoog-stratum,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-lichttoren/id=93,locatie,/parkeren/eindhoven/lichttoren,/parkeren/eindhoven/lichttoren,301,verified,Aeroparker/CMS location id 93.
-/en/locaties/parking-lichttoren/id=93,locatie-en,(retired),/parkeren/eindhoven/lichttoren,301,pattern,
+/en/locaties/parking-lichttoren/id=93,locatie-en,/en/parkeren/eindhoven/lichttoren,/en/parkeren/eindhoven/lichttoren,301,pattern,
 /nl/locaties/eindhoven/parking-lichttoren/id=93,locatie-genest,(retired),/parkeren/eindhoven/lichttoren,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/eindhoven/parking-lichttoren/id=93,locatie-genest-en,(retired),/parkeren/eindhoven/lichttoren,301,pattern,
+/en/locaties/eindhoven/parking-lichttoren/id=93,locatie-genest-en,(retired),/en/parkeren/eindhoven/lichttoren,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-mauritsstraat/id=83,locatie,/parkeren/eindhoven/mauritsstraat,/parkeren/eindhoven/mauritsstraat,301,verified,Aeroparker/CMS location id 83.
-/en/locaties/parking-mauritsstraat/id=83,locatie-en,(retired),/parkeren/eindhoven/mauritsstraat,301,pattern,
+/en/locaties/parking-mauritsstraat/id=83,locatie-en,/en/parkeren/eindhoven/mauritsstraat,/en/parkeren/eindhoven/mauritsstraat,301,pattern,
 /nl/locaties/eindhoven/parking-mauritsstraat/id=83,locatie-genest,(retired),/parkeren/eindhoven/mauritsstraat,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/eindhoven/parking-mauritsstraat/id=83,locatie-genest-en,(retired),/parkeren/eindhoven/mauritsstraat,301,pattern,
+/en/locaties/eindhoven/parking-mauritsstraat/id=83,locatie-genest-en,(retired),/en/parkeren/eindhoven/mauritsstraat,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-onyx/id=25,locatie,/parkeren/eindhoven/onyx,/parkeren/eindhoven/onyx,301,verified,Aeroparker/CMS location id 25.
-/en/locaties/parking-onyx/id=25,locatie-en,(retired),/parkeren/eindhoven/onyx,301,pattern,
+/en/locaties/parking-onyx/id=25,locatie-en,/en/parkeren/eindhoven/onyx,/en/parkeren/eindhoven/onyx,301,pattern,
 /nl/locaties/eindhoven/parking-onyx/id=25,locatie-genest,(retired),/parkeren/eindhoven/onyx,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/eindhoven/parking-onyx/id=25,locatie-genest-en,(retired),/parkeren/eindhoven/onyx,301,pattern,
+/en/locaties/eindhoven/parking-onyx/id=25,locatie-genest-en,(retired),/en/parkeren/eindhoven/onyx,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-paradijslaan/id=99,locatie,/parkeren/eindhoven/paradijslaan,/parkeren/eindhoven/paradijslaan,301,verified,Aeroparker/CMS location id 99.
-/en/locaties/parking-paradijslaan/id=99,locatie-en,(retired),/parkeren/eindhoven/paradijslaan,301,pattern,
+/en/locaties/parking-paradijslaan/id=99,locatie-en,/en/parkeren/eindhoven/paradijslaan,/en/parkeren/eindhoven/paradijslaan,301,pattern,
 /nl/locaties/eindhoven/parking-paradijslaan/id=99,locatie-genest,(retired),/parkeren/eindhoven/paradijslaan,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/eindhoven/parking-paradijslaan/id=99,locatie-genest-en,(retired),/parkeren/eindhoven/paradijslaan,301,pattern,
+/en/locaties/eindhoven/parking-paradijslaan/id=99,locatie-genest-en,(retired),/en/parkeren/eindhoven/paradijslaan,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-philips-bedrijfsschool/id=31,locatie,/parkeren/eindhoven/philips-bedrijfsschool,/parkeren/eindhoven/philips-bedrijfsschool,301,verified,Aeroparker/CMS location id 31.
-/en/locaties/parking-philips-bedrijfsschool/id=31,locatie-en,(retired),/parkeren/eindhoven/philips-bedrijfsschool,301,pattern,
+/en/locaties/parking-philips-bedrijfsschool/id=31,locatie-en,/en/parkeren/eindhoven/philips-bedrijfsschool,/en/parkeren/eindhoven/philips-bedrijfsschool,301,pattern,
 /nl/locaties/eindhoven/parking-philips-bedrijfsschool/id=31,locatie-genest,(retired),/parkeren/eindhoven/philips-bedrijfsschool,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/eindhoven/parking-philips-bedrijfsschool/id=31,locatie-genest-en,(retired),/parkeren/eindhoven/philips-bedrijfsschool,301,pattern,
+/en/locaties/eindhoven/parking-philips-bedrijfsschool/id=31,locatie-genest-en,(retired),/en/parkeren/eindhoven/philips-bedrijfsschool,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-philips-stadion/id=7,locatie,/parkeren/eindhoven/philips-stadion,/parkeren/eindhoven/philips-stadion,301,verified,Aeroparker/CMS location id 7.
-/en/locaties/parking-philips-stadion/id=7,locatie-en,(retired),/parkeren/eindhoven/philips-stadion,301,pattern,
+/en/locaties/parking-philips-stadion/id=7,locatie-en,/en/parkeren/eindhoven/philips-stadion,/en/parkeren/eindhoven/philips-stadion,301,pattern,
 /nl/locaties/eindhoven/parking-philips-stadion/id=7,locatie-genest,(retired),/parkeren/eindhoven/philips-stadion,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/eindhoven/parking-philips-stadion/id=7,locatie-genest-en,(retired),/parkeren/eindhoven/philips-stadion,301,pattern,
+/en/locaties/eindhoven/parking-philips-stadion/id=7,locatie-genest-en,(retired),/en/parkeren/eindhoven/philips-stadion,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-td-gebouw/id=17,locatie,/parkeren/eindhoven/td-gebouw,/parkeren/eindhoven/td-gebouw,301,verified,Aeroparker/CMS location id 17.
-/en/locaties/parking-td-gebouw/id=17,locatie-en,(retired),/parkeren/eindhoven/td-gebouw,301,pattern,
+/en/locaties/parking-td-gebouw/id=17,locatie-en,/en/parkeren/eindhoven/td-gebouw,/en/parkeren/eindhoven/td-gebouw,301,pattern,
 /nl/locaties/eindhoven/parking-td-gebouw/id=17,locatie-genest,(retired),/parkeren/eindhoven/td-gebouw,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/eindhoven/parking-td-gebouw/id=17,locatie-genest-en,(retired),/parkeren/eindhoven/td-gebouw,301,pattern,
+/en/locaties/eindhoven/parking-td-gebouw/id=17,locatie-genest-en,(retired),/en/parkeren/eindhoven/td-gebouw,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-the-beech/id=81,locatie,/parkeren/eindhoven/the-beech,/parkeren/eindhoven/the-beech,301,verified,Aeroparker/CMS location id 81.
-/en/locaties/parking-the-beech/id=81,locatie-en,(retired),/parkeren/eindhoven/the-beech,301,pattern,
+/en/locaties/parking-the-beech/id=81,locatie-en,/en/parkeren/eindhoven/the-beech,/en/parkeren/eindhoven/the-beech,301,pattern,
 /nl/locaties/eindhoven/parking-the-beech/id=81,locatie-genest,(retired),/parkeren/eindhoven/the-beech,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/eindhoven/parking-the-beech/id=81,locatie-genest-en,(retired),/parkeren/eindhoven/the-beech,301,pattern,
+/en/locaties/eindhoven/parking-the-beech/id=81,locatie-genest-en,(retired),/en/parkeren/eindhoven/the-beech,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-heerhugowaard-p1-zuidtangent-/id=105,locatie,/parkeren/heerhugowaard/p1-zuidtangent,/parkeren/heerhugowaard/p1-zuidtangent,301,verified,Aeroparker/CMS location id 105.
-/en/locaties/parking-heerhugowaard-p1-zuidtangent-/id=105,locatie-en,(retired),/parkeren/heerhugowaard/p1-zuidtangent,301,pattern,
+/en/locaties/parking-heerhugowaard-p1-zuidtangent-/id=105,locatie-en,/en/parkeren/heerhugowaard/p1-zuidtangent,/en/parkeren/heerhugowaard/p1-zuidtangent,301,pattern,
 /nl/locaties/regio-noord-holland/parking-heerhugowaard-p1-zuidtangent-/id=105,locatie-genest,(retired),/parkeren/heerhugowaard/p1-zuidtangent,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/regio-noord-holland/parking-heerhugowaard-p1-zuidtangent-/id=105,locatie-genest-en,(retired),/parkeren/heerhugowaard/p1-zuidtangent,301,pattern,
+/en/locaties/regio-noord-holland/parking-heerhugowaard-p1-zuidtangent-/id=105,locatie-genest-en,(retired),/en/parkeren/heerhugowaard/p1-zuidtangent,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-p2-middenwaard/id=107,locatie,/parkeren/heerhugowaard/p2-middenwaard,/parkeren/heerhugowaard/p2-middenwaard,301,verified,Aeroparker/CMS location id 107.
-/en/locaties/parking-p2-middenwaard/id=107,locatie-en,(retired),/parkeren/heerhugowaard/p2-middenwaard,301,pattern,
+/en/locaties/parking-p2-middenwaard/id=107,locatie-en,/en/parkeren/heerhugowaard/p2-middenwaard,/en/parkeren/heerhugowaard/p2-middenwaard,301,pattern,
 /nl/locaties/regio-noord-holland/parking-p2-middenwaard/id=107,locatie-genest,(retired),/parkeren/heerhugowaard/p2-middenwaard,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/regio-noord-holland/parking-p2-middenwaard/id=107,locatie-genest-en,(retired),/parkeren/heerhugowaard/p2-middenwaard,301,pattern,
+/en/locaties/regio-noord-holland/parking-p2-middenwaard/id=107,locatie-genest-en,(retired),/en/parkeren/heerhugowaard/p2-middenwaard,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-lentse-plas/id=59,locatie,/parkeren/nijmegen/lentse-plas,/parkeren/nijmegen/lentse-plas,301,verified,Aeroparker/CMS location id 59.
-/en/locaties/parking-lentse-plas/id=59,locatie-en,(retired),/parkeren/nijmegen/lentse-plas,301,pattern,
+/en/locaties/parking-lentse-plas/id=59,locatie-en,/en/parkeren/nijmegen/lentse-plas,/en/parkeren/nijmegen/lentse-plas,301,pattern,
 /nl/locaties/regio-gelderland/parking-lentse-plas/id=59,locatie-genest,(retired),/parkeren/nijmegen/lentse-plas,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/regio-gelderland/parking-lentse-plas/id=59,locatie-genest-en,(retired),/parkeren/nijmegen/lentse-plas,301,pattern,
+/en/locaties/regio-gelderland/parking-lentse-plas/id=59,locatie-genest-en,(retired),/en/parkeren/nijmegen/lentse-plas,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-at-the-park/id=53,locatie,/parkeren/rijswijk/at-the-park,/parkeren/rijswijk/at-the-park,301,verified,Aeroparker/CMS location id 53.
-/en/locaties/parking-at-the-park/id=53,locatie-en,(retired),/parkeren/rijswijk/at-the-park,301,pattern,
+/en/locaties/parking-at-the-park/id=53,locatie-en,/en/parkeren/rijswijk/at-the-park,/en/parkeren/rijswijk/at-the-park,301,pattern,
 /nl/locaties/regio-zuid-holland/parking-at-the-park/id=53,locatie-genest,(retired),/parkeren/rijswijk/at-the-park,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/regio-zuid-holland/parking-at-the-park/id=53,locatie-genest-en,(retired),/parkeren/rijswijk/at-the-park,301,pattern,
+/en/locaties/regio-zuid-holland/parking-at-the-park/id=53,locatie-genest-en,(retired),/en/parkeren/rijswijk/at-the-park,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-diergaarde-blijdorp/id=127,locatie,/parkeren/rotterdam/diergaarde-blijdorp,/parkeren/rotterdam/diergaarde-blijdorp,301,verified,Aeroparker/CMS location id 127.
-/en/locaties/parking-diergaarde-blijdorp/id=127,locatie-en,(retired),/parkeren/rotterdam/diergaarde-blijdorp,301,pattern,
+/en/locaties/parking-diergaarde-blijdorp/id=127,locatie-en,/en/parkeren/rotterdam/diergaarde-blijdorp,/en/parkeren/rotterdam/diergaarde-blijdorp,301,pattern,
 /nl/locaties/rotterdam/parking-diergaarde-blijdorp/id=127,locatie-genest,(retired),/parkeren/rotterdam/diergaarde-blijdorp,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/rotterdam/parking-diergaarde-blijdorp/id=127,locatie-genest-en,(retired),/parkeren/rotterdam/diergaarde-blijdorp,301,pattern,
+/en/locaties/rotterdam/parking-diergaarde-blijdorp/id=127,locatie-genest-en,(retired),/en/parkeren/rotterdam/diergaarde-blijdorp,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-europoint/id=11,locatie,/parkeren/rotterdam/europoint,/parkeren/rotterdam/europoint,301,verified,Aeroparker/CMS location id 11.
-/en/locaties/parking-europoint/id=11,locatie-en,(retired),/parkeren/rotterdam/europoint,301,pattern,
+/en/locaties/parking-europoint/id=11,locatie-en,/en/parkeren/rotterdam/europoint,/en/parkeren/rotterdam/europoint,301,pattern,
 /nl/locaties/rotterdam/parking-europoint/id=11,locatie-genest,(retired),/parkeren/rotterdam/europoint,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/rotterdam/parking-europoint/id=11,locatie-genest-en,(retired),/parkeren/rotterdam/europoint,301,pattern,
+/en/locaties/rotterdam/parking-europoint/id=11,locatie-genest-en,(retired),/en/parkeren/rotterdam/europoint,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-hofplein/id=9,locatie,/parkeren/rotterdam/hofplein,/parkeren/rotterdam/hofplein,301,verified,Aeroparker/CMS location id 9.
-/en/locaties/parking-hofplein/id=9,locatie-en,(retired),/parkeren/rotterdam/hofplein,301,pattern,
+/en/locaties/parking-hofplein/id=9,locatie-en,/en/parkeren/rotterdam/hofplein,/en/parkeren/rotterdam/hofplein,301,pattern,
 /nl/locaties/rotterdam/parking-hofplein/id=9,locatie-genest,(retired),/parkeren/rotterdam/hofplein,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/rotterdam/parking-hofplein/id=9,locatie-genest-en,(retired),/parkeren/rotterdam/hofplein,301,pattern,
+/en/locaties/rotterdam/parking-hofplein/id=9,locatie-genest-en,(retired),/en/parkeren/rotterdam/hofplein,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-maashaven/id=129,locatie,/parkeren/rotterdam/maashaven,/parkeren/rotterdam/maashaven,301,verified,Aeroparker/CMS location id 129.
-/en/locaties/parking-maashaven/id=129,locatie-en,(retired),/parkeren/rotterdam/maashaven,301,pattern,
+/en/locaties/parking-maashaven/id=129,locatie-en,/en/parkeren/rotterdam/maashaven,/en/parkeren/rotterdam/maashaven,301,pattern,
 /nl/locaties/rotterdam/parking-maashaven/id=129,locatie-genest,(retired),/parkeren/rotterdam/maashaven,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/rotterdam/parking-maashaven/id=129,locatie-genest-en,(retired),/parkeren/rotterdam/maashaven,301,pattern,
+/en/locaties/rotterdam/parking-maashaven/id=129,locatie-genest-en,(retired),/en/parkeren/rotterdam/maashaven,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-shopping-center/id=1,locatie,/parkeren/rotterdam/shopping-center,/parkeren/rotterdam/shopping-center,301,verified,Aeroparker/CMS location id 1.
-/en/locaties/parking-shopping-center/id=1,locatie-en,(retired),/parkeren/rotterdam/shopping-center,301,pattern,
+/en/locaties/parking-shopping-center/id=1,locatie-en,/en/parkeren/rotterdam/shopping-center,/en/parkeren/rotterdam/shopping-center,301,pattern,
 /nl/locaties/rotterdam/parking-shopping-center/id=1,locatie-genest,(retired),/parkeren/rotterdam/shopping-center,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/rotterdam/parking-shopping-center/id=1,locatie-genest-en,(retired),/parkeren/rotterdam/shopping-center,301,pattern,
+/en/locaties/rotterdam/parking-shopping-center/id=1,locatie-genest-en,(retired),/en/parkeren/rotterdam/shopping-center,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parkingyou-p-r-schiedam-centrum/id=63,locatie,/parkeren/schiedam/p-r-centrum,/parkeren/schiedam/p-r-centrum,301,verified,Aeroparker/CMS location id 63.
-/en/locaties/parkingyou-p-r-schiedam-centrum/id=63,locatie-en,(retired),/parkeren/schiedam/p-r-centrum,301,pattern,
+/en/locaties/parkingyou-p-r-schiedam-centrum/id=63,locatie-en,/en/parkeren/schiedam/p-r-centrum,/en/parkeren/schiedam/p-r-centrum,301,pattern,
 /nl/locaties/regio-zuid-holland/parkingyou-p-r-schiedam-centrum/id=63,locatie-genest,(retired),/parkeren/schiedam/p-r-centrum,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/regio-zuid-holland/parkingyou-p-r-schiedam-centrum/id=63,locatie-genest-en,(retired),/parkeren/schiedam/p-r-centrum,301,pattern,
+/en/locaties/regio-zuid-holland/parkingyou-p-r-schiedam-centrum/id=63,locatie-genest-en,(retired),/en/parkeren/schiedam/p-r-centrum,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-pakhuis/id=77,locatie,/parkeren/tilburg/pakhuis,/parkeren/tilburg/pakhuis,301,verified,Aeroparker/CMS location id 77.
-/en/locaties/parking-pakhuis/id=77,locatie-en,(retired),/parkeren/tilburg/pakhuis,301,pattern,
+/en/locaties/parking-pakhuis/id=77,locatie-en,/en/parkeren/tilburg/pakhuis,/en/parkeren/tilburg/pakhuis,301,pattern,
 /nl/locaties/tilburg/parking-pakhuis/id=77,locatie-genest,(retired),/parkeren/tilburg/pakhuis,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/tilburg/parking-pakhuis/id=77,locatie-genest-en,(retired),/parkeren/tilburg/pakhuis,301,pattern,
+/en/locaties/tilburg/parking-pakhuis/id=77,locatie-genest-en,(retired),/en/parkeren/tilburg/pakhuis,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-vliegend-hert/id=75,locatie,/parkeren/utrecht/vliegend-hert,/parkeren/utrecht/vliegend-hert,301,verified,Aeroparker/CMS location id 75.
-/en/locaties/parking-vliegend-hert/id=75,locatie-en,(retired),/parkeren/utrecht/vliegend-hert,301,pattern,
+/en/locaties/parking-vliegend-hert/id=75,locatie-en,/en/parkeren/utrecht/vliegend-hert,/en/parkeren/utrecht/vliegend-hert,301,pattern,
 /nl/locaties/utrecht/parking-vliegend-hert/id=75,locatie-genest,(retired),/parkeren/utrecht/vliegend-hert,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/utrecht/parking-vliegend-hert/id=75,locatie-genest-en,(retired),/parkeren/utrecht/vliegend-hert,301,pattern,
+/en/locaties/utrecht/parking-vliegend-hert/id=75,locatie-genest-en,(retired),/en/parkeren/utrecht/vliegend-hert,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-p1-belgielaan-/id=109,locatie,/parkeren/zoetermeer/p1-belgielaan,/parkeren/zoetermeer/p1-belgielaan,301,verified,Aeroparker/CMS location id 109.
-/en/locaties/parking-p1-belgielaan-/id=109,locatie-en,(retired),/parkeren/zoetermeer/p1-belgielaan,301,pattern,
+/en/locaties/parking-p1-belgielaan-/id=109,locatie-en,/en/parkeren/zoetermeer/p1-belgielaan,/en/parkeren/zoetermeer/p1-belgielaan,301,pattern,
 /nl/locaties/zoetermeer/parking-p1-belgielaan-/id=109,locatie-genest,(retired),/parkeren/zoetermeer/p1-belgielaan,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/zoetermeer/parking-p1-belgielaan-/id=109,locatie-genest-en,(retired),/parkeren/zoetermeer/p1-belgielaan,301,pattern,
+/en/locaties/zoetermeer/parking-p1-belgielaan-/id=109,locatie-genest-en,(retired),/en/parkeren/zoetermeer/p1-belgielaan,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-p2-bovenlangs/id=111,locatie,/parkeren/zoetermeer/p2-bovenlangs,/parkeren/zoetermeer/p2-bovenlangs,301,verified,Aeroparker/CMS location id 111.
-/en/locaties/parking-p2-bovenlangs/id=111,locatie-en,(retired),/parkeren/zoetermeer/p2-bovenlangs,301,pattern,
+/en/locaties/parking-p2-bovenlangs/id=111,locatie-en,/en/parkeren/zoetermeer/p2-bovenlangs,/en/parkeren/zoetermeer/p2-bovenlangs,301,pattern,
 /nl/locaties/zoetermeer/parking-p2-bovenlangs/id=111,locatie-genest,(retired),/parkeren/zoetermeer/p2-bovenlangs,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/zoetermeer/parking-p2-bovenlangs/id=111,locatie-genest-en,(retired),/parkeren/zoetermeer/p2-bovenlangs,301,pattern,
+/en/locaties/zoetermeer/parking-p2-bovenlangs/id=111,locatie-genest-en,(retired),/en/parkeren/zoetermeer/p2-bovenlangs,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-p2-onderlangs/id=113,locatie,/parkeren/zoetermeer/p2-onderlangs,/parkeren/zoetermeer/p2-onderlangs,301,verified,Aeroparker/CMS location id 113.
-/en/locaties/parking-p2-onderlangs/id=113,locatie-en,(retired),/parkeren/zoetermeer/p2-onderlangs,301,pattern,
+/en/locaties/parking-p2-onderlangs/id=113,locatie-en,/en/parkeren/zoetermeer/p2-onderlangs,/en/parkeren/zoetermeer/p2-onderlangs,301,pattern,
 /nl/locaties/zoetermeer/parking-p2-onderlangs/id=113,locatie-genest,(retired),/parkeren/zoetermeer/p2-onderlangs,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/zoetermeer/parking-p2-onderlangs/id=113,locatie-genest-en,(retired),/parkeren/zoetermeer/p2-onderlangs,301,pattern,
+/en/locaties/zoetermeer/parking-p2-onderlangs/id=113,locatie-genest-en,(retired),/en/parkeren/zoetermeer/p2-onderlangs,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-p4-luxemburglaan/id=115,locatie,/parkeren/zoetermeer/p4-luxemburglaan,/parkeren/zoetermeer/p4-luxemburglaan,301,verified,Aeroparker/CMS location id 115.
-/en/locaties/parking-p4-luxemburglaan/id=115,locatie-en,(retired),/parkeren/zoetermeer/p4-luxemburglaan,301,pattern,
+/en/locaties/parking-p4-luxemburglaan/id=115,locatie-en,/en/parkeren/zoetermeer/p4-luxemburglaan,/en/parkeren/zoetermeer/p4-luxemburglaan,301,pattern,
 /nl/locaties/zoetermeer/parking-p4-luxemburglaan/id=115,locatie-genest,(retired),/parkeren/zoetermeer/p4-luxemburglaan,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/zoetermeer/parking-p4-luxemburglaan/id=115,locatie-genest-en,(retired),/parkeren/zoetermeer/p4-luxemburglaan,301,pattern,
+/en/locaties/zoetermeer/parking-p4-luxemburglaan/id=115,locatie-genest-en,(retired),/en/parkeren/zoetermeer/p4-luxemburglaan,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-p5-amsterdamstraat-/id=117,locatie,/parkeren/zoetermeer/p5-amsterdamstraat,/parkeren/zoetermeer/p5-amsterdamstraat,301,verified,Aeroparker/CMS location id 117.
-/en/locaties/parking-p5-amsterdamstraat-/id=117,locatie-en,(retired),/parkeren/zoetermeer/p5-amsterdamstraat,301,pattern,
+/en/locaties/parking-p5-amsterdamstraat-/id=117,locatie-en,/en/parkeren/zoetermeer/p5-amsterdamstraat,/en/parkeren/zoetermeer/p5-amsterdamstraat,301,pattern,
 /nl/locaties/zoetermeer/parking-p5-amsterdamstraat-/id=117,locatie-genest,(retired),/parkeren/zoetermeer/p5-amsterdamstraat,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/zoetermeer/parking-p5-amsterdamstraat-/id=117,locatie-genest-en,(retired),/parkeren/zoetermeer/p5-amsterdamstraat,301,pattern,
+/en/locaties/zoetermeer/parking-p5-amsterdamstraat-/id=117,locatie-genest-en,(retired),/en/parkeren/zoetermeer/p5-amsterdamstraat,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-p8-nederlandlaan/id=119,locatie,/parkeren/zoetermeer/p8-nederlandlaan,/parkeren/zoetermeer/p8-nederlandlaan,301,verified,Aeroparker/CMS location id 119.
-/en/locaties/parking-p8-nederlandlaan/id=119,locatie-en,(retired),/parkeren/zoetermeer/p8-nederlandlaan,301,pattern,
+/en/locaties/parking-p8-nederlandlaan/id=119,locatie-en,/en/parkeren/zoetermeer/p8-nederlandlaan,/en/parkeren/zoetermeer/p8-nederlandlaan,301,pattern,
 /nl/locaties/zoetermeer/parking-p8-nederlandlaan/id=119,locatie-genest,(retired),/parkeren/zoetermeer/p8-nederlandlaan,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/zoetermeer/parking-p8-nederlandlaan/id=119,locatie-genest-en,(retired),/parkeren/zoetermeer/p8-nederlandlaan,301,pattern,
+/en/locaties/zoetermeer/parking-p8-nederlandlaan/id=119,locatie-genest-en,(retired),/en/parkeren/zoetermeer/p8-nederlandlaan,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/locaties/parking-p9-duitslandlaan/id=121,locatie,/parkeren/zoetermeer/p9-duitslandlaan,/parkeren/zoetermeer/p9-duitslandlaan,301,verified,Aeroparker/CMS location id 121.
-/en/locaties/parking-p9-duitslandlaan/id=121,locatie-en,(retired),/parkeren/zoetermeer/p9-duitslandlaan,301,pattern,
+/en/locaties/parking-p9-duitslandlaan/id=121,locatie-en,/en/parkeren/zoetermeer/p9-duitslandlaan,/en/parkeren/zoetermeer/p9-duitslandlaan,301,pattern,
 /nl/locaties/zoetermeer/parking-p9-duitslandlaan/id=121,locatie-genest,(retired),/parkeren/zoetermeer/p9-duitslandlaan,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
-/en/locaties/zoetermeer/parking-p9-duitslandlaan/id=121,locatie-genest-en,(retired),/parkeren/zoetermeer/p9-duitslandlaan,301,pattern,
+/en/locaties/zoetermeer/parking-p9-duitslandlaan/id=121,locatie-genest-en,(retired),/en/parkeren/zoetermeer/p9-duitslandlaan,301,pattern,Second indexed URL for the same location; collapse onto the canonical.
 /nl/abonnementen/subscription={id},abonnement-detail,(retired),/abonnementen,301,verified,Pattern row. Enumerate real ids from Search Console before go-live.
-/nl/abonnementen/location={id},abonnement-per-locatie,(retired),/parkeren/{stad}/{locatie},301,verified,Pattern row. Map location id to the location page; TODO build the id map.
+/en/abonnementen/subscription={id},abonnement-detail-en,(retired),/en/abonnementen,301,verified,Pattern row. Enumerate real ids from Search Console before go-live.
+/nl/abonnementen/location={id},abonnement-per-locatie,(retired),/parkeren/{stad}/{locatie},301,verified,Pattern row. Map the location id to the location page; TODO build the id map.
+/en/abonnementen/location={id},abonnement-per-locatie-en,(retired),/en/parkeren/{stad}/{locatie},301,verified,Pattern row. Map the location id to the location page; TODO build the id map.
 /nl/nieuws/{slug}/id={id},nieuws-artikel,/nieuws/{slug},/nieuws/{slug},301,verified,Pattern row. Enumerate all article ids from Search Console before go-live.
+/en/nieuws/{slug}/id={id},nieuws-artikel-en,/en/nieuws/{slug},/en/nieuws/{slug},301,verified,Pattern row. Enumerate all article ids from Search Console before go-live.
