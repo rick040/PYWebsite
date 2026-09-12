@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
-import { Breadcrumbs } from '@/components/location/breadcrumbs'
 import { BookingCta, StickyBookingBar } from '@/components/location/booking-cta'
 import { FaqBlock } from '@/components/location/faq-block'
 import { LocationMap } from '@/components/location/location-map'
@@ -14,6 +13,7 @@ import {
 } from '@/components/location/practical-info'
 import { RelatedLocations } from '@/components/location/related-locations'
 import { TariffTable } from '@/components/location/tariff-table'
+import { PageHero } from '@/components/site/page-hero'
 import { Badge } from '@/components/ui/card'
 import {
   getAllLocationParams,
@@ -96,46 +96,36 @@ export default async function LocationPage({ params }: { params: Promise<PagePar
   const pois = getPoisForLocation(location.id)
 
   return (
-    <article className="py-container flex flex-col gap-[var(--py-space-section)] py-[var(--py-space-6)]">
-      <header className="flex flex-col gap-[var(--py-space-5)]">
-        <Breadcrumbs
-          items={[
-            { label: 'Home', href: routes.home() },
-            { label: 'Parkeren', href: routes.locations() },
-            { label: city.name, href: routes.city(city) },
-            { label: location.name },
-          ]}
-        />
-
-        <PhotoGallery photos={location.photos} name={location.name} />
-
-        <div className="grid gap-[var(--py-space-6)] lg:grid-cols-[minmax(0,1fr)_20rem]">
-          <div className="flex flex-col gap-[var(--py-space-4)]">
-            <h1 className="text-4xl">{location.h1}</h1>
-            <p className="py-prose text-lg text-foreground-muted">{location.shortDescription}</p>
-            <p className="text-foreground-muted">
-              {location.address.street} {location.address.houseNumber}, {location.address.city}
-            </p>
-            {location.features.length > 0 && (
-              <ul className="flex flex-wrap gap-[var(--py-space-2)]">
-                {location.features.map((feature) => (
-                  <li key={feature}>
-                    <Badge>{feature}</Badge>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-
-          <BookingCta
-            location={location}
-            className={[
-              'hidden self-start rounded-[var(--py-radius-lg)] border border-border',
-              'bg-surface-subtle p-[var(--py-space-5)] lg:block',
-            ].join(' ')}
-          />
+    <article>
+      <PageHero
+        crumbs={[
+          { label: 'Home', href: routes.home() },
+          { label: 'Parkeren', href: routes.locations() },
+          { label: city.name, href: routes.city(city) },
+          { label: location.name },
+        ]}
+        title={location.h1}
+        intro={location.shortDescription}
+      >
+        <p className="text-foreground-muted">
+          {location.address.street} {location.address.houseNumber}, {location.address.city}
+        </p>
+        {location.features.length > 0 && (
+          <ul className="py-card-tags">
+            {location.features.map((feature) => (
+              <li key={feature}>
+                <Badge>{feature}</Badge>
+              </li>
+            ))}
+          </ul>
+        )}
+        <div className="py-action-row">
+          <BookingCta location={location} />
         </div>
-      </header>
+      </PageHero>
+
+      <div className="py-section py-container py-stack">
+        <PhotoGallery photos={location.photos} name={location.name} />
 
       <div className="py-prose">
         {location.body.map((section) => (
@@ -162,51 +152,49 @@ export default async function LocationPage({ params }: { params: Promise<PagePar
         ))}
       </div>
 
-      <section aria-labelledby="tarieven" className="flex flex-col gap-[var(--py-space-4)]">
-        <h2 id="tarieven" className="text-2xl">
-          Tarieven
-        </h2>
+      <section aria-labelledby="tarieven">
+        <div className="py-section-intro">
+          <h2 id="tarieven">Tarieven</h2>
+        </div>
         <TariffTable location={location} />
-        <BookingCta location={location} className="lg:hidden" />
       </section>
 
       {hasPracticalInfo(location) && (
         <section aria-labelledby="praktisch" className="flex flex-col gap-[var(--py-space-6)]">
-          <h2 id="praktisch" className="text-2xl">
-            Praktische informatie
-          </h2>
+          <div className="py-section-intro">
+            <h2 id="praktisch">Praktische informatie</h2>
+          </div>
           <AccessibilityFacts location={location} />
           <RouteAndAccess location={location} />
         </section>
       )}
 
-      <section aria-labelledby="kaart" className="flex flex-col gap-[var(--py-space-4)]">
-        <h2 id="kaart" className="text-2xl">
-          Waar vind je ons
-        </h2>
+      <section aria-labelledby="kaart">
+        <div className="py-section-intro">
+          <h2 id="kaart">Waar vind je ons</h2>
+        </div>
         <LocationMap location={location} />
       </section>
 
       <FaqBlock faqs={faqs} title={`Veelgestelde vragen over ${location.name}`} />
 
       {pois.length > 0 && (
-        <section aria-labelledby="bestemmingen" className="flex flex-col gap-[var(--py-space-3)]">
-          <h2 id="bestemmingen" className="text-2xl">
-            In de buurt
-          </h2>
-          <ul className="flex flex-col gap-[var(--py-space-2)]">
+        <section aria-labelledby="bestemmingen">
+          <div className="py-section-intro">
+            <h2 id="bestemmingen">In de buurt</h2>
+          </div>
+          <div className="py-quick-cities">
             {pois.map((poi) => (
-              <li key={poi.id}>
-                <Link href={routes.poi(city, poi.slug)} className="text-foreground-brand">
-                  Parkeren bij {poi.name}
-                </Link>
-              </li>
+              <Link key={poi.id} href={routes.poi(city, poi.slug)} className="py-pill">
+                Parkeren bij {poi.name}
+              </Link>
             ))}
-          </ul>
+          </div>
         </section>
       )}
 
-      <RelatedLocations city={city} locations={siblings} />
+        <RelatedLocations city={city} locations={siblings} />
+      </div>
 
       <StickyBookingBar location={location} />
     </article>

@@ -1,53 +1,40 @@
 @import 'tailwindcss';
 @import '../styles/tokens.css';
+@import '../styles/components.css';
 
 /**
- * Tailwind v4 theme bridge.
+ * Tailwind bridge.
  *
- * Every value here points at a --py-* token from tokens.css. Nothing is defined
- * twice. If a colour or a size needs to change it changes in tokens.css, and
- * both this site and the future PWA pick it up.
- *
- * `inline` means Tailwind emits the var() reference rather than the resolved
- * value, so the token indirection survives into the compiled CSS.
+ * The design of record is the prototype's plain CSS in components.css. Tailwind
+ * stays for one-off layout inside templates, and every utility it exposes
+ * resolves to a --py-* token, so there is only ever one source for a colour.
  */
 @theme inline {
   --color-background: var(--py-color-background);
   --color-surface: var(--py-color-surface);
   --color-surface-subtle: var(--py-color-surface-subtle);
-  --color-surface-sunken: var(--py-color-surface-sunken);
   --color-surface-brand: var(--py-color-surface-brand);
-  --color-surface-brand-subtle: var(--py-color-surface-brand-subtle);
-  --color-surface-accent-subtle: var(--py-color-surface-accent-subtle);
+  --color-surface-deep: var(--py-color-surface-deep);
 
   --color-foreground: var(--py-color-foreground);
   --color-foreground-muted: var(--py-color-foreground-muted);
-  --color-foreground-on-brand: var(--py-color-foreground-on-brand);
   --color-foreground-brand: var(--py-color-foreground-brand);
+  --color-foreground-on-brand: var(--py-color-foreground-on-brand);
+  --color-foreground-accent: var(--py-color-foreground-accent);
 
   --color-border: var(--py-color-border);
   --color-border-strong: var(--py-color-border-strong);
   --color-border-interactive: var(--py-color-border-interactive);
 
   --color-primary: var(--py-color-primary);
-  --color-primary-hover: var(--py-color-primary-hover);
-  --color-primary-active: var(--py-color-primary-active);
   --color-primary-foreground: var(--py-color-primary-foreground);
+  --color-accent: var(--py-color-accent);
+  --color-accent-foreground: var(--py-color-accent-foreground);
 
-  --color-focus-ring: var(--py-color-focus-ring);
-
-  --color-success: var(--py-color-success);
-  --color-success-surface: var(--py-color-success-surface);
   --color-warning: var(--py-color-warning);
   --color-warning-surface: var(--py-color-warning-surface);
-  --color-danger: var(--py-color-danger);
-  --color-danger-surface: var(--py-color-danger-surface);
-
-  --color-accent: var(--py-cyan-400);
-  --color-accent-strong: var(--py-cyan-700);
 
   --font-sans: var(--py-font-sans);
-  --font-mono: var(--py-font-mono);
 
   --text-xs: var(--py-text-xs);
   --text-sm: var(--py-text-sm);
@@ -58,19 +45,13 @@
   --text-3xl: var(--py-text-3xl);
   --text-4xl: var(--py-text-4xl);
 
-  --radius-sm: var(--py-radius-sm);
   --radius-md: var(--py-radius-md);
   --radius-lg: var(--py-radius-lg);
-  --radius-xl: var(--py-radius-xl);
-
-  --shadow-sm: var(--py-shadow-sm);
-  --shadow-md: var(--py-shadow-md);
-  --shadow-lg: var(--py-shadow-lg);
 
   --breakpoint-sm: 480px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
+  --breakpoint-md: 720px;
+  --breakpoint-lg: 980px;
+  --breakpoint-xl: 1180px;
 }
 
 @layer base {
@@ -78,7 +59,6 @@
   *::before,
   *::after {
     box-sizing: border-box;
-    border-color: var(--py-color-border);
   }
 
   html {
@@ -101,11 +81,12 @@
 
   body {
     margin: 0;
-    background-color: var(--py-color-background);
-    color: var(--py-color-foreground);
+    background: var(--py-color-background);
+    color: var(--py-color-foreground-brand);
     font-family: var(--py-font-sans);
     font-size: var(--py-text-base);
     line-height: var(--py-leading-normal);
+    text-rendering: geometricPrecision;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -115,8 +96,7 @@
   h4 {
     margin: 0;
     font-weight: var(--py-weight-bold);
-    line-height: var(--py-leading-tight);
-    letter-spacing: var(--py-tracking-tight);
+    line-height: var(--py-leading-snug);
     text-wrap: balance;
   }
 
@@ -127,8 +107,16 @@
 
   a {
     color: inherit;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 0.15em;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+  button {
+    cursor: pointer;
   }
 
   img,
@@ -147,51 +135,11 @@
     border-radius: var(--py-radius-sm);
   }
 
-  /* Native disclosure is the FAQ accordion. Zero JavaScript, keyboard
-     accessible for free, and it still works if hydration never happens. */
   summary {
     cursor: pointer;
     list-style: none;
   }
   summary::-webkit-details-marker {
     display: none;
-  }
-}
-
-@layer components {
-  /* The one horizontal rhythm used by every page. Guarantees the 16px minimum
-     side gutter at 390px that the mobile-first target depends on. */
-  .py-container {
-    width: 100%;
-    max-width: var(--py-container-max);
-    margin-inline: auto;
-    padding-inline: var(--py-space-gutter);
-  }
-
-  .py-prose {
-    max-width: var(--py-measure);
-  }
-
-  .py-prose > * + * {
-    margin-top: var(--py-space-4);
-  }
-
-  .py-prose h2 {
-    margin-top: var(--py-space-10);
-    font-size: var(--py-text-2xl);
-  }
-
-  .py-prose h3 {
-    margin-top: var(--py-space-8);
-    font-size: var(--py-text-lg);
-  }
-
-  .py-prose ul {
-    margin: 0;
-    padding-left: var(--py-space-5);
-  }
-
-  .py-prose li + li {
-    margin-top: var(--py-space-2);
   }
 }

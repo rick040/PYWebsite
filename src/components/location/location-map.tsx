@@ -21,7 +21,7 @@ export function LocationMap({ location }: { location: Location }) {
     <Card>
       <CardBody className="flex flex-col gap-[var(--py-space-4)]">
         <div>
-          <p className="font-[var(--py-weight-semibold)]">{location.name}</p>
+          <p className="font-[var(--py-weight-bold)]">{location.name}</p>
           <p className="text-foreground-muted">
             {address.street} {address.houseNumber}, {address.city}
           </p>

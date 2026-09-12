@@ -1,80 +1,84 @@
 import Link from 'next/link'
 
+import { Logo } from '@/components/ui/logo'
 import { getCities } from '@/lib/content'
-import { routes, SITE_NAME } from '@/lib/routes'
+import { routes } from '@/lib/routes'
 
 export function SiteFooter() {
   const cities = getCities()
+  const year = 2026
 
   return (
-    <footer className="mt-[var(--py-space-section)] border-t border-border bg-surface-subtle">
-      <div className="py-container grid gap-[var(--py-space-8)] py-[var(--py-space-10)] sm:grid-cols-2 lg:grid-cols-3">
-        <div>
-          <p className="text-lg font-[var(--py-weight-bold)] text-foreground-brand">{SITE_NAME}</p>
-          <address className="mt-[var(--py-space-2)] text-sm text-foreground-muted not-italic">
-            ParkingYou B.V.
-            <br />
-            Victoriapark 4
-            <br />
-            5611 BM Eindhoven
-            <br />
-            <a href="tel:+31408200956" className="underline">
-              040 8200 956
-            </a>
-            <br />
-            <a href="mailto:info@parkingyou.nl" className="underline">
-              info@parkingyou.nl
-            </a>
-          </address>
+    <footer className="py-footer">
+      <div className="py-container">
+        <div className="py-footer__grid">
+          <div>
+            <Logo inverted />
+            <address>
+              ParkingYou B.V.
+              <br />
+              Victoriapark 4, 5611 BM Eindhoven
+              <br />
+              <a href="tel:+31408200956">040 8200 956</a>
+              <br />
+              <a href="mailto:info@parkingyou.nl">info@parkingyou.nl</a>
+            </address>
+          </div>
+
+          <nav aria-labelledby="footer-steden">
+            <h2 id="footer-steden">Parkeren per stad</h2>
+            <ul>
+              {cities.slice(0, 7).map((city) => (
+                <li key={city.id}>
+                  <Link href={routes.city(city)}>{city.name}</Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <nav aria-labelledby="footer-producten">
+            <h2 id="footer-producten">Parkeren</h2>
+            <ul>
+              <li>
+                <Link href={routes.locations()}>Alle locaties</Link>
+              </li>
+              <li>
+                <Link href={routes.subscriptions()}>Abonnementen</Link>
+              </li>
+              <li>
+                <Link href={routes.parkingPass()}>ParkingPass</Link>
+              </li>
+              <li>
+                <Link href={routes.business()}>Zakelijk parkeren</Link>
+              </li>
+            </ul>
+          </nav>
+
+          <nav aria-labelledby="footer-service">
+            <h2 id="footer-service">Service</h2>
+            <ul>
+              <li>
+                <Link href={routes.faq()}>Veelgestelde vragen</Link>
+              </li>
+              <li>
+                <Link href={routes.contact()}>Contact</Link>
+              </li>
+              <li>
+                <Link href={routes.news()}>Nieuws</Link>
+              </li>
+              <li>
+                <Link href={routes.about()}>Over ParkingYou</Link>
+              </li>
+            </ul>
+          </nav>
         </div>
 
-        <nav aria-labelledby="footer-steden">
-          <h2 id="footer-steden" className="font-[var(--py-weight-semibold)]">
-            Parkeren per stad
-          </h2>
-          <ul className="mt-[var(--py-space-2)] flex flex-col gap-[var(--py-space-1)] text-sm">
-            {cities.map((city) => (
-              <li key={city.id}>
-                <Link href={routes.city(city)} className="no-underline hover:underline">
-                  Parkeren in {city.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        <nav aria-labelledby="footer-overig">
-          <h2 id="footer-overig" className="font-[var(--py-weight-semibold)]">
-            Meer informatie
-          </h2>
-          <ul className="mt-[var(--py-space-2)] flex flex-col gap-[var(--py-space-1)] text-sm">
-            <li>
-              <Link href={routes.subscriptions()} className="no-underline hover:underline">
-                Abonnementen
-              </Link>
-            </li>
-            <li>
-              <Link href={routes.parkingPass()} className="no-underline hover:underline">
-                ParkingPass
-              </Link>
-            </li>
-            <li>
-              <Link href={routes.business()} className="no-underline hover:underline">
-                Zakelijk parkeren
-              </Link>
-            </li>
-            <li>
-              <Link href={routes.faq()} className="no-underline hover:underline">
-                Veelgestelde vragen
-              </Link>
-            </li>
-            <li>
-              <Link href={routes.about()} className="no-underline hover:underline">
-                Over ParkingYou
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <div className="py-footer__bottom">
+          <span>
+            &copy; {year} ParkingYou B.V. The other way of parking.
+          </span>
+          <Link href="/algemene-voorwaarden">Algemene voorwaarden</Link>
+        </div>
       </div>
     </footer>
   )

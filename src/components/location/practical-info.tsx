@@ -15,7 +15,7 @@ function List({ items }: { items: readonly string[] }) {
 function Block({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
   return (
     <section aria-labelledby={id}>
-      <h3 id={id} className="mb-[var(--py-space-3)] text-lg font-[var(--py-weight-semibold)]">
+      <h3 id={id} className="mb-[var(--py-space-3)] text-lg font-[var(--py-weight-bold)] text-foreground-brand">
         {title}
       </h3>
       {children}
@@ -48,23 +48,15 @@ export function RouteAndAccess({ location }: { location: Location }) {
       {location.openingHours !== undefined && (
         <Block id="openingstijden" title="Openingstijden">
           <Card>
-            <table className="w-full border-collapse text-left">
+            <table className="py-table">
               <caption className="sr-only">{`Openingstijden van ${location.name}`}</caption>
               <tbody>
                 {location.openingHours.map((hours) => (
-                  <tr key={hours.day} className="border-b border-border last:border-b-0">
-                    <th
-                      scope="row"
-                      className={[
-                        'px-[var(--py-space-4)] py-[var(--py-space-2)]',
-                        'font-[var(--py-weight-normal)] capitalize',
-                      ].join(' ')}
-                    >
+                  <tr key={hours.day}>
+                    <th scope="row" className="capitalize">
                       {formatDayName(hours.day)}
                     </th>
-                    <td className="px-[var(--py-space-4)] py-[var(--py-space-2)] text-right">
-                      {formatOpeningHours(hours)}
-                    </td>
+                    <td>{formatOpeningHours(hours)}</td>
                   </tr>
                 ))}
               </tbody>

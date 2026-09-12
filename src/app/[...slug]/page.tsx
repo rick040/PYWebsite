@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
-import { Breadcrumbs } from '@/components/location/breadcrumbs'
 import { FaqBlock } from '@/components/location/faq-block'
+import { PageHero } from '@/components/site/page-hero'
 import { ProseSections } from '@/components/site/prose-sections'
 import { ButtonLink } from '@/components/ui/button'
 import { getFaqsByIds, getPage, getPageSlugs } from '@/lib/content'
@@ -56,27 +56,30 @@ export default async function FlatPageRoute({ params }: { params: Promise<PagePa
   const parent = parentSlug === undefined ? undefined : getPage(parentSlug)
 
   return (
-    <div className="py-container flex flex-col gap-[var(--py-space-section)] py-[var(--py-space-6)]">
-      <header className="flex flex-col gap-[var(--py-space-4)]">
-        <Breadcrumbs
-          items={[
-            { label: 'Home', href: routes.home() },
-            ...(parent === undefined ? [] : [{ label: parent.h1, href: `/${parent.slug}` }]),
-            { label: page.h1 },
-          ]}
-        />
-        <h1 className="text-4xl">{page.h1}</h1>
-        <p className="py-prose text-lg text-foreground-muted">{page.intro}</p>
+    <>
+      <PageHero
+        accent
+        crumbs={[
+          { label: 'Home', href: routes.home() },
+          ...(parent === undefined ? [] : [{ label: parent.h1, href: `/${parent.slug}` }]),
+          { label: page.h1 },
+        ]}
+        title={page.h1}
+        intro={page.intro}
+      >
         {page.cta !== undefined && (
-          <ButtonLink href={page.cta.href} size="lg" className="self-start">
-            {page.cta.label}
-          </ButtonLink>
+          <div className="py-action-row">
+            <ButtonLink href={page.cta.href} variant="primary">
+              {page.cta.label}
+            </ButtonLink>
+          </div>
         )}
-      </header>
+      </PageHero>
 
-      <ProseSections sections={page.sections} />
-
-      <FaqBlock faqs={faqs} title="Veelgestelde vragen" />
-    </div>
+      <div className="py-section py-container py-stack">
+        <ProseSections sections={page.sections} />
+        <FaqBlock faqs={faqs} title="Veelgestelde vragen" />
+      </div>
+    </>
   )
 }

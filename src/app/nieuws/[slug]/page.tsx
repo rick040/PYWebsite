@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
-import { Breadcrumbs } from '@/components/location/breadcrumbs'
+import { PageHero } from '@/components/site/page-hero'
 import { ProseSections } from '@/components/site/prose-sections'
 import { getNews, getNewsArticle } from '@/lib/content'
 import { formatDate } from '@/lib/format'
@@ -47,29 +47,29 @@ export default async function NewsArticlePage({ params }: { params: Promise<Page
   if (article === undefined) notFound()
 
   return (
-    <article className="py-container flex flex-col gap-[var(--py-space-6)] py-[var(--py-space-6)]">
-      <header className="flex flex-col gap-[var(--py-space-3)]">
-        <Breadcrumbs
-          items={[
-            { label: 'Home', href: routes.home() },
-            { label: 'Nieuws', href: routes.news() },
-            { label: article.title },
-          ]}
-        />
+    <article>
+      <PageHero
+        crumbs={[
+          { label: 'Home', href: routes.home() },
+          { label: 'Nieuws', href: routes.news() },
+          { label: article.title },
+        ]}
+        title={article.title}
+        intro={article.excerpt}
+      >
         <time dateTime={article.publishedAt} className="text-sm text-foreground-muted">
           {formatDate(article.publishedAt)}
         </time>
-        <h1 className="text-3xl">{article.title}</h1>
-        <p className="py-prose text-lg text-foreground-muted">{article.excerpt}</p>
-      </header>
+      </PageHero>
 
-      <ProseSections sections={article.body} />
-
-      <p>
-        <Link href={routes.news()} className="text-foreground-brand">
-          Terug naar het nieuwsoverzicht
-        </Link>
-      </p>
+      <div className="py-section py-container py-stack">
+        <ProseSections sections={article.body} />
+        <p>
+          <Link href={routes.news()} className="py-pill">
+            Terug naar het nieuwsoverzicht
+          </Link>
+        </p>
+      </div>
     </article>
   )
 }

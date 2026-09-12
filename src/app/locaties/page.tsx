@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
-import { Breadcrumbs } from '@/components/location/breadcrumbs'
 import { LocationGrid } from '@/components/site/location-card'
+import { PageHero } from '@/components/site/page-hero'
 import { getCities, getCityById, getLocations, getLocationsByCityId } from '@/lib/content'
 import { absoluteUrl, routes } from '@/lib/routes'
 
@@ -18,35 +18,22 @@ export default function LocationsPage() {
   const total = getLocations().length
 
   return (
-    <div className="py-container flex flex-col gap-[var(--py-space-section)] py-[var(--py-space-6)]">
-      <header className="flex flex-col gap-[var(--py-space-4)]">
-        <Breadcrumbs items={[{ label: 'Home', href: routes.home() }, { label: 'Locaties' }]} />
-        <h1 className="text-4xl">Alle parkeerlocaties</h1>
-        <p className="py-prose text-lg text-foreground-muted">
-          {total} locaties in {cities.length} steden. Reserveer vooraf online en rijd bij aankomst
-          zo door: je kenteken wordt bij de slagboom herkend.
-        </p>
-      </header>
-
-      <nav aria-label="Ga naar een stad">
-        <ul className="flex flex-wrap gap-[var(--py-space-2)]">
+    <>
+      <PageHero
+        crumbs={[{ label: 'Home', href: routes.home() }, { label: 'Locaties' }]}
+        title="Alle parkeerlocaties"
+        intro={`${total} locaties in ${cities.length} steden. Reserveer vooraf online en rij bij aankomst zo door: je kenteken wordt bij de slagboom herkend.`}
+      >
+        <nav aria-label="Ga naar een stad" className="py-quick-cities">
           {cities.map((city) => (
-            <li key={city.id}>
-              <a
-                href={`#${city.slug}`}
-                className={[
-                  'inline-flex min-h-[var(--py-tap-target-min)] items-center',
-                  'rounded-[var(--py-radius-full)] border border-border-strong',
-                  'px-[var(--py-space-4)] text-sm no-underline hover:bg-surface-subtle',
-                ].join(' ')}
-              >
-                {city.name}
-              </a>
-            </li>
+            <a key={city.id} href={`#${city.slug}`} className="py-pill">
+              {city.name}
+            </a>
           ))}
-        </ul>
-      </nav>
+        </nav>
+      </PageHero>
 
+      <div className="py-section py-container py-stack">
       {cities.map((city) => {
         const locations = getLocationsByCityId(city.id)
         return (
@@ -54,20 +41,17 @@ export default function LocationsPage() {
             key={city.id}
             id={city.slug}
             aria-labelledby={`kop-${city.slug}`}
-            className="flex scroll-mt-[var(--py-space-8)] flex-col gap-[var(--py-space-4)]"
+            className="scroll-mt-[var(--py-space-8)]"
           >
-            <div className="flex flex-wrap items-baseline justify-between gap-[var(--py-space-2)]">
-              <h2 id={`kop-${city.slug}`} className="text-2xl">
-                {city.name}
-              </h2>
-              <a href={routes.city(city)} className="text-foreground-brand">
-                Meer over parkeren in {city.name}
-              </a>
+            <div className="py-section-intro">
+              <h2 id={`kop-${city.slug}`}>{city.name}</h2>
+              <a href={routes.city(city)}>Meer over parkeren in {city.name}</a>
             </div>
-            <LocationGrid locations={locations} cityById={getCityById} />
+            <LocationGrid locations={locations} cityById={getCityById} showCity={false} />
           </section>
         )
       })}
-    </div>
+      </div>
+    </>
   )
 }

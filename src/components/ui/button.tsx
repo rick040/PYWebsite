@@ -1,72 +1,61 @@
-import { cva, type VariantProps } from 'class-variance-authority'
 import Link from 'next/link'
 import type { ComponentProps } from 'react'
 
+import { Icon, type IconName } from './icon'
 import { cn } from '@/lib/utils'
 
 /**
- * Built in the shadcn/ui style: a class-variance-authority recipe over the
- * design tokens, not a wrapper around a third-party component. Every colour and
- * radius below resolves to a token, so the future PWA can reproduce this button
- * exactly from design-tokens.json.
+ * The prototype's pill button, in its four variants.
  *
- * The minimum height is the token tap target: 44px is the smallest control that
- * a thumb hits reliably, and this site is judged on a phone.
+ * Styling lives in components.css rather than in utility classes, because the
+ * prototype is the design of record and keeping one definition means the PWA
+ * can lift the same rules. This file only decides which class to apply and
+ * whether the thing is a button or a link.
+ *
+ * Minimum height is the tap-target token: 48px in the prototype, and never
+ * below the 44px a thumb needs.
  */
-const buttonVariants = cva(
-  [
-    'inline-flex items-center justify-center gap-2 whitespace-nowrap',
-    'rounded-[var(--py-radius-md)] font-[var(--py-weight-semibold)]',
-    'min-h-[var(--py-tap-target-min)]',
-    'transition-colors duration-[var(--py-duration-fast)]',
-    'disabled:pointer-events-none disabled:opacity-50',
-  ],
-  {
-    variants: {
-      variant: {
-        primary:
-          'bg-primary text-primary-foreground hover:bg-primary-hover active:bg-primary-active',
-        secondary:
-          'bg-surface text-foreground-brand border border-border-strong hover:bg-surface-subtle',
-        ghost: 'text-foreground-brand hover:bg-surface-brand-subtle',
-      },
-      size: {
-        md: 'px-[var(--py-space-5)] py-[var(--py-space-3)] text-base',
-        lg: 'px-[var(--py-space-6)] py-[var(--py-space-4)] text-lg w-full sm:w-auto',
-      },
-    },
-    defaultVariants: { variant: 'primary', size: 'md' },
-  },
-)
+export type ButtonVariant = 'primary' | 'aqua' | 'outline' | 'ghost' | 'on-dark'
 
-export type ButtonVariants = VariantProps<typeof buttonVariants>
-
-export function Button({
-  className,
-  variant,
-  size,
-  ...props
-}: ComponentProps<'button'> & ButtonVariants) {
-  return <button className={cn(buttonVariants({ variant, size }), className)} {...props} />
+type Shared = {
+  variant?: ButtonVariant
+  /** Trailing icon. Pass null for a label-only button. */
+  icon?: IconName | null
+  block?: boolean
 }
 
-/**
- * A link styled as a button. Separate from Button on purpose: a thing that
- * navigates must be an anchor so it opens in a new tab, gets copied, and is
- * announced correctly.
- */
-export function ButtonLink({
+function classes(variant: ButtonVariant, block: boolean, className?: string): string {
+  return cn('py-button', `py-button--${variant}`, block && 'py-button--block', className)
+}
+
+export function Button({
+  children,
+  variant = 'primary',
+  icon = null,
+  block = false,
   className,
-  variant,
-  size,
   ...props
-}: ComponentProps<typeof Link> & ButtonVariants) {
+}: ComponentProps<'button'> & Shared) {
   return (
-    <Link
-      className={cn(buttonVariants({ variant, size }), 'no-underline', className)}
-      {...props}
-    />
+    <button className={classes(variant, block, className)} {...props}>
+      <span>{children}</span>
+      {icon !== null && <Icon name={icon} size={18} stroke={2.25} />}
+    </button>
   )
 }
 
-export { buttonVariants }
+export function ButtonLink({
+  children,
+  variant = 'primary',
+  icon = 'arrow',
+  block = false,
+  className,
+  ...props
+}: ComponentProps<typeof Link> & Shared) {
+  return (
+    <Link className={classes(variant, block, className)} {...props}>
+      <span>{children}</span>
+      {icon !== null && <Icon name={icon} size={18} stroke={2.25} />}
+    </Link>
+  )
+}

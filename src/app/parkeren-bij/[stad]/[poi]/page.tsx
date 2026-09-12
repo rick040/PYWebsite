@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
-import { Breadcrumbs } from '@/components/location/breadcrumbs'
 import { FaqBlock } from '@/components/location/faq-block'
 import { LocationGrid } from '@/components/site/location-card'
+import { PageHero } from '@/components/site/page-hero'
 import { ProseSections } from '@/components/site/prose-sections'
 import {
   getAllPoiParams,
@@ -69,36 +69,39 @@ export default async function PoiPage({ params }: { params: Promise<PageParams> 
   const faqs = getFaqsByIds(poi.faqIds)
 
   return (
-    <article className="py-container flex flex-col gap-[var(--py-space-section)] py-[var(--py-space-6)]">
-      <header className="flex flex-col gap-[var(--py-space-4)]">
-        <Breadcrumbs
-          items={[
-            { label: 'Home', href: routes.home() },
-            { label: 'Parkeren', href: routes.locations() },
-            { label: city.name, href: routes.city(city) },
-            { label: `Parkeren bij ${poi.name}` },
-          ]}
-        />
-        <h1 className="text-4xl">Parkeren bij {poi.name}</h1>
-        <p className="py-prose text-lg text-foreground-muted">{poi.intro}</p>
-      </header>
+    <article>
+      <PageHero
+        accent
+        crumbs={[
+          { label: 'Home', href: routes.home() },
+          { label: 'Parkeren', href: routes.locations() },
+          { label: city.name, href: routes.city(city) },
+          { label: `Parkeren bij ${poi.name}` },
+        ]}
+        title={`Parkeren bij ${poi.name}`}
+        intro={poi.intro}
+      />
 
-      <section aria-labelledby="waar-parkeren" className="flex flex-col gap-[var(--py-space-4)]">
-        <h2 id="waar-parkeren" className="text-2xl">
-          {locations.length === 1 ? 'Waar je parkeert' : 'Waar je kunt parkeren'}
-        </h2>
-        <LocationGrid locations={locations} cityById={getCityById} />
-      </section>
+      <div className="py-section py-container py-stack">
+        <section aria-labelledby="waar-parkeren">
+          <div className="py-section-intro">
+            <h2 id="waar-parkeren">
+              {locations.length === 1 ? 'Waar je parkeert' : 'Waar je kunt parkeren'}
+            </h2>
+          </div>
+          <LocationGrid locations={locations} cityById={getCityById} showCity={false} />
+        </section>
 
-      <ProseSections sections={poi.body} />
+        <ProseSections sections={poi.body} />
 
-      <FaqBlock faqs={faqs} title={`Veelgestelde vragen over parkeren bij ${poi.name}`} />
+        <FaqBlock faqs={faqs} title={`Veelgestelde vragen over parkeren bij ${poi.name}`} />
 
-      <p>
-        <Link href={routes.city(city)} className="text-foreground-brand">
-          Bekijk alle parkeerlocaties in {city.name}
-        </Link>
-      </p>
+        <p>
+          <Link href={routes.city(city)} className="py-pill">
+            Bekijk alle parkeerlocaties in {city.name}
+          </Link>
+        </p>
+      </div>
     </article>
   )
 }

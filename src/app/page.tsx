@@ -2,199 +2,229 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import { LocationGrid } from '@/components/site/location-card'
-import { Card, CardBody } from '@/components/ui/card'
 import { ButtonLink } from '@/components/ui/button'
-import { getCities, getCityById, getLocations, getNews, getPois } from '@/lib/content'
-import { formatDate } from '@/lib/format'
-import { absoluteUrl, routes } from '@/lib/routes'
+import { Icon, type IconName } from '@/components/ui/icon'
+import { getCities, getCityById, getLocations, getPois } from '@/lib/content'
+import { routes } from '@/lib/routes'
+import { absoluteUrl } from '@/lib/routes'
 
 export const metadata: Metadata = {
   alternates: { canonical: absoluteUrl(routes.home()) },
 }
 
+const BENEFITS: ReadonlyArray<{ icon: IconName; title: string; body: string }> = [
+  {
+    icon: 'car',
+    title: 'Rij zo naar binnen',
+    body: 'Je reserveert op kenteken. Bij aankomst herkent de camera je auto en gaat de slagboom open, zonder ticket.',
+  },
+  {
+    icon: 'wallet',
+    title: 'Je weet de prijs vooraf',
+    body: 'Een gereserveerde dagkaart is vrijwel altijd goedkoper dan het losse tarief bij de slagboom.',
+  },
+  {
+    icon: 'shield',
+    title: 'Overdekt en bewaakt',
+    body: 'Onze garages zijn overdekt, veel locaties hebben cameratoezicht en een lift naar straatniveau.',
+  },
+]
+
 export default function HomePage() {
   const cities = getCities()
   const locations = getLocations()
   const pois = getPois()
-  const articles = getNews().slice(0, 2)
 
-  // Cities with the most locations first: that is where most visitors land.
   const featured = [...cities]
     .map((city) => ({
       city,
       locations: locations.filter((location) => location.cityId === city.id),
     }))
     .toSorted((a, b) => b.locations.length - a.locations.length)
-    .slice(0, 3)
+    .slice(0, 1)
 
   return (
-    <div className="flex flex-col gap-[var(--py-space-section)] pb-[var(--py-space-section)]">
-      <section className="bg-surface-brand text-foreground-on-brand">
-        <div className="py-container flex flex-col gap-[var(--py-space-5)] py-[var(--py-space-12)]">
-          <h1 className="py-prose text-4xl">Goedkoop en centraal parkeren in heel Nederland</h1>
-          <p className="py-prose text-lg opacity-90">
-            {locations.length} overdekte parkeerlocaties in {cities.length} steden. Reserveer
-            vooraf online, betaal minder dan aan de slagboom en rijd bij aankomst zo door: je
-            kenteken wordt herkend.
-          </p>
-          <div className="flex flex-wrap gap-[var(--py-space-3)]">
-            <ButtonLink href={routes.locations()} variant="secondary" size="lg">
-              Bekijk alle locaties
-            </ButtonLink>
+    <>
+      <section className="py-hero">
+        <div className="py-container py-hero__grid">
+          <div>
+            <h1>
+              Parkeer <em>voordelig</em> midden in de stad.
+            </h1>
+            <p>
+              Vind een ParkingYou-garage, reserveer je plek en rij in met kentekenherkenning.
+              Minder rondjes rijden, meer tijd voor je dag.
+            </p>
+            <div className="py-action-row">
+              <ButtonLink href={routes.locations()} variant="primary">
+                Bekijk alle locaties
+              </ButtonLink>
+              <ButtonLink href={routes.subscriptions()} variant="outline" icon={null}>
+                Ik parkeer hier vaker
+              </ButtonLink>
+            </div>
+            <div className="py-quick-cities" aria-label="Populaire steden">
+              {cities.slice(0, 5).map((city) => (
+                <Link key={city.id} href={routes.city(city)} className="py-pill">
+                  {city.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="py-hero__visual" aria-hidden="true">
+            <div className="py-pin-photo">
+              <span className="py-pin-photo__label">
+                {'{{TODO-NL: sfeerfoto van een ParkingYou-garage}}'}
+              </span>
+            </div>
+            <div className="py-hero-ticket">
+              <span>
+                <Icon name="check" size={18} stroke={2.4} /> Gereserveerd
+              </span>
+              <strong>Philips Stadion</strong>
+              <small>Vandaag 09.00 tot 17.00 uur</small>
+            </div>
+            <div className="py-hero-stat">
+              <strong>{locations.length}</strong>
+              <span>garages in Nederland</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="py-container py-proofbar">
+          <div>
+            <strong>{locations.length}</strong>
+            <span>locaties in {cities.length} steden</span>
+          </div>
+          <div>
+            <strong>24/7</strong>
+            <span>in- en uitrijden</span>
+          </div>
+          <div>
+            <strong>Kenteken</strong>
+            <span>geen ticket nodig</span>
+          </div>
+          <div>
+            <strong>500.000+</strong>
+            <span>parkeerders per jaar</span>
           </div>
         </div>
       </section>
 
-      <div className="py-container flex flex-col gap-[var(--py-space-section)]">
-        <section aria-labelledby="steden" className="flex flex-col gap-[var(--py-space-4)]">
-          <h2 id="steden" className="text-2xl">
-            Parkeren per stad
-          </h2>
-          <ul className="flex flex-wrap gap-[var(--py-space-2)]">
-            {cities.map((city) => (
+      <section className="py-city-strip">
+        <div className="py-container">
+          <ul className="py-city-strip__inner">
+            {cities.slice(0, 10).map((city) => (
               <li key={city.id}>
-                <Link
-                  href={routes.city(city)}
-                  className={[
-                    'inline-flex min-h-[var(--py-tap-target-min)] items-center',
-                    'rounded-[var(--py-radius-full)] border border-border-strong',
-                    'px-[var(--py-space-4)] no-underline hover:bg-surface-subtle',
-                  ].join(' ')}
-                >
+                <Link href={routes.city(city)}>
                   {city.name}
+                  <Icon name="arrow" size={18} stroke={2.2} />
                 </Link>
               </li>
             ))}
           </ul>
-        </section>
+        </div>
+      </section>
 
-        {featured.map(({ city, locations: cityLocations }) => (
-          <section
-            key={city.id}
-            aria-labelledby={`home-${city.slug}`}
-            className="flex flex-col gap-[var(--py-space-4)]"
-          >
-            <div className="flex flex-wrap items-baseline justify-between gap-[var(--py-space-2)]">
-              <h2 id={`home-${city.slug}`} className="text-2xl">
-                Parkeren in {city.name}
-              </h2>
-              <Link href={routes.city(city)} className="text-foreground-brand">
+      {featured.map(({ city, locations: cityLocations }) => (
+        <section key={city.id} className="py-section">
+          <div className="py-container">
+            <div className="py-section-intro">
+              <div>
+                <h2>Parkeren in {city.name}</h2>
+                <p>{city.intro}</p>
+              </div>
+              <ButtonLink href={routes.city(city)} variant="ghost">
                 Alle {cityLocations.length} locaties
-              </Link>
+              </ButtonLink>
             </div>
             <LocationGrid locations={cityLocations.slice(0, 3)} cityById={getCityById} />
-          </section>
-        ))}
+          </div>
+        </section>
+      ))}
 
-        {pois.length > 0 && (
-          <section aria-labelledby="bestemmingen" className="flex flex-col gap-[var(--py-space-4)]">
-            <h2 id="bestemmingen" className="text-2xl">
-              Parkeren bij een bestemming
-            </h2>
-            <ul className="grid gap-[var(--py-space-4)] sm:grid-cols-2 lg:grid-cols-4">
+      <section className="py-section py-section--paper">
+        <div className="py-container">
+          <div className="py-section-intro">
+            <div>
+              <h2>Waarom ParkingYou</h2>
+              <p>
+                We maken bestaande parkeerruimte beter benut. Dat levert jou een centrale plek op
+                voor minder geld dan op straat.
+              </p>
+            </div>
+          </div>
+          <ul className="py-benefit-grid">
+            {BENEFITS.map((benefit) => (
+              <li key={benefit.title}>
+                <article>
+                  <span className="py-icon-circle">
+                    <Icon name={benefit.icon} size={22} />
+                  </span>
+                  <h3>{benefit.title}</h3>
+                  <p>{benefit.body}</p>
+                </article>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {pois.length > 0 && (
+        <section className="py-section">
+          <div className="py-container">
+            <div className="py-section-intro">
+              <div>
+                <h2>Parkeren bij een bestemming</h2>
+                <p>Ga je ergens specifieks naartoe? Dan wijzen we je de dichtstbijzijnde garage.</p>
+              </div>
+            </div>
+            <ul className="py-benefit-grid">
               {pois.map((poi) => {
                 const city = getCityById(poi.cityId)
                 if (city === undefined) return null
                 return (
                   <li key={poi.id}>
-                    <Card className="relative h-full transition-shadow hover:shadow-[var(--py-shadow-md)]">
-                      <CardBody className="flex flex-col gap-[var(--py-space-1)]">
-                        <p className="text-sm text-foreground-muted">{city.name}</p>
-                        <h3 className="font-[var(--py-weight-semibold)]">
-                          <Link href={routes.poi(city, poi.slug)} className="no-underline">
-                            <span className="absolute inset-0" aria-hidden="true" />
-                            Parkeren bij {poi.name}
-                          </Link>
-                        </h3>
-                      </CardBody>
-                    </Card>
+                    <article className="relative">
+                      <span className="py-icon-circle">
+                        <Icon name="pin" size={22} />
+                      </span>
+                      <h3>
+                        <Link href={routes.poi(city, poi.slug)}>
+                          <span className="absolute inset-0" aria-hidden="true" />
+                          Parkeren bij {poi.name}
+                        </Link>
+                      </h3>
+                      <p>{city.name}</p>
+                    </article>
                   </li>
                 )
               })}
             </ul>
-          </section>
-        )}
-
-        <section aria-labelledby="opties" className="flex flex-col gap-[var(--py-space-4)]">
-          <h2 id="opties" className="text-2xl">
-            Hoe vaak sta je er?
-          </h2>
-          <ul className="grid gap-[var(--py-space-4)] md:grid-cols-3">
-            {[
-              {
-                title: 'Af en toe',
-                body: 'Reserveer een losse dagkaart. Online vooraf is bijna altijd goedkoper dan betalen bij de slagboom.',
-                href: routes.locations(),
-                label: 'Bekijk locaties',
-              },
-              {
-                title: 'Een paar dagen per week',
-                body: 'Met een ParkingPass koop je tien of vijfentwintig parkeerdagen vooruit tegen een lager tarief.',
-                href: routes.parkingPass(),
-                label: 'Over de ParkingPass',
-              },
-              {
-                title: 'Elke dag',
-                body: 'Een abonnement geeft je een vast bedrag per maand op je eigen locatie, vanaf drie maanden.',
-                href: routes.subscriptions(),
-                label: 'Over abonnementen',
-              },
-            ].map((option) => (
-              <li key={option.title}>
-                <Card className="relative h-full">
-                  <CardBody className="flex h-full flex-col gap-[var(--py-space-2)]">
-                    <h3 className="text-lg font-[var(--py-weight-semibold)]">{option.title}</h3>
-                    <p className="text-sm text-foreground-muted">{option.body}</p>
-                    <Link
-                      href={option.href}
-                      className="mt-auto pt-[var(--py-space-2)] text-foreground-brand"
-                    >
-                      <span className="absolute inset-0" aria-hidden="true" />
-                      {option.label}
-                    </Link>
-                  </CardBody>
-                </Card>
-              </li>
-            ))}
-          </ul>
+          </div>
         </section>
+      )}
 
-        {articles.length > 0 && (
-          <section aria-labelledby="nieuws" className="flex flex-col gap-[var(--py-space-4)]">
-            <div className="flex flex-wrap items-baseline justify-between gap-[var(--py-space-2)]">
-              <h2 id="nieuws" className="text-2xl">
-                Nieuws
-              </h2>
-              <Link href={routes.news()} className="text-foreground-brand">
-                Alle berichten
-              </Link>
-            </div>
-            <ul className="grid gap-[var(--py-space-4)] md:grid-cols-2">
-              {articles.map((article) => (
-                <li key={article.id}>
-                  <Card className="relative h-full">
-                    <CardBody className="flex flex-col gap-[var(--py-space-2)]">
-                      <time
-                        dateTime={article.publishedAt}
-                        className="text-sm text-foreground-muted"
-                      >
-                        {formatDate(article.publishedAt)}
-                      </time>
-                      <h3 className="text-lg font-[var(--py-weight-semibold)]">
-                        <Link href={`${routes.news()}/${article.slug}`} className="no-underline">
-                          <span className="absolute inset-0" aria-hidden="true" />
-                          {article.title}
-                        </Link>
-                      </h3>
-                      <p className="text-sm text-foreground-muted">{article.excerpt}</p>
-                    </CardBody>
-                  </Card>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
-      </div>
-    </div>
+      <section className="py-banner">
+        <div className="py-container py-banner__inner">
+          <div>
+            <h2>Sta je er vaker dan af en toe?</h2>
+            <p>
+              Met een ParkingPass koop je tien of vijfentwintig dagen vooruit. Sta je er elke dag,
+              dan is een abonnement voordeliger.
+            </p>
+          </div>
+          <div className="py-action-row">
+            <ButtonLink href={routes.parkingPass()} variant="aqua">
+              ParkingPass
+            </ButtonLink>
+            <ButtonLink href={routes.subscriptions()} variant="on-dark">
+              Abonnementen
+            </ButtonLink>
+          </div>
+        </div>
+      </section>
+    </>
   )
 }
