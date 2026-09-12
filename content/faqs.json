@@ -1,0 +1,117 @@
+[
+  {
+    "id": "faq-reserveren-kenteken",
+    "question": "Hoe werkt reserveren op kenteken?",
+    "answer": "Je reserveert online en vult je kenteken in. Bij aankomst herkent de camera je kenteken en gaat de slagboom open. Je hoeft geen ticket te trekken en niets uit te printen.",
+    "category": "reserveren",
+    "showOnGeneralFaq": true,
+    "published": true
+  },
+  {
+    "id": "faq-annuleren",
+    "question": "Kan ik mijn reservering annuleren?",
+    "answer": "{{TODO-NL: annuleringsvoorwaarden opvragen bij klantenservice. De oude site verwijst hiervoor naar Zendesk en noemt geen termijn.}}",
+    "category": "reserveren",
+    "showOnGeneralFaq": true,
+    "published": true
+  },
+
+  {
+    "id": "faq-psv-wedstrijd",
+    "question": "Kan ik hier parkeren tijdens een PSV-wedstrijd?",
+    "answer": "Nee. Tijdens wedstrijden en grote evenementen in het Philips Stadion is deze garage niet bereikbaar, ook niet voor abonnementhouders. Bekijk dan onze wedstrijdlocaties in de omgeving.",
+    "category": "toegang",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-psv-plaatsen",
+    "question": "Hoeveel parkeerplaatsen zijn er?",
+    "answer": "De garage heeft 700 overdekte parkeerplaatsen, waardoor er buiten wedstrijddagen bijna altijd plek is.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-psv-dagkaart",
+    "question": "Wat kost een dagkaart?",
+    "answer": "Zonder reservering € 15. Reserveer je online vooraf, dan betaal je € 12,50 voor een hele dag.",
+    "category": "betalen",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-psv-openingstijden",
+    "question": "Is de garage 24 uur per dag open?",
+    "answer": "Ja, in- en uitrijden kan zeven dagen per week, de klok rond, behalve op dagen met een wedstrijd of groot evenement in het stadion.",
+    "category": "toegang",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+
+  {
+    "id": "faq-hofplein-weekend",
+    "question": "Wat kost parkeren in het weekend?",
+    "answer": "Op zaterdag en zondag geldt een maximumtarief van € 15 voor een hele dag.",
+    "category": "betalen",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-hofplein-nacht",
+    "question": "Is er een nachttarief?",
+    "answer": "Ja, tussen 00.00 en 09.00 uur betaal je maximaal € 15.",
+    "category": "betalen",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-hofplein-reserveren",
+    "question": "Hoeveel scheelt online reserveren?",
+    "answer": "Op werkdagen kost een dagkaart € 30 zonder reservering, € 25 met reservering en € 20 bij vroeg boeken.",
+    "category": "reserveren",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-hofplein-werkzaamheden",
+    "question": "Is de garage bereikbaar tijdens de wegwerkzaamheden?",
+    "answer": "Ja. Rond de garage vinden werkzaamheden plaats, maar de garage is altijd bereikbaar. Volg de borden ter plaatse.",
+    "category": "toegang",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+
+  {
+    "id": "faq-cruquius-harbour-club",
+    "question": "Hoe ver is het lopen naar The Harbour Club?",
+    "answer": "Ongeveer één minuut. De garage ligt vlak naast The Harbour Club en het Harbour Club Theater.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-cruquius-doorrijhoogte",
+    "question": "Wat is de doorrijhoogte?",
+    "answer": "2,70 meter op de bovenste niveaus. Op niveau -2 is dat 2,14 meter.",
+    "category": "toegang",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-cruquius-zondag",
+    "question": "Is parkeren op zondag goedkoper?",
+    "answer": "Ja. Op zondag geldt de hele dag het lage tarief van € 1,30 per 30 minuten, net als op andere dagen tussen 21.00 en 09.00 uur.",
+    "category": "betalen",
+    "showOnGeneralFaq": false,
+    "published": true
+  },
+  {
+    "id": "faq-cruquius-centrum",
+    "question": "Hoe kom ik vanaf hier in het centrum?",
+    "answer": "Met het openbaar vervoer sta je binnen 25 minuten op Amsterdam Centraal.",
+    "category": "overig",
+    "showOnGeneralFaq": false,
+    "published": true
+  }
+]

@@ -1,0 +1,635 @@
+[
+  {
+    "id": "loc-philips-stadion",
+    "name": "Parking Philips Stadion",
+    "slug": "philips-stadion",
+    "cityId": "city-eindhoven",
+    "h1": "Parkeren bij het Philips Stadion in Eindhoven",
+    "shortDescription": "Ruime overdekte garage met 700 plaatsen aan de westkant van Eindhoven. Niet bereikbaar tijdens wedstrijden en grote evenementen in het stadion.",
+    "body": [
+      {
+        "heading": "Let op: niet tijdens wedstrijden en evenementen",
+        "tone": "warning",
+        "paragraphs": [
+          "Belangrijk om te weten voordat je reserveert: tijdens wedstrijden en grote evenementen in het Philips Stadion is deze garage niet bereikbaar. Dat geldt ook voor abonnementhouders. Kom je voor een PSV-wedstrijd of een concert, kijk dan bij onze wedstrijdlocaties in de omgeving van het stadion, daar kun je op speeldagen wel terecht."
+        ]
+      },
+      {
+        "heading": "Waarom deze garage",
+        "tone": "default",
+        "paragraphs": [
+          "Buiten die dagen is dit een van de ruimste garages van Eindhoven: 700 overdekte plaatsen aan de Anton Philipslaan, aan de westkant van de stad. Doordat de garage zo groot is, vind je hier vrijwel altijd een plek zonder rondjes te rijden, handig als je een afspraak hebt in het stadiongebied, op Strijp of bij een van de kantoren rond de Frederiklaan.",
+          "Je staat overdekt, er is een lift en de garage is toegankelijk voor rolstoelgebruikers. In- en uitrijden kan zeven dagen per week, 24 uur per dag."
+        ]
+      },
+      {
+        "heading": "Tarieven en abonnementen",
+        "tone": "default",
+        "paragraphs": [
+          "Je betaalt € 1,50 per 30 minuten. Een dagkaart kost € 15 zonder reservering; reserveer je online, dan betaal je € 12,50. Voor wie er dagelijks staat, zijn er abonnementen: een kantoorabonnement kost € 135 per maand, en bewoners van het complex kunnen een 24/7-abonnement afnemen voor € 160 per maand.",
+          "Reserveren gaat online en werkt op kenteken, je hoeft geen ticket te trekken."
+        ]
+      },
+      {
+        "heading": "Praktische informatie en omgeving",
+        "tone": "default",
+        "paragraphs": [
+          "De doorrijhoogte is 2,00 meter, dus houd daar rekening mee met een dakkoffer of imperiaal. Het centrum van Eindhoven ligt op ongeveer negen minuten lopen, en het Klokgebouw en de Cultuurhallen op Strijp-S bereik je te voet in een kwartier. Ook het Philips Museum en de winkels aan de Mathildelaan liggen binnen wandelafstand."
+        ]
+      }
+    ],
+    "address": {
+      "street": "Anton Philipslaan",
+      "houseNumber": "{{TODO-NL: huisnummer ontbreekt in de bronpagina}}",
+      "postalCode": "{{TODO-NL: postcode ontbreekt in de bronpagina}}",
+      "city": "Eindhoven"
+    },
+    "coordinates": {
+      "lat": 51.4418,
+      "lng": 5.4655
+    },
+    "coordinatesSource": "approximate",
+    "photos": [
+      {
+        "src": "/images/locations/philips-stadion-1.jpg",
+        "alt": "Ingang van de parkeergarage bij het Philips Stadion aan de Anton Philipslaan in Eindhoven",
+        "width": 1600,
+        "height": 1000
+      },
+      {
+        "src": "/images/locations/philips-stadion-2.jpg",
+        "alt": "Overdekte parkeergarage met 700 plaatsen bij het Philips Stadion in Eindhoven",
+        "width": 1600,
+        "height": 1000
+      }
+    ],
+    "routeDescription": [
+      "De garage ligt aan de Anton Philipslaan, aan de westkant van Eindhoven, vlak bij het stadiongebied en Strijp.",
+      "{{TODO-NL: aanrijroute vanaf de snelweg beschrijven, inclusief afrit en de borden die je volgt}}"
+    ],
+    "entryInstructions": [
+      "Reserveer online op kenteken. Bij aankomst herkent de camera je kenteken en gaat de slagboom open.",
+      "Je hoeft geen ticket te trekken en niets uit te printen."
+    ],
+    "exitInstructions": [
+      "Bij het uitrijden gaat de slagboom open zodra de camera je kenteken herkent.",
+      "{{TODO-NL: klopt het dat uitrijden volledig op kenteken gaat, of is er ook een uitrijkaart?}}"
+    ],
+    "openingHours": [
+      {
+        "day": 1,
+        "closed": false
+      },
+      {
+        "day": 2,
+        "closed": false
+      },
+      {
+        "day": 3,
+        "closed": false
+      },
+      {
+        "day": 4,
+        "closed": false
+      },
+      {
+        "day": 5,
+        "closed": false
+      },
+      {
+        "day": 6,
+        "closed": false
+      },
+      {
+        "day": 7,
+        "closed": false
+      }
+    ],
+    "accessibility": {
+      "maxHeightMeters": 2.0,
+      "covered": true,
+      "hasElevator": true,
+      "wheelchairAccessible": true,
+      "cameraSurveillance": false,
+      "evCharging": false,
+      "bicycleParking": false
+    },
+    "capacity": 700,
+    "walkingDistanceToCenterMinutes": 9,
+    "features": [
+      "700 overdekte plaatsen",
+      "Lift aanwezig",
+      "Toegankelijk voor rolstoelgebruikers",
+      "24 uur per dag in- en uitrijden",
+      "Reserveren op kenteken"
+    ],
+    "tariffs": [
+      {
+        "title": "Kort parkeren",
+        "kind": "short_stay",
+        "rows": [
+          {
+            "label": "Alle dagen",
+            "amountCents": 150,
+            "unit": "per_30_min"
+          }
+        ]
+      },
+      {
+        "title": "Dagkaart",
+        "kind": "day_pass",
+        "rows": [
+          {
+            "label": "Zonder reservering",
+            "amountCents": 1500,
+            "unit": "per_day"
+          },
+          {
+            "label": "Online gereserveerd",
+            "amountCents": 1250,
+            "unit": "per_day",
+            "note": "Reserveren scheelt € 2,50 per dag"
+          }
+        ]
+      },
+      {
+        "title": "Abonnementen",
+        "kind": "subscription",
+        "rows": [
+          {
+            "label": "Kantoorabonnement",
+            "amountCents": 13500,
+            "unit": "per_month"
+          },
+          {
+            "label": "24/7-abonnement",
+            "amountCents": 16000,
+            "unit": "per_month",
+            "note": "Voor bewoners van het complex"
+          }
+        ]
+      }
+    ],
+    "bookingUrl": "https://reserveren.parkingyou.nl/",
+    "subscriptionOnly": false,
+    "faqIds": [
+      "faq-psv-wedstrijd",
+      "faq-psv-plaatsen",
+      "faq-psv-dagkaart",
+      "faq-psv-openingstijden"
+    ],
+    "seo": {
+      "title": "Parkeren Philips Stadion Eindhoven: 700 plekken | ParkingYou",
+      "description": "Overdekt parkeren bij het Philips Stadion in Eindhoven: 700 plaatsen, lift en dagkaart vanaf € 12,50. Let op: tijdens wedstrijden is deze garage gesloten."
+    },
+    "published": true,
+    "aeroparkerCarParkId": 7,
+    "sync": {
+      "status": "ok",
+      "syncedAt": "2026-09-12T03:00:00.000Z",
+      "lowestPriceCents": 1250
+    }
+  },
+  {
+    "id": "loc-hofplein",
+    "name": "Parking Hofplein",
+    "slug": "hofplein",
+    "cityId": "city-rotterdam",
+    "h1": "Parkeren aan het Hofplein in het centrum van Rotterdam",
+    "shortDescription": "Overdekte garage met 300 plaatsen aan het Hofplein, op acht minuten lopen van de Lijnbaan. In het weekend en 's nachts maximaal € 15 per dag.",
+    "body": [
+      {
+        "heading": "Midden in het centrum van Rotterdam",
+        "tone": "default",
+        "paragraphs": [
+          "Parking Hofplein ligt aan het Hofplein 20, op een van de bekendste plekken van Rotterdam. Je staat hier op ongeveer acht minuten lopen van het centrum, met de Lijnbaan, de Koopgoot en het Schouwburgplein binnen wandelafstand. De garage heeft 300 overdekte plaatsen, cameratoezicht, een lift en is toegankelijk voor rolstoelgebruikers. In- en uitrijden kan 24 uur per dag."
+        ]
+      },
+      {
+        "heading": "In het weekend en 's nachts flink goedkoper",
+        "tone": "default",
+        "paragraphs": [
+          "Hier zit het echte voordeel van deze garage. Op zaterdag en zondag geldt een maximumtarief van € 15 voor een hele dag. Ook 's nachts, tussen 00.00 en 09.00 uur, betaal je maximaal € 15. Ga je in het weekend shoppen in Rotterdam of blijf je een nacht in de stad, dan parkeer je hier dus voor een bedrag waar je in de binnenstad nog geen halve dag mee vooruit komt."
+        ]
+      },
+      {
+        "heading": "Tarieven op werkdagen",
+        "tone": "default",
+        "paragraphs": [
+          "Van maandag tot en met vrijdag betaal je € 2,00 per 30 minuten. Voor een hele werkdag is het dagtarief € 30 zonder reservering. Reserveer je online, dan betaal je € 25, en wie ruim vooraf boekt komt uit op € 20. Reserveren scheelt dus tot een derde van de prijs.",
+          "Parkeer je hier vaker, dan kost een ParkingPass tien dagen € 200. Voor een vaste plek zijn er abonnementen: € 280 per maand voor kantoorgebruik en € 330 per maand voor 24/7-toegang."
+        ]
+      },
+      {
+        "heading": "Praktische informatie",
+        "tone": "default",
+        "paragraphs": [
+          "De doorrijhoogte is 2,10 meter, behalve op de tweede etage: daar is het 2,05 meter. Rond de garage zijn wegwerkzaamheden aan de gang, maar de garage blijft altijd bereikbaar, volg de borden ter plaatse.",
+          "Reserveren doe je online en werkt op kenteken: bij aankomst gaat de slagboom automatisch open, je hoeft geen ticket te trekken."
+        ]
+      }
+    ],
+    "address": {
+      "street": "Hofplein",
+      "houseNumber": "20",
+      "postalCode": "{{TODO-NL: postcode ontbreekt in de bronpagina}}",
+      "city": "Rotterdam"
+    },
+    "coordinates": {
+      "lat": 51.9251,
+      "lng": 4.4777
+    },
+    "coordinatesSource": "approximate",
+    "photos": [
+      {
+        "src": "/images/locations/hofplein-1.jpg",
+        "alt": "Ingang van parkeergarage Hofplein in het centrum van Rotterdam",
+        "width": 1600,
+        "height": 1000
+      },
+      {
+        "src": "/images/locations/hofplein-2.jpg",
+        "alt": "Overdekte parkeergarage met 300 plaatsen aan het Hofplein in Rotterdam",
+        "width": 1600,
+        "height": 1000
+      }
+    ],
+    "routeDescription": [
+      "De garage ligt aan het Hofplein 20, midden in het centrum van Rotterdam.",
+      "Rond de garage vinden wegwerkzaamheden plaats. De garage blijft bereikbaar; volg de borden ter plaatse.",
+      "{{TODO-NL: aanrijroute vanaf de ring beschrijven, inclusief afrit}}"
+    ],
+    "entryInstructions": [
+      "Reserveer online op kenteken. Bij aankomst gaat de slagboom automatisch open.",
+      "Je hoeft geen ticket te trekken."
+    ],
+    "exitInstructions": [
+      "Bij het uitrijden gaat de slagboom open zodra de camera je kenteken herkent.",
+      "{{TODO-NL: bevestigen of uitrijden volledig op kenteken gaat}}"
+    ],
+    "openingHours": [
+      {
+        "day": 1,
+        "closed": false
+      },
+      {
+        "day": 2,
+        "closed": false
+      },
+      {
+        "day": 3,
+        "closed": false
+      },
+      {
+        "day": 4,
+        "closed": false
+      },
+      {
+        "day": 5,
+        "closed": false
+      },
+      {
+        "day": 6,
+        "closed": false
+      },
+      {
+        "day": 7,
+        "closed": false
+      }
+    ],
+    "accessibility": {
+      "maxHeightMeters": 2.1,
+      "maxHeightNote": "Op de tweede etage is de doorrijhoogte 2,05 meter.",
+      "covered": true,
+      "hasElevator": true,
+      "wheelchairAccessible": true,
+      "cameraSurveillance": true,
+      "evCharging": false,
+      "bicycleParking": false
+    },
+    "capacity": 300,
+    "walkingDistanceToCenterMinutes": 8,
+    "features": [
+      "300 overdekte plaatsen",
+      "Cameratoezicht",
+      "Lift aanwezig",
+      "Toegankelijk voor rolstoelgebruikers",
+      "24 uur per dag in- en uitrijden"
+    ],
+    "tariffs": [
+      {
+        "title": "Kort parkeren",
+        "kind": "short_stay",
+        "rows": [
+          {
+            "label": "Maandag tot en met vrijdag",
+            "amountCents": 200,
+            "unit": "per_30_min"
+          },
+          {
+            "label": "Zaterdag en zondag",
+            "amountCents": 1500,
+            "unit": "per_day",
+            "note": "Maximumtarief voor een hele dag"
+          },
+          {
+            "label": "'s Nachts, 00.00 tot 09.00 uur",
+            "amountCents": 1500,
+            "unit": "per_day",
+            "note": "Maximumtarief"
+          }
+        ]
+      },
+      {
+        "title": "Dagkaart op werkdagen",
+        "kind": "day_pass",
+        "rows": [
+          {
+            "label": "Zonder reservering",
+            "amountCents": 3000,
+            "unit": "per_day"
+          },
+          {
+            "label": "Online gereserveerd",
+            "amountCents": 2500,
+            "unit": "per_day"
+          },
+          {
+            "label": "Ruim vooraf geboekt",
+            "amountCents": 2000,
+            "unit": "per_day",
+            "note": "Tot een derde goedkoper dan zonder reservering"
+          }
+        ]
+      },
+      {
+        "title": "ParkingPass",
+        "kind": "parkingpass",
+        "rows": [
+          {
+            "label": "Tien dagen",
+            "amountCents": 20000,
+            "unit": "per_pass"
+          }
+        ]
+      },
+      {
+        "title": "Abonnementen",
+        "kind": "subscription",
+        "rows": [
+          {
+            "label": "Kantoorabonnement",
+            "amountCents": 28000,
+            "unit": "per_month"
+          },
+          {
+            "label": "24/7-abonnement",
+            "amountCents": 33000,
+            "unit": "per_month"
+          }
+        ]
+      }
+    ],
+    "bookingUrl": "https://reserveren.parkingyou.nl/",
+    "subscriptionOnly": false,
+    "faqIds": [
+      "faq-hofplein-weekend",
+      "faq-hofplein-nacht",
+      "faq-hofplein-reserveren",
+      "faq-hofplein-werkzaamheden"
+    ],
+    "seo": {
+      "title": "Parkeren Hofplein Rotterdam: weekend € 15 | ParkingYou",
+      "description": "Overdekt parkeren aan het Hofplein in het centrum van Rotterdam. In het weekend maximaal € 15 per dag, 's nachts € 15. 300 plaatsen met cameratoezicht."
+    },
+    "published": true,
+    "aeroparkerCarParkId": 9,
+    "sync": {
+      "status": "ok",
+      "syncedAt": "2026-09-12T03:00:00.000Z",
+      "lowestPriceCents": 1500
+    }
+  },
+  {
+    "id": "loc-cruquius",
+    "name": "Parking Cruquius",
+    "slug": "cruquius",
+    "cityId": "city-amsterdam",
+    "h1": "Parkeren bij The Harbour Club op het Cruquius-eiland",
+    "shortDescription": "Overdekte garage op het Cruquius-eiland in Amsterdam-Oost, op één minuut lopen van The Harbour Club. Doorrijhoogte tot 2,70 meter.",
+    "body": [
+      {
+        "heading": "Eén minuut van The Harbour Club",
+        "tone": "default",
+        "paragraphs": [
+          "Parking Cruquius ligt aan de Zeeburgerkade 830 op het Cruquius-eiland, in Amsterdam-Oost. Ga je uit eten of naar een evenement bij The Harbour Club of The Harbour Club Theater, dan sta je hier op één minuut lopen van de deur. Ook Museum Perron Oost en de Entrepothaven liggen om de hoek.",
+          "De garage heeft 177 plaatsen, is overdekt en beschikt over camerabewaking, een lift en toegang voor rolstoelgebruikers. In- en uitrijden kan 24 uur per dag."
+        ]
+      },
+      {
+        "heading": "Ruim genoeg voor hoge auto's",
+        "tone": "default",
+        "paragraphs": [
+          "Op de bovenste niveaus is de doorrijhoogte 2,70 meter, uitzonderlijk ruim voor een Amsterdamse garage. Rijd je een bestelbus, een hoge SUV of een auto met dakkoffer, dan kun je hier zonder problemen naar binnen. Let op: op niveau -2 is de doorrijhoogte 2,14 meter, dus houd bij het afdalen de borden in de gaten."
+        ]
+      },
+      {
+        "heading": "Tarieven: 's avonds en op zondag goedkoper",
+        "tone": "default",
+        "paragraphs": [
+          "Van maandag tot en met zaterdag betaal je tussen 09.00 en 21.00 uur € 2,60 per 30 minuten. Buiten die uren, dus tussen 21.00 en 09.00, en op zondag de hele dag, is dat € 1,30 per 30 minuten, precies de helft. Kom je 's avonds uit eten, dan werkt dat flink in je voordeel.",
+          "Voor een hele dag is er een dagkaart: € 25 zonder reservering, € 22,50 met reservering en € 17,50 als je ruim vooraf boekt. Sta je hier vaker, dan kost een ParkingPass tien dagen € 190 of vijfentwintig dagen € 450. Abonnementen lopen van € 205 per maand voor avond en weekend tot € 345 per maand voor 24/7."
+        ]
+      },
+      {
+        "heading": "Praktische informatie en omgeving",
+        "tone": "default",
+        "paragraphs": [
+          "Met het openbaar vervoer sta je binnen 25 minuten op Amsterdam Centraal, dus je kunt hier je auto neerzetten en verder de stad in. Reserveren doe je online; bij aankomst wordt je kenteken herkend."
+        ]
+      }
+    ],
+    "address": {
+      "street": "Zeeburgerkade",
+      "houseNumber": "830",
+      "postalCode": "{{TODO-NL: postcode ontbreekt in de bronpagina}}",
+      "city": "Amsterdam"
+    },
+    "coordinates": {
+      "lat": 52.3702,
+      "lng": 4.941
+    },
+    "coordinatesSource": "approximate",
+    "photos": [
+      {
+        "src": "/images/locations/cruquius-1.jpg",
+        "alt": "Ingang van parkeergarage Cruquius aan de Zeeburgerkade in Amsterdam-Oost",
+        "width": 1600,
+        "height": 1000
+      },
+      {
+        "src": "/images/locations/cruquius-2.jpg",
+        "alt": "Overdekte parkeergarage Cruquius op één minuut lopen van The Harbour Club in Amsterdam",
+        "width": 1600,
+        "height": 1000
+      }
+    ],
+    "routeDescription": [
+      "De garage ligt aan de Zeeburgerkade 830 op het Cruquius-eiland in Amsterdam-Oost.",
+      "Met het openbaar vervoer sta je binnen 25 minuten op Amsterdam Centraal.",
+      "{{TODO-NL: aanrijroute vanaf de A10 beschrijven, inclusief afrit}}"
+    ],
+    "entryInstructions": [
+      "Reserveer online op kenteken. Bij aankomst wordt je kenteken herkend en gaat de slagboom open.",
+      "Let op de doorrijhoogte: 2,70 meter op de bovenste niveaus, 2,14 meter op niveau -2."
+    ],
+    "exitInstructions": [
+      "Bij het uitrijden gaat de slagboom open zodra de camera je kenteken herkent.",
+      "{{TODO-NL: bevestigen of uitrijden volledig op kenteken gaat}}"
+    ],
+    "openingHours": [
+      {
+        "day": 1,
+        "closed": false
+      },
+      {
+        "day": 2,
+        "closed": false
+      },
+      {
+        "day": 3,
+        "closed": false
+      },
+      {
+        "day": 4,
+        "closed": false
+      },
+      {
+        "day": 5,
+        "closed": false
+      },
+      {
+        "day": 6,
+        "closed": false
+      },
+      {
+        "day": 7,
+        "closed": false
+      }
+    ],
+    "accessibility": {
+      "maxHeightMeters": 2.7,
+      "maxHeightNote": "Op niveau -2 is de doorrijhoogte 2,14 meter.",
+      "covered": true,
+      "hasElevator": true,
+      "wheelchairAccessible": true,
+      "cameraSurveillance": true,
+      "evCharging": false,
+      "bicycleParking": false
+    },
+    "capacity": 177,
+    "features": [
+      "177 overdekte plaatsen",
+      "Doorrijhoogte tot 2,70 meter",
+      "Camerabewaking",
+      "Lift aanwezig",
+      "Toegankelijk voor rolstoelgebruikers",
+      "24 uur per dag in- en uitrijden"
+    ],
+    "tariffs": [
+      {
+        "title": "Kort parkeren",
+        "kind": "short_stay",
+        "rows": [
+          {
+            "label": "Maandag tot en met zaterdag, 09.00 tot 21.00 uur",
+            "amountCents": 260,
+            "unit": "per_30_min"
+          },
+          {
+            "label": "Maandag tot en met zaterdag, 21.00 tot 09.00 uur",
+            "amountCents": 130,
+            "unit": "per_30_min"
+          },
+          {
+            "label": "Zondag, de hele dag",
+            "amountCents": 130,
+            "unit": "per_30_min"
+          }
+        ]
+      },
+      {
+        "title": "Dagkaart",
+        "kind": "day_pass",
+        "rows": [
+          {
+            "label": "Zonder reservering",
+            "amountCents": 2500,
+            "unit": "per_day"
+          },
+          {
+            "label": "Online gereserveerd",
+            "amountCents": 2250,
+            "unit": "per_day"
+          },
+          {
+            "label": "Ruim vooraf geboekt",
+            "amountCents": 1750,
+            "unit": "per_day"
+          }
+        ]
+      },
+      {
+        "title": "ParkingPass",
+        "kind": "parkingpass",
+        "rows": [
+          {
+            "label": "Tien dagen",
+            "amountCents": 19000,
+            "unit": "per_pass"
+          },
+          {
+            "label": "Vijfentwintig dagen",
+            "amountCents": 45000,
+            "unit": "per_pass"
+          }
+        ]
+      },
+      {
+        "title": "Abonnementen",
+        "kind": "subscription",
+        "rows": [
+          {
+            "label": "Avond en weekend",
+            "amountCents": 20500,
+            "unit": "per_month"
+          },
+          {
+            "label": "24/7-abonnement",
+            "amountCents": 34500,
+            "unit": "per_month"
+          }
+        ]
+      }
+    ],
+    "bookingUrl": "https://reserveren.parkingyou.nl/",
+    "subscriptionOnly": false,
+    "faqIds": [
+      "faq-cruquius-harbour-club",
+      "faq-cruquius-doorrijhoogte",
+      "faq-cruquius-zondag",
+      "faq-cruquius-centrum"
+    ],
+    "seo": {
+      "title": "Parkeren bij The Harbour Club Amsterdam | ParkingYou",
+      "description": "Overdekt parkeren op het Cruquius-eiland in Amsterdam-Oost, één minuut van The Harbour Club. Doorrijhoogte 2,70 m en dagkaart vanaf € 17,50 bij vroeg boeken."
+    },
+    "published": true,
+    "aeroparkerCarParkId": 27,
+    "sync": {
+      "status": "ok",
+      "syncedAt": "2026-09-12T03:00:00.000Z",
+      "lowestPriceCents": 1750
+    }
+  }
+]
