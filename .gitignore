@@ -16,3 +16,6 @@ next-env.d.ts
 *.log
 coverage/
 .lighthouseci/
+
+# Regenerate with: npm run build && npm run start, then npx tsx scripts/screenshots.ts
+screenshots/
