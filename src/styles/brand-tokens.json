@@ -1,0 +1,785 @@
+{
+ "colors": {
+  "py-tok-color-blauw": {
+   "name": "PY-Blauw",
+   "hex": "#1A3580",
+   "rgb": [
+    26,
+    53,
+    128
+   ],
+   "cmyk": [
+    100,
+    83,
+    0,
+    17
+   ],
+   "ral": "5002",
+   "ral_note": "best match only, does NOT match the huisstijlkleur exactly (handbook p8)",
+   "source_page": 8,
+   "kind": "brand"
+  },
+  "py-tok-color-aqua": {
+   "name": "PY-Aqua",
+   "hex": "#32B9CD",
+   "rgb": [
+    50,
+    185,
+    205
+   ],
+   "cmyk": [
+    69,
+    0,
+    21,
+    0
+   ],
+   "ral": "6027",
+   "ral_note": "best match only, does NOT match the huisstijlkleur exactly (handbook p8)",
+   "source_page": 8,
+   "kind": "brand"
+  },
+  "py-tok-color-oranje": {
+   "name": "PY-Oranje",
+   "hex": "#F08300",
+   "rgb": [
+    240,
+    131,
+    0
+   ],
+   "cmyk": [
+    0,
+    57,
+    100,
+    0
+   ],
+   "ral": "2003",
+   "ral_note": "best match only, does NOT match the huisstijlkleur exactly (handbook p8)",
+   "source_page": 8,
+   "kind": "brand"
+  },
+  "py-tok-color-grijs": {
+   "name": "PY-Grijs",
+   "hex": "#AEAEAE",
+   "rgb": [
+    174,
+    174,
+    174
+   ],
+   "cmyk": [
+    0,
+    0,
+    0,
+    42
+   ],
+   "ral": "9006",
+   "ral_note": "best match only, does NOT match the huisstijlkleur exactly (handbook p8)",
+   "source_page": 8,
+   "kind": "brand"
+  },
+  "py-tok-color-zwart": {
+   "name": "PY-Zwart",
+   "hex": "#1D1D1B",
+   "rgb": [
+    29,
+    29,
+    27
+   ],
+   "cmyk": [
+    0,
+    0,
+    0,
+    100
+   ],
+   "ral": "9005",
+   "ral_note": "best match only, does NOT match the huisstijlkleur exactly (handbook p8)",
+   "source_page": 8,
+   "kind": "brand"
+  },
+  "py-tok-color-wit": {
+   "name": "Wit",
+   "hex": "#FFFFFF",
+   "rgb": [
+    255,
+    255,
+    255
+   ],
+   "cmyk": null,
+   "ral": null,
+   "source_page": null,
+   "kind": "observed",
+   "note": "diapositief logo and white signing"
+  },
+  "py-tok-color-ral-9010": {
+   "name": "RAL 9010 (hoogtebalk)",
+   "hex": "#FFFFFF",
+   "rgb": [
+    255,
+    255,
+    255
+   ],
+   "cmyk": null,
+   "ral": "9010",
+   "source_page": null,
+   "kind": "observed",
+   "note": "mentioned on p22 only; drawn white; no official sRGB"
+  },
+  "py-tok-color-reflective-red": {
+   "name": "Rode reflecterende band",
+   "hex": "#C20016",
+   "rgb": [
+    194,
+    0,
+    22
+   ],
+   "cmyk": null,
+   "ral": null,
+   "source_page": null,
+   "kind": "observed",
+   "note": "post bands p43, p44; not a brand colour"
+  },
+  "py-tok-color-led-green": {
+   "name": "LED groen",
+   "hex": "#3AAA35",
+   "rgb": [
+    58,
+    170,
+    53
+   ],
+   "cmyk": null,
+   "ral": null,
+   "source_page": null,
+   "kind": "observed",
+   "note": "display dots p12 to p25 (also #53A043); not a brand colour"
+  },
+  "py-tok-color-safety-green": {
+   "name": "Veiligheidsgroen",
+   "hex": "#008A3B",
+   "rgb": [
+    0,
+    138,
+    59
+   ],
+   "cmyk": null,
+   "ral": null,
+   "source_page": null,
+   "kind": "observed",
+   "note": "escape plan p35 (also #00913E); not a brand colour"
+  },
+  "py-tok-color-rvv-red": {
+   "name": "RVV rood",
+   "hex": "#E30613",
+   "rgb": [
+    227,
+    6,
+    19
+   ],
+   "cmyk": null,
+   "ral": null,
+   "source_page": null,
+   "kind": "observed",
+   "note": "third-party RVV signs p51"
+  }
+ },
+ "gradients": {
+  "py-tok-gradient-verloop": {
+   "kind": "linear",
+   "direction": "top-left to bottom-right (45 degrees)",
+   "stops": [
+    {
+     "offset": 0.0,
+     "hex": "#1A3580"
+    },
+    {
+     "offset": 0.18,
+     "hex": "#1A3580"
+    },
+    {
+     "offset": 0.62,
+     "hex": "#097BAE"
+    },
+    {
+     "offset": 1.0,
+     "hex": "#32B9CD"
+    }
+   ],
+   "note": "Not defined in handbook 1.3. Measured from the source shadings (p9, p12, p23, p31). The mid stop #097BAE is not a brand colour."
+  },
+  "py-tok-gradient-verloop-vertical": {
+   "kind": "linear",
+   "direction": "top to bottom",
+   "stops": [
+    {
+     "offset": 0.0,
+     "hex": "#1A3580"
+    },
+    {
+     "offset": 0.18,
+     "hex": "#1A3580"
+    },
+    {
+     "offset": 0.62,
+     "hex": "#097BAE"
+    },
+    {
+     "offset": 1.0,
+     "hex": "#32B9CD"
+    }
+   ],
+   "note": "Not defined in handbook 1.3. Measured from the source shadings (p9, p12, p23, p31). The mid stop #097BAE is not a brand colour."
+  },
+  "py-tok-gradient-verloop-horizontal": {
+   "kind": "linear",
+   "direction": "left to right",
+   "stops": [
+    {
+     "offset": 0.0,
+     "hex": "#1A3580"
+    },
+    {
+     "offset": 0.18,
+     "hex": "#1A3580"
+    },
+    {
+     "offset": 0.62,
+     "hex": "#097BAE"
+    },
+    {
+     "offset": 1.0,
+     "hex": "#32B9CD"
+    }
+   ],
+   "note": "Not defined in handbook 1.3. Measured from the source shadings (p9, p12, p23, p31). The mid stop #097BAE is not a brand colour."
+  }
+ },
+ "typography": {
+  "family": "Ubuntu",
+  "licence": "Ubuntu Font Licence 1.0 (fonts/UBUNTU-FONT-LICENCE.txt)",
+  "styles": [
+   {
+    "id": "py-tok-type-ubuntu-light",
+    "name": "Ubuntu Light",
+    "weight": 300,
+    "italic": false,
+    "file": "fonts/Ubuntu-Light.ttf"
+   },
+   {
+    "id": "py-tok-type-ubuntu-light-italic",
+    "name": "Ubuntu Light Italic",
+    "weight": 300,
+    "italic": true,
+    "file": "fonts/Ubuntu-Light-Italic.ttf"
+   },
+   {
+    "id": "py-tok-type-ubuntu-regular",
+    "name": "Ubuntu Regular",
+    "weight": 400,
+    "italic": false,
+    "file": "fonts/Ubuntu-Regular.ttf"
+   },
+   {
+    "id": "py-tok-type-ubuntu-italic",
+    "name": "Ubuntu Italic",
+    "weight": 400,
+    "italic": true,
+    "file": "fonts/Ubuntu-Italic.ttf"
+   },
+   {
+    "id": "py-tok-type-ubuntu-medium",
+    "name": "Ubuntu Medium",
+    "weight": 500,
+    "italic": false,
+    "file": "fonts/Ubuntu-Medium.ttf"
+   },
+   {
+    "id": "py-tok-type-ubuntu-medium-italic",
+    "name": "Ubuntu Medium Italic",
+    "weight": 500,
+    "italic": true,
+    "file": "fonts/Ubuntu-Medium-Italic.ttf"
+   },
+   {
+    "id": "py-tok-type-ubuntu-bold",
+    "name": "Ubuntu Bold",
+    "weight": 700,
+    "italic": false,
+    "file": "fonts/Ubuntu-Bold.ttf"
+   },
+   {
+    "id": "py-tok-type-ubuntu-bold-italic",
+    "name": "Ubuntu Bold Italic",
+    "weight": 700,
+    "italic": true,
+    "file": "fonts/Ubuntu-Bold-Italic.ttf"
+   }
+  ],
+  "logo": {
+   "parking": "Ubuntu Regular (measured on the vector outlines; handbook p6 says Medium, p7 says Medium)",
+   "you": "Ubuntu Bold"
+  },
+  "usage_observed": {
+   "location names, captions": "Ubuntu Bold",
+   "body text": "Ubuntu Regular",
+   "pylon section bars": "Ubuntu Medium",
+   "dimension labels": "Ubuntu Light"
+  },
+  "other": {
+   "py-tok-type-hoogtebalk-lettering": "outlined in the PDF, typeface unidentified",
+   "RVV numerals": "RWSTTDdx on portals, AnwbEeVL on pylons (third-party, outlined in the SVGs)"
+  }
+ },
+ "deviations": [
+  {
+   "found": "#1A3680 in vector artwork",
+   "used": "#1A3580",
+   "reason": "handbook 1.3 states #1A3580"
+  },
+  {
+   "found": "#010101 (logo black)",
+   "used": "#1D1D1B",
+   "reason": "PY-Zwart in 1.3"
+  },
+  {
+   "found": "#082E7A (RAL 5002 swatch in hardware)",
+   "used": "#1A3580",
+   "reason": "RAL values are best match only"
+  },
+  {
+   "found": "#A0A1A0 (RAL 9006 swatch in hardware)",
+   "used": "#AEAEAE",
+   "reason": "PY-Grijs in 1.3"
+  }
+ ],
+ "observed": {
+  "note": "Colours sampled from the eleven print files in source/print/. They are NOT brand values and never replace the official tokens. Native print values are CMYK; hex_viewer is the sRGB a PDF viewer shows, hex_fogra39 the sRGB through the FOGRA39 profile. Official blauw is CMYK 100/83/0/17 (#1A3580); four files use exactly that, the rest (the terminal sticker sheet included) drift as listed.",
+  "colors": {
+   "py-obs-blauw-uitrit": {
+    "name": "Blauw uitritbord",
+    "files": "15728501-1.pdf",
+    "used_for": "pill background",
+    "kind": "observed",
+    "cmyk": [
+     100,
+     92.5,
+     19.2,
+     5.9
+    ],
+    "hex_fogra39": "#343A78",
+    "delta_to_token_cmyk": [
+     0,
+     9.5,
+     19.2,
+     -11.1
+    ]
+   },
+   "py-obs-blauw-maashaven": {
+    "name": "Blauw Maashaven",
+    "files": "Maashaven.pdf",
+    "used_for": "header, bars, logo, text",
+    "kind": "observed",
+    "cmyk": [
+     100,
+     86,
+     21.2,
+     3.7
+    ],
+    "hex_fogra39": "#2F417D",
+    "delta_to_token_cmyk": [
+     0,
+     3,
+     21.2,
+     -13.3
+    ]
+   },
+   "py-obs-blauw-laadkabel": {
+    "name": "Blauw laadkabel",
+    "files": "LaadKabel.pdf",
+    "used_for": "background",
+    "kind": "observed",
+    "cmyk": [
+     100,
+     85.9,
+     6.6,
+     0
+    ],
+    "hex_fogra39": "#2F428B",
+    "delta_to_token_cmyk": [
+     0,
+     2.9,
+     6.6,
+     -17
+    ]
+   },
+   "py-obs-blauw-diefstal": {
+    "name": "Blauw diefstalsticker en slagboombord",
+    "files": "StickerDiefstalARtisDruk.pdf, BordSlagboomEVO.pdf",
+    "used_for": "text, icon, footer, background",
+    "kind": "observed",
+    "cmyk": [
+     100,
+     86.3,
+     21.5,
+     3.5
+    ],
+    "hex_fogra39": "#2F417C",
+    "delta_to_token_cmyk": [
+     0,
+     3.3,
+     21.5,
+     -13.5
+    ]
+   },
+   "py-obs-blauw-glow": {
+    "name": "Blauw GLOW",
+    "files": "Tekengebied_1.pdf, Tekengebied_4_kopie_4.pdf",
+    "used_for": "background, text",
+    "kind": "observed",
+    "cmyk": [
+     100,
+     84.4,
+     5.5,
+     0.4
+    ],
+    "hex_fogra39": "#2D438D",
+    "delta_to_token_cmyk": [
+     0,
+     1.4,
+     5.5,
+     -16.6
+    ]
+   },
+   "py-obs-blauw-rgb-1a3680": {
+    "name": "Blauw RGB achtergrond",
+    "files": "Naamloos-7.pdf",
+    "used_for": "RGB only, #1A3680 (the vector blue replaced by #1A3580 in 1.3)",
+    "kind": "observed",
+    "rgb": [
+     26,
+     54,
+     128
+    ],
+    "hex_viewer": "#1A3680"
+   },
+   "py-obs-aqua-uitrit": {
+    "name": "Aqua uitritbord",
+    "files": "15728501-1.pdf",
+    "used_for": "arrow and arc",
+    "kind": "observed",
+    "cmyk": [
+     67.8,
+     3.1,
+     19.2,
+     0
+    ],
+    "hex_fogra39": "#44B8CE",
+    "delta_to_token_cmyk": [
+     -1.2,
+     3.1,
+     -1.8,
+     0
+    ]
+   },
+   "py-obs-aqua-licht": {
+    "name": "Lichtaqua",
+    "files": "LaadKabel.pdf, StickerDiefstalARtisDruk.pdf, InfoPylonBordGoed.pdf",
+    "used_for": "icons on navy (plug, padlock), chevron",
+    "kind": "observed",
+    "cmyk": [
+     54,
+     0,
+     14,
+     0
+    ],
+    "hex_fogra39": "#7BCADD",
+    "delta_to_token_cmyk": [
+     -15,
+     0,
+     -7,
+     0
+    ]
+   },
+   "py-obs-blauw-terminal": {
+    "name": "Blauw terminalstickers",
+    "files": "TerminalStickers_September2026.pdf",
+    "used_for": "text, icons, badges, bars (also 99.6/84/21.3/6.6 and 100/86.4/21.4/3.7 on single stickers)",
+    "kind": "observed",
+    "cmyk": [
+     99.5,
+     85,
+     21.4,
+     6.8
+    ],
+    "hex_fogra39": "#2F417A",
+    "delta_to_token_cmyk": [
+     -0.5,
+     2,
+     21.4,
+     -10.2
+    ]
+   },
+   "py-obs-grijs-qrplaat": {
+    "name": "Lichtgrijs QR plaat",
+    "files": "TerminalStickers_September2026.pdf",
+    "used_for": "QR plates of the phone, reader and subscription card illustrations (at 90 percent opacity)",
+    "kind": "observed",
+    "cmyk": [
+     8.4,
+     5.8,
+     6.9,
+     0
+    ],
+    "hex_fogra39": "#EEEDED"
+   },
+   "py-obs-zwart-rijk": {
+    "name": "Rijk zwart",
+    "files": "Maashaven.pdf",
+    "used_for": "small text",
+    "kind": "observed",
+    "cmyk": [
+     91.2,
+     78.7,
+     62,
+     97.4
+    ],
+    "hex_fogra39": "#1D1D1D"
+   },
+   "py-obs-blauw-briefpapier-tekst": {
+    "name": "Blauw adresblok briefpapier",
+    "files": "Briefpapier_nieuw.pdf",
+    "used_for": "address text",
+    "kind": "observed",
+    "cmyk": [
+     100,
+     85.5,
+     22.3,
+     4
+    ],
+    "hex_fogra39": "#2E427C",
+    "delta_to_token_cmyk": [
+     0,
+     2.5,
+     22.3,
+     -13
+    ]
+   },
+   "py-obs-magenta-gaten": {
+    "name": "Magenta montagegaten",
+    "files": "BordSlagboomEVO.pdf",
+    "used_for": "two 1 pt rings (mounting holes), not a spot colour",
+    "kind": "observed",
+    "cmyk": [
+     0,
+     93.4,
+     7.2,
+     0
+    ],
+    "hex_fogra39": "#E72F82"
+   },
+   "py-obs-blauw-rgb-pr": {
+    "name": "Blauw RGB P+R bord",
+    "files": "PR_RoadSignage.pdf",
+    "used_for": "background and text, RGB (ICC) only",
+    "kind": "observed",
+    "rgb": [
+     39,
+     58,
+     124
+    ],
+    "hex_viewer": "#273A7C"
+   },
+   "py-obs-blauw-rgb-pr-logo": {
+    "name": "Blauw RGB P+R bord logo",
+    "files": "PR_RoadSignage.pdf",
+    "used_for": "logo and partner text, RGB (ICC) only",
+    "kind": "observed",
+    "rgb": [
+     33,
+     58,
+     143
+    ],
+    "hex_viewer": "#213A8F"
+   },
+   "py-obs-blauw-rgb-envelop": {
+    "name": "Blauw RGB envelop",
+    "files": "ParkingYou_Envelop_220x156.pdf",
+    "used_for": "logo and address, RGB (ICC) only (file claims PDF/X-1a)",
+    "kind": "observed",
+    "rgb": [
+     34,
+     58,
+     122
+    ],
+    "hex_viewer": "#223A7A"
+   },
+   "py-obs-blauw-rgb-tarief": {
+    "name": "Blauw RGB tariefbord",
+    "files": "TariefConcerten.pdf",
+    "used_for": "background and text, RGB (ICC) only",
+    "kind": "observed",
+    "rgb": [
+     35,
+     57,
+     142
+    ],
+    "hex_viewer": "#23398E"
+   },
+   "py-obs-aqua-rgb-envelop": {
+    "name": "Aqua RGB envelop",
+    "files": "ParkingYou_Envelop_220x156.pdf, PR_RoadSignage.pdf",
+    "used_for": "tagline, dot; RGB (ICC)",
+    "kind": "observed",
+    "rgb": [
+     52,
+     186,
+     206
+    ],
+    "hex_viewer": "#34BACE"
+   },
+   "py-obs-aqua-licht-rgb": {
+    "name": "Lichtaqua RGB",
+    "files": "TariefConcerten.pdf, PR_WTC_Sticker.pdf, PR_WTC_Poster.pdf",
+    "used_for": "price bubble, RGB (ICC) only",
+    "kind": "observed",
+    "rgb": [
+     120,
+     201,
+     220
+    ],
+    "hex_viewer": "#78C9DC"
+   },
+   "py-obs-blauw-dranghek": {
+    "name": "Blauw dranghekspandoek",
+    "files": "dranghekspandoek-dubbelzijdig_01.pdf",
+    "used_for": "background, figure text",
+    "kind": "observed",
+    "cmyk": [
+     100,
+     85,
+     10,
+     1
+    ],
+    "hex_fogra39": "#2E4288",
+    "delta_to_token_cmyk": [
+     0,
+     2,
+     10,
+     -16
+    ]
+   },
+   "py-obs-aqua-licht-dranghek": {
+    "name": "Lichtaqua dranghekspandoek",
+    "files": "dranghekspandoek-dubbelzijdig_01.pdf",
+    "used_for": "pill, triangle, divider, keyword",
+    "kind": "observed",
+    "cmyk": [
+     51,
+     1,
+     11,
+     0
+    ],
+    "hex_fogra39": "#85CCE2",
+    "delta_to_token_cmyk": [
+     -18,
+     1,
+     -10,
+     0
+    ]
+   },
+   "py-obs-blauw-rgb-wtc": {
+    "name": "Blauw RGB P+R sticker en poster",
+    "files": "PR_WTC_Sticker.pdf, PR_WTC_Poster.pdf",
+    "used_for": "background and text, RGB (ICC) only",
+    "kind": "observed",
+    "rgb": [
+     35,
+     58,
+     137
+    ],
+    "hex_viewer": "#233A89"
+   },
+   "py-obs-blauw-rgb-poster-a3": {
+    "name": "Blauw RGB poster A3",
+    "files": "posters_297x420_3_1.pdf",
+    "used_for": "text and icons, RGB (ICC sRGB) only",
+    "kind": "observed",
+    "rgb": [
+     43,
+     61,
+     145
+    ],
+    "hex_viewer": "#2B3D91"
+   },
+   "py-obs-blauw-rgb-poster-a2": {
+    "name": "Blauw RGB poster A2",
+    "files": "posters_420x594_3_1.pdf",
+    "used_for": "text and QR plate, RGB (ICC sRGB) only",
+    "kind": "observed",
+    "rgb": [
+     42,
+     50,
+     130
+    ],
+    "hex_viewer": "#2A3282"
+   },
+   "py-obs-blauw-rgb-partner": {
+    "name": "Blauw RGB partnerpakket",
+    "files": "MarketingCampagne_ParkingYouPartner.pdf",
+    "used_for": "poster, flyers, stickers, RGB (ICC) only, vivid royal blue",
+    "kind": "observed",
+    "rgb": [
+     25,
+     42,
+     162
+    ],
+    "hex_viewer": "#192AA2"
+   },
+   "py-obs-cyaan-rgb-partner": {
+    "name": "Cyaan RGB partnerpakket",
+    "files": "MarketingCampagne_ParkingYouPartner.pdf",
+    "used_for": "beeldmerk dot, flyer panel, bright cyan, not PY-Aqua",
+    "kind": "observed",
+    "rgb": [
+     10,
+     211,
+     230
+    ],
+    "hex_viewer": "#0AD3E6"
+   },
+   "py-obs-oranje-rgb-partner": {
+    "name": "Oranje RGB partnerpakket",
+    "files": "MarketingCampagne_ParkingYouPartner.pdf",
+    "used_for": "price and keyword; close to PY-Oranje (#F08300)",
+    "kind": "observed",
+    "rgb": [
+     255,
+     132,
+     1
+    ],
+    "hex_viewer": "#FF8401"
+   },
+   "py-obs-grijs-licht-sticker": {
+    "name": "Lichtgrijs stickerbasis",
+    "files": "MarketingCampagne_ParkingYouPartner.pdf",
+    "used_for": "window sticker body, flat grey in the mock-up (raster in source), template placeholder",
+    "kind": "observed",
+    "rgb": [
+     240,
+     240,
+     240
+    ],
+    "hex_viewer": "#F0F0F0"
+   },
+   "py-obs-grijs-nfc-schijf": {
+    "name": "Grijs NFC schijf",
+    "files": "MarketingCampagne_ParkingYouPartner.pdf",
+    "used_for": "NFC sticker disc, flat grey in the mock-up (raster in source), template placeholder",
+    "kind": "observed",
+    "rgb": [
+     225,
+     225,
+     225
+    ],
+    "hex_viewer": "#E1E1E1"
+   }
+  }
+ }
+}

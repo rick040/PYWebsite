@@ -1,15 +1,15 @@
 /**
  * ParkingYou design tokens.
  *
- * Values come from the rebranding prototype (github.com/rick040/parkingyou),
- * which is the agreed visual direction. This file keeps the prototype's palette
- * and typography but restates them as semantic roles, so that the marketing
- * website and the future PWA share one language without sharing a component
- * library.
+ * The brand palette is the huisstijlhandboek's section 1.3, via
+ * github.com/rick040/PY-ASSETS (`tokens.json`). It is NOT the rebranding
+ * prototype's palette: the prototype eyeballed the colours and was consistently
+ * off, most visibly #374e9d against the real PY-Blauw #1A3580, a lighter and
+ * softer navy. Structure, typography and spacing still come from the prototype;
+ * only the colours are corrected.
  *
- * Three colours from the prototype did not clear WCAG 2.1 AA and are corrected
- * here rather than copied. Each correction is marked and explained; see
- * docs/DESIGN-TOKENS.md for the measured ratios.
+ * Every ratio in this file was recomputed against the handbook values rather
+ * than carried over. See docs/DESIGN-TOKENS.md.
  *
  * Naming: everything is namespaced --py-* so importing this file into the PWA
  * cannot collide with whatever that project already defines.
@@ -17,40 +17,47 @@
 
 :root {
   /* ---------------------------------------------------------------------- */
-  /* Brand palette, straight from the prototype                              */
+  /* Brand palette, huisstijlhandboek 1.3. Do not edit without a reference.  */
   /* ---------------------------------------------------------------------- */
 
-  --py-blue: #374e9d; /* primary brand blue */
-  --py-mid: #233a89; /* gradient mid stop */
-  --py-deep: #0d142e; /* near-black navy, footers and banners */
-  --py-aqua: #79cadc; /* accent, backgrounds only */
-  --py-orange: #ee7d2c; /* accent, backgrounds only */
-  --py-paper: #f5f7fb; /* alternating section background */
-  --py-line: #dfe5f0; /* hairline rules and card edges */
-  --py-text: #24335f; /* body copy */
-  --py-muted: #627092; /* secondary copy */
+  --py-blue: #1a3580; /* PY-Blauw,  RAL 5002 (best match only)  11.26:1 on white */
+  --py-aqua: #32b9cd; /* PY-Aqua,   RAL 6027. Backgrounds only,  2.34:1 on white */
+  --py-orange: #f08300; /* PY-Oranje, RAL 2003. Backgrounds only,  2.64:1 on white */
+  --py-grijs: #aeaeae; /* PY-Grijs,  RAL 9006 */
+  --py-zwart: #1d1d1b; /* PY-Zwart,  RAL 9005,                   16.88:1 on white */
+
+  /* The verloop's mid stop. Measured from the source artwork, not a brand
+     colour in its own right, which is why it is named for its job. */
+  --py-mid: #097bae;
+  --py-deep: var(--py-zwart); /* footers and banners */
+
+  /* Neutrals, mixed from PY-Blauw toward white so greys carry the brand hue
+     rather than drifting to a generic slate. */
+  --py-paper: #f7f8fb; /* alternating section background */
+  --py-line: #e5e8f0; /* hairline rules and card edges */
+  --py-text: var(--py-blue); /* body copy, 11.26:1 on white */
+  --py-muted: #6b7489; /* secondary copy,  4.93:1 on white */
   --py-white: #ffffff;
 
-  /* Tonal steps derived from the brand blue, for hover and pressed states. */
-  --py-blue-50: #eef1f9;
-  --py-blue-100: #dbe1f2;
-  --py-blue-700: #374e9d;
-  --py-blue-800: #2c3f80;
-  --py-blue-900: #233266;
+  /* Tonal steps derived from PY-Blauw, for hover and pressed states. */
+  --py-blue-50: #f0f2f7;
+  --py-blue-100: #dadfeb;
+  --py-blue-700: #1a3580;
+  --py-blue-800: #152a66; /* white on it 13.51:1 */
+  --py-blue-900: #10214f; /* white on it 15.53:1 */
 
   /* ---------------------------------------------------------------------- */
   /* Accessibility corrections to the prototype palette                      */
   /* ---------------------------------------------------------------------- */
 
-  /* The prototype sets orange text on white (.py-product-chooser strong and
-     friends) at 2.76:1. This is the same hue darkened to 4.80:1. The bright
-     --py-orange stays, for backgrounds carrying dark text. */
-  --py-orange-text: #b8560f;
+  /* PY-Oranje as text on white is 2.64:1. This is the same hue darkened to
+     4.56:1. The brand --py-orange stays, for backgrounds carrying dark text. */
+  --py-orange-text: #b26100;
 
-  /* The prototype's hairline is 1.26:1 on white. Fine for decoration, but WCAG
-     1.4.11 asks 3:1 for anything a user must recognise as a control, so inputs
-     and similar get this one instead, at 3.11:1. */
-  --py-line-strong: #8492b3;
+  /* The hairline is 1.23:1 on white. Fine for decoration, but WCAG 1.4.11 asks
+     3:1 for anything a user must recognise as a control, so inputs and similar
+     get this one instead, at 3.17:1. */
+  --py-line-strong: #8190b9;
 
   /* ---------------------------------------------------------------------- */
   /* Semantic colour roles                                                   */
@@ -66,15 +73,15 @@
   --py-color-surface-accent: var(--py-aqua);
   --py-color-surface-accent-subtle: #e6f5f9;
 
-  --py-color-foreground: var(--py-text); /* 12.25:1 on white */
-  --py-color-foreground-muted: var(--py-muted); /*  4.94:1 on white */
-  --py-color-foreground-brand: var(--py-blue); /*  7.67:1 on white */
-  --py-color-foreground-on-brand: var(--py-white); /*  7.67:1 on brand blue */
+  --py-color-foreground: var(--py-text); /* 11.26:1 on white */
+  --py-color-foreground-muted: var(--py-muted); /*  4.93:1 on white */
+  --py-color-foreground-brand: var(--py-blue); /* 11.26:1 on white */
+  --py-color-foreground-on-brand: var(--py-white); /* 11.26:1 on brand blue */
   --py-color-foreground-on-deep: rgb(255 255 255 / 0.82);
   --py-color-foreground-accent: var(--py-orange-text); /*  4.80:1 on white */
 
   --py-color-border: var(--py-line);
-  --py-color-border-strong: #c3cde2;
+  --py-color-border-strong: #bac2d9;
   /* Functional edges only: inputs, checkboxes, anything that is a control.
      Never use --py-color-border for those. */
   --py-color-border-interactive: var(--py-line-strong);
@@ -84,11 +91,11 @@
   --py-color-primary-active: var(--py-blue-900);
   --py-color-primary-foreground: var(--py-white);
 
-  /* The prototype puts --py-blue on the aqua button at 4.12:1, just under the
-     4.5 a 15px bold label needs. The body-text navy on the same aqua is
-     6.59:1 and reads as the same colour at a glance. */
+  /* The prototype needed a workaround here: its blue on its aqua was 4.12:1,
+     under the 4.5 a 15px bold label needs. The handbook pair clears it at
+     4.80:1, so the accent button can carry the real brand blue. */
   --py-color-accent: var(--py-aqua);
-  --py-color-accent-foreground: var(--py-text);
+  --py-color-accent-foreground: var(--py-blue); /* 4.80:1 on PY-Aqua */
 
   --py-color-focus-ring: var(--py-blue);
 
@@ -180,11 +187,11 @@
   --py-radius-pill: 999px; /* every button and tag in the prototype */
   --py-radius-full: 50%;
 
-  --py-shadow-sm: 0 10px 26px rgb(35 58 137 / 0.08);
-  --py-shadow-md: 0 12px 28px rgb(35 58 137 / 0.1);
-  --py-shadow-lg: 0 18px 44px rgb(35 58 137 / 0.14);
-  --py-shadow-brand: 0 12px 26px rgb(55 78 157 / 0.24);
-  --py-shadow-accent: 0 12px 26px rgb(121 202 220 / 0.22);
+  --py-shadow-sm: 0 10px 26px rgb(26 53 128 / 0.08);
+  --py-shadow-md: 0 12px 28px rgb(26 53 128 / 0.1);
+  --py-shadow-lg: 0 18px 44px rgb(26 53 128 / 0.14);
+  --py-shadow-brand: 0 12px 26px rgb(26 53 128 / 0.24);
+  --py-shadow-accent: 0 12px 26px rgb(50 185 205 / 0.22);
 
   --py-duration-fast: 160ms;
   --py-duration-base: 180ms;

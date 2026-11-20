@@ -84,42 +84,24 @@
 
 .py-logo {
   display: inline-flex;
-  align-items: center;
-  gap: 11px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
   color: var(--py-color-foreground-brand);
 }
+/* The official horizontal logo. Width-led so the lock-up keeps its ratio;
+   height follows. 132px matches the prototype's optical size for the badge
+   plus wordmark it replaces. */
 .py-logo__mark {
-  width: 42px;
-  height: 42px;
-  /* The pin silhouette: round on three corners, squared off at the bottom left. */
-  border-radius: 50% 50% 50% 12px;
-  display: grid;
-  place-items: center;
-  background: var(--py-color-primary);
-  color: var(--py-color-primary-foreground);
-  font-size: 23px;
-  font-weight: var(--py-weight-bold);
-  line-height: 1;
-  box-shadow: 0 10px 24px rgb(55 78 157 / 0.22);
-}
-.py-logo strong {
-  display: block;
-  font-size: 22px;
-  line-height: 1;
+  width: 132px;
+  height: auto;
 }
 .py-logo small {
   display: block;
-  margin-top: 3px;
   font-size: 10px;
   font-weight: var(--py-weight-medium);
+  letter-spacing: var(--py-tracking-wide);
   color: var(--py-color-foreground-muted);
-}
-.py-logo--inverted {
-  color: var(--py-white);
-}
-.py-logo--inverted .py-logo__mark {
-  background: var(--py-white);
-  color: var(--py-color-primary);
 }
 .py-logo--inverted small {
   color: rgb(255 255 255 / 0.72);
