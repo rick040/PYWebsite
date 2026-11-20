@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Ubuntu } from 'next/font/google'
+import localFont from 'next/font/local'
 import type { ReactNode } from 'react'
 
 import { SiteFooter } from '@/components/site/footer'
@@ -9,33 +9,35 @@ import { SITE_NAME, SITE_URL } from '@/lib/routes'
 import './globals.css'
 
 /**
- * Ubuntu, the prototype's typeface.
+ * Ubuntu, the brand typeface.
  *
- * next/font self-hosts the files and preloads them, so there is no request to
- * fonts.googleapis.com and no render-blocking stylesheet. `adjustFontFallback`
- * is on by default and generates a metric-matched local fallback, which is what
- * removes the layout shift the prototype's <link> version causes while the font
- * is still downloading. That matters here: the target is green Core Web Vitals
- * on a midrange Android over 4G.
+ * Loaded from the brand repository's own licensed copies (src/fonts/, Ubuntu
+ * Font Licence 1.0) rather than next/font/google. Both self-host the files at
+ * runtime; the difference is that this version makes no build-time request to
+ * Google and guarantees the exact faces the huisstijlhandboek specifies.
+ *
+ * `adjustFontFallback` still generates a metric-matched local fallback, which
+ * is what removes the layout shift while the font downloads. That matters: the
+ * target is green Core Web Vitals on a midrange Android over 4G.
  */
-const ubuntu = Ubuntu({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '700'],
-  style: ['normal'],
+const ubuntu = localFont({
+  src: [
+    { path: '../fonts/Ubuntu-Light.ttf', weight: '300', style: 'normal' },
+    { path: '../fonts/Ubuntu-Regular.ttf', weight: '400', style: 'normal' },
+    { path: '../fonts/Ubuntu-Medium.ttf', weight: '500', style: 'normal' },
+    { path: '../fonts/Ubuntu-Bold.ttf', weight: '700', style: 'normal' },
+  ],
   display: 'swap',
   variable: '--py-font-ubuntu',
 })
 
 /**
  * Italic is used in exactly one place, the emphasised word in the hero
- * headline, so only the 700 italic face is loaded. This matches the font
- * request the prototype makes (ital,wght@0,300;0,400;0,500;0,700;1,700) and
- * keeps four unused italic weights off the wire.
+ * headline, so only the 700 italic face is loaded. Four unused italic weights
+ * stay off the wire.
  */
-const ubuntuItalic = Ubuntu({
-  subsets: ['latin'],
-  weight: ['700'],
-  style: ['italic'],
+const ubuntuItalic = localFont({
+  src: [{ path: '../fonts/Ubuntu-BoldItalic.ttf', weight: '700', style: 'italic' }],
   display: 'swap',
   variable: '--py-font-ubuntu-italic',
 })
@@ -54,7 +56,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#374e9d',
+  themeColor: '#1a3580', // PY-Blauw, huisstijlhandboek 1.3
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
